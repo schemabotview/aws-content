@@ -500,6 +500,194 @@
       ]
     },
     {
+      "id": "07-dns-cdn-and-edge",
+      "title": "DNS, CDN & Edge",
+      "notebook": "notebooks/07-dns-cdn-and-edge.ipynb",
+      "defaultScene": "aws-global",
+      "sections": [
+        {
+          "heading": "Three edge services, one job",
+          "scene": "aws-global",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "DNS and Record Types",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Hosted Zones",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Alias Records",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Routing Policies",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Health Checks",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Route 53 Resolver and Hybrid DNS",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "CloudFront",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Origins and Origin Access Control",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Cache Behaviours, TTL, and Cache Keys",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "CloudFront Security",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Edge Functions: CloudFront Functions vs Lambda@Edge",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Price Classes",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "CloudFront vs S3 Cross-Region Replication",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Global Accelerator",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Picking the Right Edge Service",
+          "scene": "aws-global",
+          "spine": true
+        }
+      ]
+    },
+    {
+      "id": "08-relational-databases-and-caching",
+      "title": "Relational Databases & Caching",
+      "notebook": "notebooks/08-relational-databases-and-caching.ipynb",
+      "defaultScene": "aws-data-engineering",
+      "sections": [
+        {
+          "heading": "The relational data tier on AWS",
+          "scene": "aws-data-engineering",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "RDS Overview",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Backups and Point-in-Time Restore",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Multi-AZ vs Read Replicas",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "RDS Security",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "RDS Proxy",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Aurora — a Different Engine",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Aurora Endpoints",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Aurora Serverless v2",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Aurora Global Database",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Backtrack and Multi-Master",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "RDS vs Aurora — Picking Which",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Why Cache?",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Caching Strategies",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Redis vs Memcached",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "ElastiCache for Redis",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "ElastiCache for Memcached",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Putting the Tier Together",
+          "scene": "aws-data-engineering",
+          "spine": true
+        }
+      ]
+    },
+    {
       "id": "09-nosql-and-analytics",
       "title": "NoSQL & Analytics",
       "notebook": "notebooks/09-nosql-and-analytics.ipynb",
@@ -737,6 +925,292 @@
           "heading": "Picking the Right Tool",
           "scene": "aws-data-engineering",
           "spine": false
+        }
+      ]
+    },
+    {
+      "id": "11-security-services",
+      "title": "Security Services",
+      "notebook": "notebooks/11-security-services.ipynb",
+      "defaultScene": "aws-iam",
+      "sections": [
+        {
+          "heading": "The six security layers at a glance",
+          "scene": "aws-iam",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "KMS — Key Management Service",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Envelope Encryption",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Key Policies, Grants, Cross-Account",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Rotation, Deletion, Multi-Region Keys",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "KMS in S3, EBS, and RDS",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "AWS Secrets Manager",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Secrets Manager vs SSM Parameter Store",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "AWS Shield — DDoS Protection",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "AWS WAF — Web Application Firewall",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "AWS Firewall Manager",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Cognito User Pools — Authentication",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Cognito Identity Pools — AWS Credentials",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Detective Services — GuardDuty, Macie, Inspector, Detective",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Picking the Right Tool",
+          "scene": "aws-iam",
+          "spine": true
+        }
+      ]
+    },
+    {
+      "id": "12-observability-and-governance",
+      "title": "Observability & Governance",
+      "notebook": "notebooks/12-observability-and-governance.ipynb",
+      "defaultScene": "aws-iam",
+      "sections": [
+        {
+          "heading": "Three observability services, plus a compliance layer",
+          "scene": "aws-iam",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "The Shared Responsibility Model",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "CloudWatch Metrics",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "CloudWatch Logs",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "CloudWatch Alarms",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "CloudWatch Agent and Insights Variants",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "AWS CloudTrail",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "AWS Config",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Compliance — Artifact, Audit Manager, Programmes",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "CloudWatch vs CloudTrail vs Config",
+          "scene": "aws-iam",
+          "spine": true
+        },
+        {
+          "heading": "Picking the Right Tool",
+          "scene": "aws-iam",
+          "spine": true
+        }
+      ]
+    },
+    {
+      "id": "13-ha-dr-cost-and-migration",
+      "title": "HA/DR, Cost & Migration",
+      "notebook": "notebooks/13-ha-dr-cost-and-migration.ipynb",
+      "defaultScene": "aws-global",
+      "sections": [
+        {
+          "heading": "RTO and RPO — the only two numbers that matter",
+          "scene": "aws-global",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "HA patterns within a Region",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "DR strategies — the four AWS shapes",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "AWS Backup",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Right-sizing and idle elimination",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Commitment discounts — Reserved Instances, Savings Plans, Spot",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Cost tools — Cost Explorer, Budgets, Anomaly Detection",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "The 7 Rs",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Migration services",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Snow family — bulk data when the network won't do",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Putting it together",
+          "scene": "aws-global",
+          "spine": true
+        }
+      ]
+    },
+    {
+      "id": "14-well-architected-and-saa-exam-prep",
+      "title": "Well-Architected & SAA Exam Prep",
+      "notebook": "notebooks/14-well-architected-and-saa-exam-prep.ipynb",
+      "defaultScene": "aws-global",
+      "sections": [
+        {
+          "heading": "Operational Excellence",
+          "scene": "aws-global",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "Security",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Reliability",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Performance Efficiency",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Cost Optimization",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Sustainability",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "AWS Well-Architected Tool",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Trusted Advisor",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "SAA blueprint — where each notebook fits",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Reading a scenario question",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Distractor patterns to recognise",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Study plan",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Closing",
+          "scene": "aws-global",
+          "spine": true
         }
       ]
     }

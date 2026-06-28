@@ -44,9 +44,14 @@ full consolidation plan). The four scenes cover four of those modules' topics:
 | 09 | NoSQL & Analytics | `aws-data-engineering` |
 | 10 | Integration & Streaming | `aws-data-engineering` |
 
-The other nine notebooks (03, 04, 05, 07, 08, 11–14) ship in `notebooks/` but are
-not yet wired — they have no dedicated scene. Wire a module by adding a scene in the
-app, then adding the module (with its overlay) to `scripts/build_manifest.py`.
+Modules **07, 08, 11, 12, 13, 14** are also wired, but each rides a topically
+related existing scene as a **full-strength backdrop** (`backdrop=True` in
+`build_manifest.py`): no `highlight`/`focus`, since their content has no matching
+scene nodes, every section on the spine, first section the hook. 07/13/14 → `aws-global`,
+08 → `aws-data-engineering`, 11/12 → `aws-iam`. Give one its own diagram later by
+authoring a scene in graphl-ux and replacing its `backdrop` entry with a real overlay map.
+
+Modules **03, 04, 05** (compute / serverless / storage) are **not yet wired**.
 
 ## Regenerating the manifest
 

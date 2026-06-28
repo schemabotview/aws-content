@@ -130,16 +130,75 @@ MODULES = [
             "Standard vs Express Workflows": dict(focus="process", highlight=["stepfn-b"]),
         },
     ),
+    # Modules 07, 08, 11–14 have no dedicated scene yet, so each rides the most
+    # topically related existing scene as a BACKDROP: full-strength (no highlight/
+    # focus, since the scene's node ids don't match this module's content), every
+    # section on the spine, the first section the hook. `backdrop=True` drives that
+    # default in the section loop below. Give a module its own scene later by adding
+    # the scene in graphl-ux and replacing the entry here with a real overlay map.
+    dict(
+        id="07-dns-cdn-and-edge",
+        title="DNS, CDN & Edge",
+        notebook="notebooks/07-dns-cdn-and-edge.ipynb",
+        scene="aws-global",
+        backdrop=True,
+        overlay={},
+    ),
+    dict(
+        id="08-relational-databases-and-caching",
+        title="Relational Databases & Caching",
+        notebook="notebooks/08-relational-databases-and-caching.ipynb",
+        scene="aws-data-engineering",
+        backdrop=True,
+        overlay={},
+    ),
+    dict(
+        id="11-security-services",
+        title="Security Services",
+        notebook="notebooks/11-security-services.ipynb",
+        scene="aws-iam",
+        backdrop=True,
+        overlay={},
+    ),
+    dict(
+        id="12-observability-and-governance",
+        title="Observability & Governance",
+        notebook="notebooks/12-observability-and-governance.ipynb",
+        scene="aws-iam",
+        backdrop=True,
+        overlay={},
+    ),
+    dict(
+        id="13-ha-dr-cost-and-migration",
+        title="HA/DR, Cost & Migration",
+        notebook="notebooks/13-ha-dr-cost-and-migration.ipynb",
+        scene="aws-global",
+        backdrop=True,
+        overlay={},
+    ),
+    dict(
+        id="14-well-architected-and-saa-exam-prep",
+        title="Well-Architected & SAA Exam Prep",
+        notebook="notebooks/14-well-architected-and-saa-exam-prep.ipynb",
+        scene="aws-global",
+        backdrop=True,
+        overlay={},
+    ),
 ]
 
 presentations = []
 for m in MODULES:
     secs = []
-    for h in headings(os.path.basename(m["notebook"])):
+    backdrop = m.get("backdrop", False)
+    for i, h in enumerate(headings(os.path.basename(m["notebook"]))):
         o = m["overlay"].get(h, {})
-        sec = {"heading": h, "scene": m["scene"], "spine": bool(o.get("spine", False))}
-        if o.get("role"):
-            sec["role"] = o["role"]
+        # A backdrop module defaults every section onto the spine and makes the
+        # first section the hook; an overlaid module takes its flags from the map.
+        spine = True if backdrop else bool(o.get("spine", False))
+        sec = {"heading": h, "scene": m["scene"], "spine": spine}
+        role = o.get("role") or ("hook" if backdrop and i == 0 else None)
+        if role:
+            sec["role"] = role
         if o.get("highlight"):
             sec["highlight"] = o["highlight"]
         if o.get("focus"):
@@ -152,6 +211,10 @@ for m in MODULES:
         "defaultScene": m["scene"],
         "sections": secs,
     })
+
+# Keep the course in module order regardless of how MODULES is listed, since the
+# app flattens presentations into one continuous page list in array order.
+presentations.sort(key=lambda p: p["id"])
 
 manifest = {
     "concept": "AWS",
