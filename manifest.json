@@ -326,6 +326,468 @@
       ]
     },
     {
+      "id": "03-compute-core-ec2-elb-autoscaling",
+      "title": "Compute Core — EC2, ELB & Auto Scaling",
+      "notebook": "notebooks/03-compute-core-ec2-elb-autoscaling.ipynb",
+      "defaultScene": "aws-vpc",
+      "sections": [
+        {
+          "heading": "What EC2 is",
+          "scene": "aws-vpc",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "The minimum to launch a working web server",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "What You Configure at Launch",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Instance Families",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Instance Naming",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "T-Series Burstable Instances",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Purchasing Options",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Reserved Instances — Anatomy",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Savings Plans vs Reserved Instances",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Spot Instances",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Amazon Machine Images (AMIs)",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "AMI Lifecycle",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Baked vs Bootstrapped",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "User Data",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Security Groups",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Instance Metadata Service (IMDS)",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Public, Private, and Elastic IPs",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Tenancy Options",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "ENIs, ENA, and EFA",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Placement Groups",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "The Nitro System",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Hibernate, Stop, Terminate",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Elastic Load Balancing",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "The Four ELB Types",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Application Load Balancer (ALB)",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Network Load Balancer (NLB)",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Gateway Load Balancer (GWLB)",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Target Groups, Health Checks, Draining",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Auto Scaling Groups (ASG)",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Launch Templates",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Scaling Policies",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "ASG Health Checks",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Instance Refresh",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Lifecycle Hooks",
+          "scene": "aws-vpc",
+          "spine": true
+        },
+        {
+          "heading": "Warm Pools",
+          "scene": "aws-vpc",
+          "spine": true
+        }
+      ]
+    },
+    {
+      "id": "04-serverless-and-containers",
+      "title": "Serverless & Containers",
+      "notebook": "notebooks/04-serverless-and-containers.ipynb",
+      "defaultScene": "aws-global",
+      "sections": [
+        {
+          "heading": "Serverless and containers in one frame",
+          "scene": "aws-global",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "The Serverless Trade-off",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "AWS Lambda",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Execution Environment",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Packaging and Layers",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Configuration",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Cold Starts and Warm Starts",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Invocation Models",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Concurrency",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Permissions — Two Sides",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "VPC Configuration",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Error Handling and Destinations",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Lambda@Edge and CloudFront Functions",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "API Gateway and Function URLs",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "The Serverless Stack",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Containers — the Other Compute Model",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Amazon ECR",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Amazon ECS — Object Model",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Task Definitions and the Two Roles",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "EC2 vs Fargate Launch Types",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "ECS Networking",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "ECS Service Auto Scaling",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Amazon EKS — Managed Kubernetes",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "EKS Node Options",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "ECS vs EKS — Choosing",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "AWS App Runner",
+          "scene": "aws-global",
+          "spine": true
+        },
+        {
+          "heading": "Choosing a Compute Service",
+          "scene": "aws-global",
+          "spine": true
+        }
+      ]
+    },
+    {
+      "id": "05-storage-s3-ebs-efs-fsx",
+      "title": "Storage — S3, EBS, EFS & FSx",
+      "notebook": "notebooks/05-storage-s3-ebs-efs-fsx.ipynb",
+      "defaultScene": "aws-data-engineering",
+      "sections": [
+        {
+          "heading": "The three categories at a glance",
+          "scene": "aws-data-engineering",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "S3 — Buckets and Objects",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Storage Classes",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Security Model",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Encryption",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Versioning, Object Lock, and MFA Delete",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Lifecycle Policies",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Replication",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Performance",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Pre-signed URLs, Access Points, and Object Lambda",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Event Notifications",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "S3 Select, Batch Operations, and Storage Lens",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Static Website Hosting",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "EBS — Block Storage for EC2",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Volume Types",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Snapshots",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Encryption",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Instance Store",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "EFS — Elastic File System",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Performance and Throughput Modes",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Storage Tiers and One Zone",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "FSx — Specialised File Systems",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Windows File Server and Lustre in More Detail",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Storage Gateway — the Hybrid Bridge",
+          "scene": "aws-data-engineering",
+          "spine": true
+        },
+        {
+          "heading": "Choosing Among the File Storage Options",
+          "scene": "aws-data-engineering",
+          "spine": true
+        }
+      ]
+    },
+    {
       "id": "06-vpc-and-connectivity",
       "title": "VPC & Connectivity",
       "notebook": "notebooks/06-vpc-and-connectivity.ipynb",
