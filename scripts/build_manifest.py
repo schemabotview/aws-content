@@ -137,6 +137,30 @@ MODULES = [
     # default in the section loop below. Give a module its own scene later by adding
     # the scene in graphl-ux and replacing the entry here with a real overlay map.
     dict(
+        id="03-compute-core-ec2-elb-autoscaling",
+        title="Compute Core — EC2, ELB & Auto Scaling",
+        notebook="notebooks/03-compute-core-ec2-elb-autoscaling.ipynb",
+        scene="aws-vpc",
+        backdrop=True,
+        overlay={},
+    ),
+    dict(
+        id="04-serverless-and-containers",
+        title="Serverless & Containers",
+        notebook="notebooks/04-serverless-and-containers.ipynb",
+        scene="aws-global",
+        backdrop=True,
+        overlay={},
+    ),
+    dict(
+        id="05-storage-s3-ebs-efs-fsx",
+        title="Storage — S3, EBS, EFS & FSx",
+        notebook="notebooks/05-storage-s3-ebs-efs-fsx.ipynb",
+        scene="aws-data-engineering",
+        backdrop=True,
+        overlay={},
+    ),
+    dict(
         id="07-dns-cdn-and-edge",
         title="DNS, CDN & Edge",
         notebook="notebooks/07-dns-cdn-and-edge.ipynb",

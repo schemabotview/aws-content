@@ -45,12 +45,14 @@ Four faithful ports of the NodeMap `aws*` scenes, one per topic:
 ## Status
 
 - **14 notebooks** copied from `~/Projects/aws` (a 14-module beginner→SAA curriculum).
-- **11 modules wired** in `manifest.json` (166 sections). Five ride a dedicated
-  scene with per-section `highlight`/`focus` (01→aws-global, 02→aws-iam, 06→aws-vpc,
-  09 & 10→aws-data-engineering). The other six (07, 08, 11, 12, 13, 14) ride the most
-  topically related scene as a **full-strength backdrop** (no spotlight — their
-  content has no matching scene nodes; every section on the spine, first = hook).
-  Modules **03, 04, 05** (compute / serverless / storage) are **not yet wired**.
+- **All 14 modules wired** in `manifest.json` (253 sections) — the full course loads
+  as one continuous flow. Five ride a dedicated scene with per-section
+  `highlight`/`focus` (01→aws-global, 02→aws-iam, 06→aws-vpc, 09 & 10→aws-data-engineering).
+  The other nine (03, 04, 05, 07, 08, 11, 12, 13, 14) ride the most topically related
+  scene as a **full-strength backdrop** (no spotlight — their content has no matching
+  scene nodes; every section on the spine, first = hook). Give any of them its own
+  diagram later by authoring a scene in graphl-ux and replacing its `backdrop` entry
+  in `scripts/build_manifest.py` with a real overlay map.
 - **Per-section `.tts` authored** for **all 14 notebooks** (234 scripts,
   `tts/NN-SS-slug.tts`), written from scratch from each `## ` section per the TTS
   guidelines (plain spoken prose, no tables/code, acronyms spelled out). Intro
