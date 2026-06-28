@@ -1,0 +1,7 @@
+The global accelerator.
+
+The global accelerator is the third leg of the edge story, and unlike the content network it caches nothing. What it does is get user traffic onto AWS's private backbone at the nearest edge and carry it across AWS infrastructure to your application, giving less variability and more predictable latency than the public-internet path.
+
+Its user-facing surface is two static anycast addresses; anycast means the same address is announced from many edges, so the user lands at whichever is closest, and from there AWS routes over its backbone to the healthy endpoint with the lowest latency. Two static addresses that never change is powerful: clients can hard-code them, firewalls can allow-list them, and failover happens at the network layer in seconds without waiting on any name-resolution time-to-live.
+
+It routes to load balancers, instances, and elastic addresses, organized into endpoint groups, one per region, each with a traffic dial you can turn to zero to drain a region during a deployment. And with load-balancer and instance endpoints, the original client address is preserved, so your application still sees real source addresses, which is a practical reason to put the accelerator in front of a regional load balancer.

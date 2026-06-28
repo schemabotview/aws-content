@@ -1,0 +1,5 @@
+Elastic load balancing.
+
+Once you run more than one instance, users need a way to reach the app rather than picking a single instance by address. That's the job of a load balancer: it accepts incoming connections at one stable endpoint and distributes them across a fleet of targets.
+
+The value it adds is several things at once. It health-checks the targets, so unhealthy ones stop receiving traffic. It gives clients a single d-n-s endpoint, so they never track individual instances. It drains connections gracefully when you remove an instance mid-deploy. It can terminate t-l-s, so the certificate lives on the balancer rather than on every instance. And it can keep a client returning to the same target when you need stickiness.

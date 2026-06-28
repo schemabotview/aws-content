@@ -1,0 +1,7 @@
+Security groups.
+
+A security group is a virtual firewall attached to a network interface, on an instance, a load balancer, a database, a function, anything with an address in your network. Four properties shape how you design with them.
+
+It's stateful, so if you allow inbound on a port, the return traffic is allowed automatically and you don't write a matching outbound rule. It has allow rules only; there's no deny, and everything not permitted is implicitly denied. You can attach several to one interface, and their rules combine additively, so if any group allows the traffic, it's allowed. And a rule can reference another security group as its source instead of an address range, which is both more expressive and more maintainable because it tracks instances automatically as they scale.
+
+The canonical pattern is the layered chain: the load-balancer group allows the web port from the internet, the app group allows its port from the load-balancer group, and the database group allows its port from the app group, each layer trusting only the one above it.

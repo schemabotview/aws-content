@@ -1,0 +1,7 @@
+Rotation, deletion, and multi-region keys.
+
+Three lifecycle topics. Rotation: enabling automatic rotation on a customer-managed key generates new key material once a year, while the key's id, name, and aliases stay the same, so applications see no change; the service keeps all previous material versions, so data encrypted with old material stays decryptable, and on-demand rotation lets you trigger one immediately if you suspect compromise.
+
+Deletion: keys can't be deleted immediately; scheduling deletion starts a mandatory waiting period of a week to a month, during which the key is disabled but recoverable, and once the window closes the key is gone and any data encrypted with it is permanently unrecoverable. The safer move when unsure is to disable the key instead, which makes it unusable with no data at risk and re-enable-able later.
+
+Multi-region keys are a set of keys in different regions sharing the same material and id, so you can encrypt with the primary in one region and decrypt with the replica in another without re-encrypting; the use cases are global applications, global database tables, and cross-region replication of encrypted objects, and each replica is independent for policy purposes.

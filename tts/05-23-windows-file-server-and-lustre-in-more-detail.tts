@@ -1,0 +1,5 @@
+The Windows file server and Lustre in more detail.
+
+The Windows file server is a fully managed Windows filesystem running on Windows Server underneath. It speaks the Windows sharing protocol, stores files in the native Windows filesystem, integrates with Active Directory, and can federate multiple filesystems under one namespace. A multi-zone deployment runs an active filesystem in one subnet and an automatically-promoted standby in another, with daily backups to object storage. Lift-and-shift Windows apps and Windows home directories are the canonical workloads.
+
+Lustre delivers up to hundreds of gigabytes per second of throughput at sub-millisecond latency, for chewing through huge datasets fast in training, genomics, and modeling. Its object-storage integration is the clever part: you link the filesystem to a bucket, files appear on first access, and results export back; the data lives cheaply in the bucket, and Lustre is the high-performance compute-time mount. It comes in two flavors: scratch, temporary and cheapest for processing runs whose output goes back to the bucket, and persistent, replicated within a zone for long-running jobs.

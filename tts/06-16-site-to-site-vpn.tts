@@ -1,0 +1,7 @@
+Site-to-site vpn.
+
+A site-to-site vpn runs an encrypted tunnel between your on-premises network and AWS, over the public internet. It's the fastest way to connect a data center to a network, set up in minutes, with no physical install, and encrypted by default.
+
+There are three components: a virtual private gateway attached to your network on the AWS side, or a transit gateway with a vpn attachment for the multi-network case; a customer gateway representing your on-premises device's public address; and the connection that runs the encrypted tunnels between them. Every connection has two tunnels to two AWS-side endpoints by design, so configuring both on your device gives you automatic failover. Routing can be static, where you tell each side which ranges are on the other, or dynamic, where the two sides exchange routes automatically; dynamic is the default for any non-trivial topology.
+
+The honest limits are that each tunnel caps at a bit over a gigabit and the path rides the public internet, so latency varies; for low bandwidth, quick rollout, or a backup path, it's the right tool, and for sustained high throughput you move to direct connect.

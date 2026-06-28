@@ -1,0 +1,7 @@
+The firewall manager.
+
+The firewall manager centralizes security policy across an organization: web access control lists, advanced denial-of-service subscriptions, security-group baselines, network-firewall policies, and name-resolution firewall rules. You define a policy once in the management or a delegated-administrator account, and it applies and enforces that policy across every member account.
+
+The practical fit is two patterns. Enforcing a baseline, for example requiring that every internet-facing load balancer in every account has the core rule set attached. And onboarding new accounts automatically, so a new account joining the organization inherits all the policies on day one without anyone having to remember.
+
+The cue is applying the firewall or denial-of-service protection across all accounts, centralizing security policy in an organization, or requiring new accounts to inherit it automatically.

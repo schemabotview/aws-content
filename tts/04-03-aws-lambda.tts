@@ -1,0 +1,5 @@
+AWS Lambda.
+
+Lambda runs your code in response to events, scales automatically from zero to thousands of concurrent executions, and bills per millisecond. You supply a function; AWS supplies the runtime, the network, the scaling, and the integrations with dozens of event sources.
+
+A function is four things. The handler is the entry point AWS calls on each invocation. The runtime is the language environment, Python, Node, Java, Go, and so on, or a custom one. The execution role is its identity, the permissions the function holds at runtime. And the configuration sets memory, timeout, environment variables, and networking. Hand AWS the function, and it deals with everything around it.

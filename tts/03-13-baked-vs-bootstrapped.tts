@@ -1,0 +1,9 @@
+Baked versus bootstrapped.
+
+There's a spectrum for how an instance gets its software. At one end, fully bootstrapped: a bare base image, and everything installed at boot through user data. It's the slowest to launch but the most flexible, since config changes need no rebuild, which suits rapid iteration.
+
+At the other end, fully baked: the app and all its config are already in the image. It launches fastest but every change means rebuilding the image, which suits auto scaling at scale and immutable infrastructure.
+
+In between is the hybrid: a base image carries the heavy dependencies and the app is pulled in at launch, which is where most production fleets land.
+
+The trade is always launch speed against flexibility. The native tool for producing those baked golden images, on a schedule or whenever the base image updates, is image builder.

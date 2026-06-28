@@ -1,0 +1,9 @@
+Purpose-built databases.
+
+A handful of databases exist because both relational and the key-value store are wrong shapes for specific workloads; each is a one-liner away from being unfit for everything else, and the value is recognizing the cue.
+
+The document store is compatible with MongoDB and sits on the same Aurora-style storage underneath; the cue is MongoDB or document data with variable structure. The graph database models data as nodes and edges and runs traversal queries; the fit is highly connected data, social graphs, fraud-detection link analysis, recommendations, and knowledge graphs, with cues like graph, social network, fraud, or friend-of-friend. The wide-column store is a serverless Cassandra-compatible option for high-write wide-row workloads; the cue is Cassandra.
+
+The time-series database auto-tiers recent data in memory and history on cheaper storage with built-in time functions; cues are time-series, sensors, and metrics over time. The durable in-memory store gives you the Redis interface on top of a durable multi-zone log, so unlike the cache it's safe as a primary database; the cue is durable Redis or can't-afford-to-lose-this-data. And the ledger database keeps a cryptographically verifiable immutable journal where every change is hashed and appended, so you can prove no record was altered; the fit is centralized audit trails, and if the scenario needs multi-party decentralized trust instead, that's the blockchain service.
+
+The selection skill is the cue-to-service jump.

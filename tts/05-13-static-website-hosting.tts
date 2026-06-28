@@ -1,0 +1,5 @@
+Static website hosting.
+
+Object storage can serve a static site directly: enable website hosting on the bucket, set an index and error document, and reach it on the website endpoint.
+
+But for anything production-grade, put the content-delivery network in front. That gives you a custom domain, secure h-t-t-p with a managed certificate, global edge caching, and origin access control, which keeps the bucket private so that only the distribution can read from it. The web application firewall sits naturally at that same edge. The bare website endpoint is for quick internal sites; the distribution with origin access control is the production default.

@@ -1,0 +1,7 @@
+Database security.
+
+Security wraps the database on several sides. On the network, instances live inside your private network, normally in private subnets, with a security group that allows the engine's port from the application tier's security group only; there's no production reason for a database to be publicly reachable.
+
+Encryption at rest is key-management-service-backed and must be enabled at instance creation, since you can't toggle it on later; to encrypt an existing instance you snapshot it, copy the snapshot with encryption on, and restore that copy. Encryption in transit is enforced through the engine, validating against a regional certificate bundle.
+
+Identity-based database authentication lets the application skip the password entirely, asking for a short-lived token and using that where a password would go, which pairs naturally with instance and function roles so no credential sits in any config file. And when that isn't available, the secrets manager is the standard home for the master credentials, with a built-in integration that rotates the password on both the database and the stored secret atomically, so the application always reads the current secret rather than hard-coding it.

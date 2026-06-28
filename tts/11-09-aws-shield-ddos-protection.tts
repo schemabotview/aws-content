@@ -1,0 +1,7 @@
+Shield, denial-of-service protection.
+
+Shield protects AWS resources from distributed denial-of-service attacks, in two tiers. The standard tier is automatic, free, and on for every account; it defends the network and transport layers, syn floods, reflection, and volumetric attacks, for resources behind the content network, name resolution, load balancers, and elastic addresses, with nothing to configure, since AWS absorbs the routine attack traffic before it reaches you.
+
+The advanced tier is a paid subscription, a few thousand dollars a month, that builds on standard with several things worth memorizing. It adds application-layer protection, defending against request floods that the standard tier doesn't cover. It adds cost protection, crediting back the scaling charges you incur because of an active attack, which without it could be a six-figure bill. It gives you around-the-clock access to a response team that helps mitigate live attacks and writes custom rules. And it provides detailed attack metrics and alarms.
+
+The practical cue is denial-of-service cost protection, application-layer floods, twenty-four-seven expert support, or protecting a high-value internet-facing application; anything else is already covered by the standard tier.

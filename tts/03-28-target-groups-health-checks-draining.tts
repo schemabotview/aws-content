@@ -1,0 +1,7 @@
+Target groups, health checks, and draining.
+
+A target group is reusable; several balancers and rules can point at the same one. Its health check defines a protocol and path, like a web request to a health endpoint, plus thresholds for how many consecutive passes mark a target healthy and how many failures mark it unhealthy, an interval, and a timeout.
+
+The key behavior to understand is deregistration delay, also called connection draining. When a target is removed, the balancer stops sending it new requests but waits up to this delay for in-flight requests to finish; the default is three hundred seconds. Lower it for stateless services and keep it higher for long-lived or websocket connections.
+
+One more knob: cross-zone load balancing, which spreads traffic evenly across all zones, is on by default and free for the application load balancer, but off by default for the network and gateway types, where enabling it incurs cross-zone data charges.

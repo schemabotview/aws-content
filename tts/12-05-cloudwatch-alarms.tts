@@ -1,0 +1,7 @@
+Alarms.
+
+An alarm watches a single metric, or a metric-math expression, and moves between three states based on how the metric compares to a threshold: an okay state within the threshold, an alarm state when it's breached per the rules, and an insufficient-data state when there aren't enough data points, as at startup or during a gap. The evaluation parameters trip people up: a five-minute period, three evaluation periods, and two-out-of-three data points to alarm means it alarms when the metric breached the threshold in at least two of the most recent three windows; set these tighter than necessary and the alarm flaps, looser and the response is delayed.
+
+An alarm's actions are several. The universal one is a notification, which fans out to email, text message, or a function. An auto-scaling action scales a group in or out, the backend for target tracking. An instance action can stop, terminate, reboot, or recover an instance, where recover replaces the underlying host on hardware failure while preserving the instance and its volumes. And a systems-manager action kicks off a self-healing runbook.
+
+Because real incidents rarely match a single metric, a composite alarm combines child alarms with and-or-not logic, whose big payoff is noise reduction: you page on the composite and suppress the noisy children. And a billing alarm watches estimated charges, with two specifics worth knowing, that billing metrics live only in one region and you must enable billing alerts first; it's the standard guardrail for any account.

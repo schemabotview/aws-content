@@ -1,0 +1,7 @@
+Performance efficiency.
+
+Performance efficiency is the pillar about hitting your performance targets without overspending. Pick the right compute: functions for sporadic event work, serverless containers for steady ones, instances for sustained or custom workloads, and arm-based processors for better price-performance on most workloads. Pick the right data engine per access pattern: relational for transactions, the key-value store for any-scale lookups, the warehouse for analytics, object storage with a query service for an ad-hoc lake, the search service for search, and a cache for hot data.
+
+Cache aggressively at every layer, at the edge, near the application, and in front of the key-value store when latency demands. Use asynchronous patterns, queues, topics, the event bus, and workflows, to decouple latency-sensitive paths from slow downstream work. Set auto-scaling rules with cooldowns so nothing flaps, aggressive on scale-out and conservative on scale-in. Optimize the network with placement groups, enhanced networking, and the global accelerator. And match storage class to access.
+
+The lever that pays everyone back is reviewing the architecture every quarter for newer instance generations and managed-service replacements that didn't exist when you designed it.

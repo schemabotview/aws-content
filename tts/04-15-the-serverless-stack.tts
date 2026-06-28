@@ -1,0 +1,5 @@
+The serverless stack.
+
+Lambda is rarely alone; a typical serverless application stitches several managed services together. Ay-pee-eye gateway is the h-t-t-p and websocket front door. The database service is the serverless no-sequel data store that scales to zero. Storage holds objects, and is also a Lambda event source. The messaging trio, queues, topics, and the event bus, handle decoupling, fan-out, and routing. Step functions orchestrate multi-step workflows. Aurora serverless gives you a relational database that scales with load. And Cognito handles user identity and sign-in.
+
+The whole stack scales independently and bills per use, which is the underlying value proposition of going serverless in the first place.

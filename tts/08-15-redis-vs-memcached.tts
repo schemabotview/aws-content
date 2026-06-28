@@ -1,0 +1,7 @@
+Redis versus Memcached.
+
+The cache offers two engines that look superficially similar, both key-value and in-memory, and choosing wrong is a common mistake.
+
+Redis is far richer: it has real data structures beyond strings, including sorted sets, lists, and hashes; it can persist to disk; it supports replication with multi-zone automatic failover; it can shard across many nodes; and it offers publish-subscribe, scripting, and transactions. Memcached, by contrast, stores only strings, has no persistence, no replication, and no failover, but it's multi-threaded and scales horizontally by adding nodes.
+
+The default answer is Redis: persistence, replication, failover, leaderboards, publish-subscribe, all on Redis. Memcached is right only when the workload is genuinely simple key-value caching that you're happy to lose entirely on a restart, and a single node's multi-threaded throughput fits better than Redis's mostly single-threaded model. There's also a newer engine, Valkey, a Redis-compatible fork the cache now offers, which is the right pick on cost, since its clusters are noticeably cheaper than the equivalent Redis cluster; everything true of Redis applies to it too.

@@ -1,0 +1,5 @@
+Error handling and destinations.
+
+For asynchronous invocations there are two failure pathways. A dead-letter queue, a queue or topic, receives the failed event payload after retries are exhausted; it's older and simpler, carrying just the payload. Lambda destinations are richer: they route both success and failure to a queue, topic, event bus, or another function, carrying the full event plus the function's response, which is far better for debugging.
+
+Event source mappings have their own retry semantics: a queue retries until the visibility timeout expires or the receive count trips the dead-letter trigger, while streams retry until the record expires or a bisect-on-error narrows down the one failing record. And partial batch responses let your function report exactly which records in a batch failed, so the successful ones aren't reprocessed.

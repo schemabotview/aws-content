@@ -1,0 +1,7 @@
+The shared responsibility model.
+
+The boundary between AWS's responsibility and the customer's is the most quoted security framing on the platform, and most architecture decisions sit on top of it. AWS is responsible for security of the cloud: the physical data centers, the hardware, the hypervisor, the global network, and the managed-service control planes. The customer is responsible for security in the cloud: their data, their identity configuration, their application code, and however they configure the services they use.
+
+The line shifts depending on the service. As you move from raw infrastructure toward serverless, AWS takes on more of the stack. On a raw instance, you own the most: the operating-system patching, the runtime, the app code, the firewall rules, and encryption. On a managed database, AWS handles the operating system, the engine, replication, and backups, while you still own the users, the schema, the firewall rules, and enabling encryption at creation. On object storage, AWS owns the storage tier completely, and you own the bucket policies, public-access settings, and encryption mode. On a function, AWS owns the runtime, scaling, and hardware, and you own the code, the execution role, and how you store secrets.
+
+But one row never moves: the customer is always responsible for their data, their identity configuration, and how they use the service. A public bucket with private data in it is a customer problem, no matter how many certifications AWS holds.

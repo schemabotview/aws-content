@@ -1,0 +1,7 @@
+Distribution and sort keys.
+
+Two physical design choices govern performance on large tables. The distribution style decides how rows are placed across compute nodes; pick badly and joins shuffle huge amounts of data across the network, pick well and joins stay local to each node. The automatic style lets the warehouse choose, the sensible default. A key style hashes a column so equal values land on the same node, right for large tables joined frequently on that column. An all style puts a full copy of the table on every node, right for small dimension tables joined a lot. And an even style round-robins when there's no clear join key.
+
+A classic pattern is a large fact table distributed by a key like customer id, with the small customer dimension table distributed to all nodes, so the join runs locally with no network shuffle.
+
+Sort keys decide the order data is stored within each node; the warehouse keeps zone maps recording the minimum and maximum sort-key value in each block, so a query filtering on the sort key skips whole blocks instead of scanning them. The right sort key, often a date column or the column most used in filters, turns a full scan into a small range read. Get these two right and a query can go from minutes to seconds with no change to the query itself.

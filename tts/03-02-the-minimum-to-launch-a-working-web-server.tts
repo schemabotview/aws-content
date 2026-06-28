@@ -1,0 +1,7 @@
+The minimum to launch a working web server.
+
+To get from nothing to a server you can open in a browser, you make six decisions, and for now we take the smallest viable choice for each.
+
+First, the machine image, the disk to boot from; a maintained, free Linux does the job. Second, the instance type, or size; a tiny, free-tier-eligible one is fine for a demo. Third, a key pair, so you can connect in over ess-ess-aitch if you need to. Fourth, the network: the default virtual private cloud with a public address turned on, which gives the instance a routable address. Fifth, a security group, the firewall, allowing port eighty for web traffic and port twenty-two for ess-ess-aitch. And sixth, user data, a boot script that installs and starts a web server, turning a bare operating system into a running app on first boot.
+
+When the instance finishes booting, its public address serves your page. That is the whole of compute at its simplest: one instance, one image, one boot script. Everything after this is refinement.

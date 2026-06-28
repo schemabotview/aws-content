@@ -1,0 +1,7 @@
+User pools, the authentication side.
+
+The user-identity service is really two products under one name: user pools answer who are you, a managed user directory with sign-up, sign-in, and identity tokens, and identity pools answer what AWS resources can you reach, swapping a token for temporary credentials; they're usually paired but solve different problems.
+
+A user pool is the authentication side. It handles username or email and password sign-up with configurable policies; social sign-in through providers like Google and Apple; enterprise federation through the standard identity protocols and providers like Okta; multi-factor authentication by text message or an authenticator app; email and phone verification; risk-based authentication that prompts for a second factor on suspicious sign-ins; and a pre-built, brandable hosted sign-in page so applications don't ship their own login form.
+
+On successful sign-in, it returns three tokens: an identity token carrying the user's claims, an access token carrying authorization scopes for your ay-pee-eye, and a refresh token for getting new tokens without re-prompting. It integrates so that ay-pee-eye gateway can validate the token with no custom code, and a load balancer can redirect unauthenticated users to the hosted page. It also fires functions at lifecycle events, like pre-sign-up validation or injecting custom claims into the token, which is how you graft application-specific behavior onto the managed flow. And user-pool groups organize users into roles whose membership flows into the token claims.

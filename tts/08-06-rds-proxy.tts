@@ -1,0 +1,7 @@
+The database proxy.
+
+Relational databases have a hard cap on concurrent connections, and opening one is expensive: a handshake, authentication, and memory allocation. Long-running application servers handle this with their own connection pool, but functions don't; every invocation is its own short-lived process with its own connection, so at a few thousand concurrent invocations the database starts rejecting connections and the system collapses under its own bursting.
+
+The database proxy is the fix: a managed connection pool that sits between the application and the database, multiplexing thousands of incoming connections into a small pool of long-lived backend ones.
+
+Three properties are worth remembering. It handles failover, detecting a promotion and reconnecting to the new primary in seconds while the application's connection to the proxy stays open, so code sees a brief pause rather than dropped sockets. It integrates with the secrets manager and presents an identity-authenticated endpoint, so passwords never leave the proxy. And it lives only inside your private network. The mental shortcut is simple: a function plus a relational database means put the proxy in between.

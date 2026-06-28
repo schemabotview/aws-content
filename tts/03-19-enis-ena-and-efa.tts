@@ -1,0 +1,7 @@
+Network interfaces and adapters.
+
+Three related things share similar initials. An elastic network interface is a virtual network card; every instance has at least one, and it carries the private address, the hardware address, the security groups, and any public or elastic addresses. You can attach several to one instance, which enables patterns like a management plane and data plane on separate subnets, or a floating address that moves between instances on failover.
+
+The elastic network adapter is the high-throughput driver that enables a hundred-plus gigabits per second on supported instances; it's on by default on modern hardware, with no setup needed.
+
+And the elastic fabric adapter is a specialized interface that bypasses the operating-system kernel for high-performance-computing and machine-learning traffic, which is what tightly coupled simulations and distributed training use to talk between nodes at very low latency.

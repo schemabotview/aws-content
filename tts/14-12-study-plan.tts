@@ -1,0 +1,7 @@
+A study plan.
+
+Here's a practical four-week run at the exam once you've been through this series. Week one is foundations, identity, networking, and compute: re-read those modules and build a lab with a network of public and private subnets, a scaling group behind a load balancer across two zones, and a least-privilege role, practicing reading policy documents. Week two is serverless, storage, name resolution, and the edge: deploy a function behind a gateway, stand up a bucket with versioning and lifecycle and a content distribution, and configure a failover routing policy.
+
+Week three is data, integration, and security: build a multi-zone database, create a key-value table with secondary indexes, set up a queue-to-function pipeline, and encrypt a volume with a customer key. Week four is observability, resilience, and cost: run a backup plan with a cross-region copy, use the cost explorer to find a savings opportunity, and take an official practice exam, reviewing every wrong answer against the source module.
+
+That last step is the most important: treat each wrong answer as an instruction to re-read a section, not a flashcard to memorize. On exam day, read the verb first, eliminate the old-school and unmanaged options, prefer managed services and modern primitives, and trust the picking rules for the confusable groups.

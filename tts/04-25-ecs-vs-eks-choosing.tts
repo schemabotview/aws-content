@@ -1,0 +1,7 @@
+Choosing between the two container services.
+
+The decision comes down to whether Kubernetes is a real requirement or just a preference. Lean toward the native container service when you're new to containers on AWS with no Kubernetes history, when you want the deepest AWS integration with minimal complexity, and when cluster cost matters at small scale.
+
+Lean toward the Kubernetes service when you already have Kubernetes workloads or manifests, when you need multi-cloud or on-premises portability, when you need rich Kubernetes scheduler features, and when your team is comfortable owning Kubernetes' operational complexity.
+
+The default for a new, AWS-only workload with no existing Kubernetes investment is the native container service on Fargate; it's the simplest, cheapest, lowest-overhead path. Kubernetes earns its complexity premium only when it's a genuine requirement.

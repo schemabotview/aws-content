@@ -1,0 +1,5 @@
+Container service auto scaling.
+
+A service scales through application auto scaling, the same engine that scales database capacity, and its policy types mirror the ones for instance groups. Target tracking holds a metric at a value, like average see-pee-you at seventy percent, or requests per target at a thousand. Step scaling responds with different magnitudes at different alarm thresholds. And scheduled scaling handles predictable patterns.
+
+There's one extra wrinkle for the instance launch type: you also have to scale the underlying instances, which you automate with a capacity provider backed by an auto scaling group, so the cluster grows and shrinks with the services on it. Fargate has no underlying capacity to manage at all, which is much of its appeal.

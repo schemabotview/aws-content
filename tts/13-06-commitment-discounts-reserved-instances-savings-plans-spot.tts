@@ -1,0 +1,7 @@
+Commitment discounts: reserved instances, savings plans, and spot.
+
+For anything running steadily, paying the on-demand rate leaves thirty to seventy percent on the table, and AWS offers three families of discount. Reserved instances commit you to a specific instance family and region for one or three years, for up to about seventy percent off; standard ones give the deepest discount but lock to the exact family, while convertible ones give a smaller discount but can be exchanged for different families during the term, and they're best for predictable steady-state on a single family.
+
+Savings plans commit you to an hourly dollar amount of spend, and the discount applies across families and regions automatically; the compute variant covers instances, containers, and functions interchangeably, while the instance variant is family-pinned for a slightly deeper discount, and they're easier to manage than reservations for fleets that churn. Spot instances bid on unused capacity for up to about ninety percent off, but can be reclaimed with two minutes' notice, perfect for batch jobs, build runners, and stateless workers that can restart.
+
+A well-run fleet often pays seventy to eighty-five percent off list: savings plans on the steady base, spot on the burst layer, and right-sizing keeping the base correct. There's a storage equivalent too: intelligent tiering moves objects between access tiers automatically, which beats hand-managed lifecycle rules for data with unpredictable access.

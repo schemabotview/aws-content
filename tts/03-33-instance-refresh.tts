@@ -1,0 +1,7 @@
+Instance refresh.
+
+When you update the launch template, with a new image, new user data, or a new instance type, instance refresh rolls that change across the fleet for you, with no manual cycling.
+
+You control it with a minimum healthy percentage, which caps how many instances are out of service at once; a warm-up time, which says how long before a fresh instance counts as in service; and optional checkpoints that pause between batches so you can verify. You can cancel or roll it back partway through.
+
+The pattern this enables is immutable infrastructure: rather than patching live instances, you bake a new image, point the launch template at it, and run an instance refresh, so every instance in the fleet is replaced rather than mutated.

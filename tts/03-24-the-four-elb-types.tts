@@ -1,0 +1,9 @@
+The four load balancer types.
+
+There are four, and three are current. The application load balancer works at layer seven; it understands web traffic and routes on content like path, host, header, or query, which makes it right for web apps, ay-pee-eyes, and microservices.
+
+The network load balancer works at layer four; it moves t-c-p and u-d-p connections without parsing them, gives you a static address per zone, and handles millions of requests per second at very low latency, which suits real-time, gaming, and financial workloads, or anything needing a fixed address.
+
+The gateway load balancer works at layer three and transparently passes traffic through third-party network appliances like firewalls. And the classic load balancer is the legacy option, kept only for old migrations.
+
+For anything new, use the application load balancer for web traffic and the network load balancer for everything else.

@@ -1,0 +1,7 @@
+The instance metadata service.
+
+Code running on an instance can query a special link-local address to learn facts about itself: its instance identifier, its zone, its attached role's credentials, its tags, its user data, and its addresses.
+
+There are two versions, and the difference is security. Version one is a simple request with no authentication, which makes it vulnerable to server-side request forgery: a bug in your app that fetches an attacker-controlled url can be tricked into leaking the role's credentials. Version two requires you to first request a session token and then present it on every read, which binds the token to the instance and defeats that attack.
+
+New launches default to requiring version two. Treat version one as deprecated; it has been the single biggest cause of credential-theft incidents on ee-see-two.

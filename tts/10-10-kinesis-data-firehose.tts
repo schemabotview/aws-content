@@ -1,0 +1,7 @@
+Firehose.
+
+Firehose is the managed delivery sibling of the streaming service. Where a stream is something you build consumers against, firehose is a one-way pipe: you point it at a destination, hand it data, and it delivers, buffering and batching along the way, with no shards to manage and no consumers to write. The trade-off is that it stores nothing; it's a delivery pipe, not a stream, so while failed records can be backed up, you can't replay history.
+
+Its destinations are object storage, by far the most common and a pairing with the query and catalog services downstream; the warehouse, which it loads by writing to object storage first and then issuing a load command; the search service for real-time dashboards; web endpoints; and various third-party tools.
+
+It batches records before delivering, by buffer size or by a time interval of up to a few minutes, whichever comes first, which is why it's described as near real-time, with a minimum latency around a minute; for sub-minute latency you need the streaming service, not firehose. It can also transform records inline with a function before delivery, for things like format conversion, field masking, or enrichment. The two often combine: producers write into a stream for the real-time consumers, while a firehose consumer on the same stream lands a copy in object storage for the data lake.

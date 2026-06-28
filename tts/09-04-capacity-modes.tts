@@ -1,0 +1,9 @@
+Capacity modes.
+
+The database has two billing modes, and the choice shapes both cost and behavior.
+
+With provisioned capacity, you specify read and write capacity units upfront; one read unit buys a strongly-consistent read per second of a small item, and one write unit buys a write per second, with larger items consuming proportionally more. Provisioned mode is cheaper for steady, predictable workloads, but if traffic exceeds the ceiling, requests are throttled. Auto-scaling sits on top, adjusting the provisioned values within a range you set over a minute or so.
+
+With on-demand capacity, there's no planning at all; the database scales instantly with traffic and you pay per request. It costs more per request but never throttles on a spike, which makes it the right default for unpredictable workloads, brand-new tables before you know the traffic shape, dev and test, and any application where bursting matters more than steady cost.
+
+You can switch between the two modes, with a cooldown of about a day after each switch.

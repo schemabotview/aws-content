@@ -1,0 +1,7 @@
+Logs.
+
+Logs are the unstructured cousin of metrics, text lines from services and applications, collected and queryable. The hierarchy has three levels: a log group is the container, one per logical source, with a retention setting from a day to ten years or never; a log stream is the events from a single emitter, like one function environment or one instance; and log events are the actual timestamped lines. Functions write automatically to a log group, containers capture their output, and flow logs and the agent all land here too.
+
+A metric filter scans incoming log events for a pattern and increments a metric when it matches, so a filter for error or exception on an application log group emits an errors metric that an alarm can page on; that's how you turn unstructured logs into actionable signals. There's also a query language, sequel-like, that runs across multiple log groups at once with time-binning and aggregation, the right tool for ad-hoc investigation, asking what happened around a specific time last night, without exporting to a warehouse.
+
+For getting logs out, a batch export sends a log group to object storage for archive, and a subscription filter streams matching events in real time into a stream, a delivery pipe, or a function, which is the standard plumbing for shipping logs to a search service or a third-party tool. Logs are encrypted at rest.

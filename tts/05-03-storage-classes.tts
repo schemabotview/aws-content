@@ -1,0 +1,7 @@
+Storage classes.
+
+Every class shares the same eleven-nines durability; they differ on availability, retrieval cost, and how long an object must stay before deletion is free.
+
+Standard is for hot data and is the default. Intelligent-tiering charges a tiny monitoring fee but moves objects between tiers automatically with no retrieval cost, and it's the right answer when you genuinely don't know the access pattern. Standard infrequent-access and one-zone infrequent-access are cheaper for data read maybe monthly, with a retrieval fee and a thirty-day minimum; one-zone is cheaper still because it isn't replicated across zones, so reserve it for reproducible data like thumbnails.
+
+The glacier tiers are for archives: instant retrieval reads in milliseconds but bills for retrieval, flexible retrieval takes minutes to hours, and deep archive takes up to a couple of days for the lowest cost. Watch the minimum-duration traps: delete a thirty-day-minimum object after a week, and you still pay the full thirty days.

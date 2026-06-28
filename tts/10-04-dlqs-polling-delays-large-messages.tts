@@ -1,0 +1,7 @@
+Dead-letter queues, polling, delays, and large messages.
+
+A few queue features come up constantly. A dead-letter queue is a separate queue where messages that fail processing too many times are sent; you set a maximum receive count on the main queue, and after that many failed deliveries the message is moved aside. This matters for two reasons: a poison message, a malformed payload that breaks the consumer every time, doesn't block the queue, since it's shunted aside after a few attempts; and the dead-letter queue is your audit log of what failed, which you can inspect, fix, and then redrive back into the source.
+
+Long polling means setting a wait time of up to twenty seconds on a receive, so instead of returning immediately when the queue is empty, the service waits for a message to arrive, which cuts empty responses and costs; there's no reason not to use it. Delay queues make new messages invisible for up to fifteen minutes, useful for do-this-later patterns without a separate scheduler. And for payloads larger than the quarter-megabyte cap, the convention is to put the body in object storage and send a pointer through the queue, which an extended client library does transparently.
+
+Security wraps the rest with encryption, identity policies, and queue policies for cross-account access.

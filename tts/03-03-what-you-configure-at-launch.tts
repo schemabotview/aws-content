@@ -1,0 +1,7 @@
+What you configure at launch.
+
+Every launch comes down to a handful of settings, and it's worth knowing what each one controls.
+
+The machine image sets the operating system. The instance type sets the see-pee-you and memory profile. The key pair gives you ess-ess-aitch access on Linux, or decrypts the administrator password on Windows. The network settings choose the virtual private cloud, the subnet, and whether the instance gets a public address. The security group is the instance-level firewall. Storage is the root volume plus any extra volumes you attach. The identity role grants permissions through an instance profile, so you never put long-lived keys on disk. And user data is the script that runs once on first boot.
+
+The rest of this act is just the why behind each of these fields.

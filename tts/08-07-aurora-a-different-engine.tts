@@ -1,0 +1,7 @@
+Aurora, a different engine.
+
+Aurora isn't just managed open-source MySQL or Postgres; it's AWS's own engine that speaks those wire protocols on the front but reimplements the storage and replication layer underneath, and that rebuild is where its performance and availability come from. AWS's headline numbers are several times the throughput of the standard engines at the same instance size, and the mechanism is the shared cluster volume.
+
+In a traditional database, compute and storage live together, each instance with its own files on its own disk, and replication means streaming write events to other instances that re-execute them. Aurora separates the two: the compute instances, the primary and its replicas, all share a single distributed storage layer that lives independently of the compute tier. That layer keeps six copies of every piece of data across three zones, acknowledging a write when four of six confirm, and it's self-healing and grows automatically up to many terabytes with no pre-provisioning.
+
+Two consequences fall out. Adding a read replica copies no data, since it's just a new compute node pointed at the same volume, so Aurora supports up to fifteen replicas with very low lag. And failover is fast, often under thirty seconds, because the replicas are already attached to the shared volume and promotion is just a control-plane flip.

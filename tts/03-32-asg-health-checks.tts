@@ -1,0 +1,7 @@
+Auto scaling group health checks.
+
+The group decides whether to replace an instance based on a health check, and there are three kinds.
+
+The default ee-see-two check only confirms the instance is running and the hypervisor is healthy, so it catches host failures and kernel hangs. The load-balancer check uses the target group's health check, so it catches application-level failures, a crashed process or a server returning errors on every request. And a custom check lets you set health from your own signal.
+
+The important advice: always enable the load-balancer health check on production groups. Without it, an instance that's running but failing every request still counts as healthy, and the group will happily leave it serving traffic. Pair this with a health-check grace period, which delays checks on a new instance long enough for it to boot and pass; set it comfortably above your slowest cold start.

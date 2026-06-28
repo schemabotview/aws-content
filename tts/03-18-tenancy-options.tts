@@ -1,0 +1,7 @@
+Tenancy options.
+
+Tenancy is about how much of the physical hardware you share. The default is shared tenancy: your instances sit on hardware alongside other customers, safely isolated at the hypervisor, and it's the cheapest.
+
+A dedicated instance reserves the underlying hardware for your account, but you don't get visibility into it. A dedicated host goes further and gives you a specific physical server, where you can see the sockets, cores, and host identifier; that's what you need when a vendor's license is tied to physical sockets, like some Oracle or Windows licensing, or when an audit requires host-level visibility. And bare metal gives you a server with no hypervisor at all, direct hardware access.
+
+Unless licensing or compliance forces your hand, default to shared tenancy; it gives the same isolation guarantees at the hypervisor level for the lowest cost.

@@ -1,0 +1,7 @@
+Containers, the other compute model.
+
+A container packages your application, its runtime, and its dependencies into a single image that runs identically wherever a container engine exists. Containers boot in seconds, share the host kernel rather than virtualizing hardware, and are the unit of deployment for almost every modern microservice.
+
+The container model fits exactly where Lambda doesn't: long-running processes beyond Lambda's fifteen-minute cap, sustained see-pee-you or memory where per-invocation pricing loses to per-hour, workloads that need finer control over the runtime than Lambda exposes, and existing apps that are already containerized.
+
+AWS runs containers three ways: the elastic container service for native orchestration, the elastic Kubernetes service for managed Kubernetes, and Fargate as the serverless compute engine underneath either of them.

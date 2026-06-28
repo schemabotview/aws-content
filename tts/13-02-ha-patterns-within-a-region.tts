@@ -1,0 +1,7 @@
+High-availability patterns within a region.
+
+Within a region, AWS gives you multiple availability zones, physically separate data centers with independent power and network, and high-availability design is mostly about using them. The standard pattern is a stateless tier spread across multiple zones behind a load balancer, a stateful tier replicated across zones, and autoscaling on demand: instances in an auto scaling group spanning three zones behind a load balancer, a relational database in multi-zone mode with a synchronous standby, a cache with multi-zone replication, and object storage, the one service where you never think about zones because it spreads objects across them automatically.
+
+Four native primitives are worth being explicit about. A multi-zone auto scaling group kills the single-host failure mode at zero developer cost, as long as you keep at least two instances and span the zones. A multi-zone relational database fails the writer over to a standby in another zone in a minute or two with near-zero data loss, though only within one region. Aurora's storage layer keeps six copies of every write across three zones, so it survives losing a whole zone and can promote a read replica in seconds. And the no-sequel database replicates across zones invisibly.
+
+The one thing none of these handles is a whole-region outage; for that, you move to disaster recovery.

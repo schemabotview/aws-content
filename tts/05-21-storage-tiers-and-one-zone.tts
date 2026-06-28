@@ -1,0 +1,7 @@
+Storage tiers and one-zone.
+
+The elastic file system has its own internal tiering, parallel to object storage classes, where files move between tiers based on when they were last accessed, configured by a lifecycle policy. Standard holds active files; an infrequent-access tier is far cheaper for files not touched in a while; and an archive tier is cheaper still for files cold for longer.
+
+An optional rule promotes a file back to standard on access, useful so occasional reads don't pay the retrieval fee repeatedly, and the cold tiers do carry a retrieval cost, so they only pay off for genuinely cold files.
+
+There's also a one-zone variant, roughly half the price of the multi-zone default, suitable for dev and test, build caches, or data already backed up elsewhere; the trade is the obvious one, that if the zone fails the filesystem is unavailable, and a lost zone means lost data.

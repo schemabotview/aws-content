@@ -1,0 +1,7 @@
+Purchasing options.
+
+This is the single most important ee-see-two cost lever, and every option trades commitment for discount.
+
+On-demand asks for no commitment and gives no discount; it's right for unpredictable or short-lived workloads. A one-year reserved instance commits you for a year and saves around forty percent; a three-year commitment can save up to about seventy percent, for steady, around-the-clock workloads. Savings plans commit you to a spend rate for one or three years and reach similar discounts with more flexibility. Spot uses spare capacity for up to about ninety percent off, but it can be reclaimed at short notice, so it's for fault-tolerant work.
+
+And then there are isolation options: dedicated hosts and dedicated instances for licensing and compliance, and capacity reservations for guaranteeing capacity in a specific zone. The mental model: the more you commit, the deeper the discount.

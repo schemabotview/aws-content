@@ -1,0 +1,7 @@
+Security groups.
+
+A security group is a stateful, allow-only firewall attached to an instance's network interface. Stateful means that if you allow a connection in, the response is automatically allowed back out, and the reverse; you don't write return rules.
+
+It only has allow rules, never deny; for explicit denies you drop down to a network access control list at the subnet level. By default, all inbound is denied and all outbound is allowed. A rule's source can be an address range, a single address, or, powerfully, another security group's identifier.
+
+That last option is the cleanest pattern for tiered apps: the database security group allows its port from the app security group, not from a hard-coded address range, and the membership updates automatically as instances come and go. Remember that security groups aren't a substitute for network access control lists; one is stateful and per-instance, the other stateless and per-subnet, and they complement each other.

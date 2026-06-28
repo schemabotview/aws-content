@@ -1,0 +1,7 @@
+Envelope encryption.
+
+The key management service has a hard limit of a few kilobytes per direct encrypt call, plus a regional rate limit that would collapse under bulk load. The pattern AWS uses everywhere to work around this is envelope encryption.
+
+The flow is: the application asks the service to generate a data key, and gets back two things, a plaintext data key and the same key encrypted under your master key. The application encrypts the actual data locally with the plaintext key, using a fast cipher with no round-trip per byte, then stores the encrypted data alongside the encrypted data key and discards the plaintext key from memory. To decrypt later, it sends the encrypted data key to the service, gets the plaintext key back, and decrypts the data locally.
+
+The wins stack up: large payloads are encrypted at local processor speed rather than at service latency; the plaintext key never goes to disk; the encrypted data key is safe to keep beside the data, useless without service access; and the service only ever sees small keys, never the data. Every AWS-service integration implements this under the hood, so you rarely write it yourself unless you're encrypting your own application blobs.

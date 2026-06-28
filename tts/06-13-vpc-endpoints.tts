@@ -1,0 +1,7 @@
+Endpoints.
+
+An endpoint lets a network reach AWS services privately, without going through an internet gateway, a nat gateway, or a vpn. It matters for two reasons: nat bandwidth and per-gigabyte charges add up at scale, and many regulated workloads can't have their traffic to AWS leave the AWS network at all.
+
+There are two types, and the distinction is the whole story. A gateway endpoint serves only object storage and the no-sequel database, costs nothing, and works by adding a route to a prefix list in your route tables; for any private subnet calling object storage, it's a free win with no reason not to use it.
+
+An interface endpoint serves most other services by creating a network interface with a private address in your subnet, billed per hour and per gigabyte; it supports endpoint policies that restrict which principals and actions can use it, and with private name resolution enabled, the service's normal hostname resolves to that private address automatically, so your code needs no changes.

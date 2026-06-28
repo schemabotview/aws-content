@@ -1,0 +1,9 @@
+Secondary indexes.
+
+The base table's partition key answers one access pattern well; secondary indexes let you answer others by maintaining a second copy of items keyed differently.
+
+A local secondary index keeps the base table's partition key but uses a different sort key, like same customer ordered by date instead of by order id. Its constraints: it must be defined at table creation and can't be added later, you can have up to five, it shares the base table's throughput, it supports strongly-consistent reads, and it caps each partition key at ten gigabytes.
+
+A global secondary index uses an entirely different partition key, like all orders with a shipped status ordered by date. It can be created or dropped anytime, you can have up to twenty, it has its own separate throughput, but it supports only eventually-consistent reads, and there's no size cap.
+
+The decision rule: if you need strong consistency on the alternate key, it has to be a local index planned at design time; if you need a completely different partition key, or you didn't anticipate the access pattern, that's a global index.

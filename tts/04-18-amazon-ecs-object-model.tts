@@ -1,0 +1,7 @@
+The elastic container service object model.
+
+The container service is AWS's native orchestrator: it schedules, places, scales, and replaces containers across a cluster. Four objects make up its model.
+
+A cluster is the logical fleet, backed either by instances or by Fargate. A task definition is the blueprint: which containers, how much see-pee-you and memory, the image, ports, volumes, and roles. A task is a running instance of that definition, one or more containers running together. And a service maintains a desired number of tasks, integrates with a load balancer, and replaces tasks when they fail.
+
+The unit of deployment is the task; the unit of long-running operation is the service; and one-off batch jobs run as standalone tasks.

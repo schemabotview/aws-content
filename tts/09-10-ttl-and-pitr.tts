@@ -1,0 +1,5 @@
+Time-to-live and point-in-time recovery.
+
+Two small features matter operationally. A time-to-live auto-deletes items after a per-item expiry timestamp; you enable it on the table, point it at an attribute holding an expiry time, and the database removes expired items in the background, typically within a couple of days. Those deletes don't consume write capacity and they show up in the stream, so cleanup logic can hang off them. The caveat is that items aren't removed at exactly the expiry moment, so they can still appear in reads until the background sweep runs; filter on the expiry attribute if strict expiry matters.
+
+Point-in-time recovery is continuous backup: with it enabled, you can restore the table to any second within the last thirty-five days, recovering a new table at that timestamp, which is the standard guard against a bug that corrupts data or a delete-without-a-filter accident. On-demand backups are the manual companion, a full snapshot you trigger and keep until you delete it, with cross-region copy supported.

@@ -1,0 +1,7 @@
+Cold starts and warm starts.
+
+A cold start happens on the very first invocation, after an idle period, or whenever Lambda scales out to add concurrency: it has to download the code, start the runtime, and run your initialization before the handler. A warm start skips all of that and goes straight to the handler.
+
+The cold-start cost depends mostly on the runtime: lightweight ones like Python and Node take a hundred or two hundred milliseconds, while Java and dot-net can take half a second or more because of their startup. To reduce the pain, keep the package small, move heavy setup into initialization so it runs once per environment, and choose a lighter runtime where you can.
+
+And for latency-sensitive surfaces, provisioned concurrency pre-initializes a set number of environments so their requests never cold-start; you pay for that capacity even when idle, so reserve it for the surfaces that need it.

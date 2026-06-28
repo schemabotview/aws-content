@@ -1,0 +1,7 @@
+Streams and global tables.
+
+A stream is a twenty-four-hour change log of item-level modifications; every create, update, and delete can be captured as a record, ordered per partition key, and you choose what each record contains, the keys, the new image, the old image, or both.
+
+A function consumes the stream through an event source mapping, scaled automatically to the number of shards, and streams are the foundation under a lot of patterns: fanning a write out to downstream work, replicating writes into a search index, appending every change to object storage for audit, maintaining a derived view in another table, and replication itself.
+
+Global tables are the multi-region, multi-active replication built on streams. Every region accepts both reads and writes, and changes propagate to every other region typically in under a second, with conflict resolution by last-writer-wins on timestamp, so there's no application-level reconciliation. The use cases are global applications needing local-latency writes everywhere, active-active disaster recovery, and data residency. The trade is exactly that last-writer-wins model: workloads that can't tolerate an occasional silent overwrite need application-level conflict handling or a different architecture.

@@ -1,0 +1,7 @@
+Alias records.
+
+An alias record is a Route fifty-three extension that points a hostname directly at an AWS resource, rather than at another hostname. It's a feature of the answer logic, not a standard record type. From the client's side it looks like a plain address record returning an address; from your side, you don't hard-code an address that might change.
+
+Compared with a canonical-name record, the alias has three advantages: it's allowed at the zone apex, where a canonical name isn't; queries to it are free; and it integrates with health checks.
+
+The valid targets are worth memorizing: load balancers, content-delivery distributions, ay-pee-eye gateway, object-storage website endpoints, Elastic Beanstalk environments, interface endpoints, the global accelerator, and other records in the same zone. Notably, raw instance names and database endpoints are not on the list, so those still need canonical-name records and therefore can't sit at the apex.

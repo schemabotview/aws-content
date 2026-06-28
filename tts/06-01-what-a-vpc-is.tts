@@ -1,0 +1,5 @@
+What a virtual private cloud is.
+
+A virtual private cloud is your own logically isolated network inside AWS. Every resource that touches the network lives in one: instances, databases, functions attached to a network, container tasks, and load balancers.
+
+The virtual private cloud defines an address space, how that space is sliced into subnets, what traffic can enter or leave, and how to reach the rest of the world, other networks, AWS services, your on-premises data center, and the public internet. Think of it as the empty plot of network you lay everything else out on; before you can connect to anything, you decide its shape.

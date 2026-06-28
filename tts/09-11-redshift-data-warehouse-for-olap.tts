@@ -1,0 +1,7 @@
+The data warehouse.
+
+The warehouse is AWS's fully managed analytical store. Its job is online analytical processing, meaning big queries over big datasets, monthly revenue rollups, cohort analysis, and joins across years of history, which is the opposite of the small point-lookups that transactional databases are built for. Analytical queries are few and large, the data runs from terabytes to petabytes, and the users are analysts and reporting tools rather than the application.
+
+The key word is columnar. A row store keeps each row's fields together on disk, perfect for fetching one whole row by key; a columnar store keeps each column's values together, perfect for summing one column across a billion rows, because only that column is read off disk. For an analytical query touching three columns out of fifty, columnar storage cuts the input-output by an order of magnitude or more, and compression is far better too, since values within a column are similar.
+
+That one design choice is most of why the warehouse is fast on analytics and unsuited to transactional work.

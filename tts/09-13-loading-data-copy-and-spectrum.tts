@@ -1,0 +1,7 @@
+Loading data: the copy command and external querying.
+
+The right way to bulk-load the warehouse is the copy command, which reads files in parallel from object storage, each compute node slice pulling its own files; it supports many formats and is orders of magnitude faster than running insert statements. The pattern in almost every pipeline is: land data in object storage, then copy it into the warehouse.
+
+The other half of the story lets the warehouse query data directly in object storage without loading it first. You define external tables backed by objects, usually catalogued in the shared data catalog, and standard queries can join those external tables against tables that live inside the cluster; a separate pool of nodes scans the object store in parallel, billed per terabyte scanned.
+
+The split is useful: hot, frequently-joined data lives inside the warehouse, while cold historical data stays in object storage and is queried externally when needed, with the same query language working against both. One networking detail: an enhanced-routing option forces the load and unload traffic to traverse your private network rather than the public internet, required for compliance setups.

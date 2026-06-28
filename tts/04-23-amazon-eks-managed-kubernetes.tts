@@ -1,0 +1,7 @@
+The elastic Kubernetes service.
+
+The Kubernetes service runs the Kubernetes control plane, the ay-pee-eye server, the key-value store, the scheduler, and the controllers, as a managed AWS service; you're responsible for the worker nodes, or you use Fargate for a nodeless pattern.
+
+Choose it over the native container service when one of these applies: your team already runs Kubernetes and wants one operational model; multi-cloud portability matters, since Kubernetes manifests are largely cloud-agnostic; you need rich Kubernetes-specific scheduling like taints, tolerations, and custom operators; or you're adopting the broader Kubernetes ecosystem of charts, meshes, and git-ops tools.
+
+Choose the native container service when none of those apply and you want simplicity, lower cost at small scale, and the deepest AWS integration. The Kubernetes control plane carries a small hourly cost per cluster that matters at small scale but disappears at large scale.

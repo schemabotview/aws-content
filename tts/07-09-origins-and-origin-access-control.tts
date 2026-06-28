@@ -1,0 +1,7 @@
+Origins and origin access control.
+
+An origin is where the network fetches content on a cache miss. It can be an object-storage bucket, a load balancer, an instance with a public address, or any web server on the internet, and a single distribution can have multiple origins, with cache behaviors routing different path patterns to different ones.
+
+For an object-storage origin, the recommended pattern is origin access control: keep the bucket completely private, and let only the distribution read from it. The distribution signs its origin requests, and the bucket policy allows the distribution's service principal scoped to that specific distribution, so the user never reaches the bucket directly and there's no public access to worry about. This replaced an older access-identity mechanism, which still works but is on its way out, since the newer control supports encrypted buckets and write methods.
+
+There are also origin groups, which wrap a primary and a secondary origin for failover: if the primary returns configured errors or times out, the network retries the secondary automatically and invisibly.

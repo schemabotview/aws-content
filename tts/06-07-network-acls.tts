@@ -1,0 +1,7 @@
+Network access control lists.
+
+A network access control list sits one layer up, at the subnet boundary, evaluating traffic entering or leaving the subnet, separately from any security group. It looks similar to a security group but has inverted properties. It works at the subnet, not the interface. It's stateless rather than stateful. And it has both allow and deny rules, evaluated in order with the first match winning, where a security group combines all rules at once.
+
+The stateless property is the trap. Because return traffic isn't automatically allowed, you must permit both directions explicitly, and the response to an inbound request comes back on a high-numbered ephemeral port; if you allow inbound on the web port but forget to allow outbound on the ephemeral range, the connection completes its handshake and then hangs.
+
+In practice you leave the default list wide open and do your firewalling with security groups, reaching for custom lists only for things groups can't do, like blocking a specific bad address at the subnet edge. Security groups are the workhorse; the access control list is the bouncer.

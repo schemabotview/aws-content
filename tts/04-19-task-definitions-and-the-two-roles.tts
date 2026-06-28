@@ -1,0 +1,7 @@
+Task definitions and the two roles.
+
+A task definition is a document that pins down everything about how a task runs: the image, see-pee-you and memory, port mappings, environment variables, logging, volumes, networking mode, and two distinct identity roles.
+
+The split between those roles is deliberate. The task execution role belongs to the agent on the host; it uses it to pull the image from the registry and ship logs, so its permissions are plumbing. The task role is your application's own identity; it carries whatever your code needs, like reading from a bucket or querying a table.
+
+Because the task role's credentials are exposed to the container through the standard metadata path, the software development kit inside your container just works, with no embedded keys anywhere.

@@ -1,0 +1,7 @@
+Select, batch operations, and storage lens.
+
+Three capabilities sit just outside the core storage model. Select runs a sequel query against the contents of a single object, comma-separated, json, or parquet, on the server, returning only the matching rows; it cuts transfer and processing cost sharply when you only need a slice of a large file.
+
+Batch operations runs a single action across billions of objects as one managed job: copy them, invoke a function per object, replace tags, restore from archive, or backfill replication for objects that predate it; you feed it an inventory file as the manifest and it produces a completion report.
+
+And storage lens is the organization-wide analytics dashboard, with dozens of metrics across every account and bucket, plus cost recommendations like buckets missing lifecycle rules or incomplete uploads piling up, and its metrics export for querying.

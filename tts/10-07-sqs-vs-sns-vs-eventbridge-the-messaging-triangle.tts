@@ -1,0 +1,5 @@
+The messaging triangle.
+
+Three services all decouple producers from consumers and look similar, so picking the right one is a frequent decision. The queue service is a pull model: one consumer processes each message, messages persist for up to two weeks, and there's no filtering beyond the dead-letter queue. The notification service is a push model: many subscribers get a copy at once, there's no persistence, and each subscription can filter on attributes. The event bridge is an event bus with rules: many targets via rich pattern matching, optional archiving, and crucially it can source events from AWS services and software-as-a-service partners, not just your own application.
+
+The practical decision tree is short. To decouple a producer from a single consumer and buffer traffic, use the queue. For one event reaching many subscribers with simple delivery, use the notification service, often paired with queues for durability. And to route AWS-service or partner events with complex matching, or many-to-many across accounts and regions, use the event bridge, which is essentially the notification idea with a richer matching layer and a broader source surface.

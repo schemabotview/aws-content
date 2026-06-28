@@ -1,0 +1,7 @@
+Spot instances.
+
+Spot uses AWS's spare capacity, at seventy to ninety percent off on-demand. The catch is that AWS can reclaim the instance with just a two-minute warning when it needs the capacity back.
+
+The price moves smoothly over time, so there's no bidding anymore. When an interruption is coming, AWS fires a signal in the instance metadata, and then the instance is stopped or terminated. To reduce the chance of many instances going at once, a spot fleet diversifies across instance types and zones.
+
+Spot is a great fit for batch processing, build-and-test runners, big-data jobs, stateless web workers behind a load balancer, and machine-learning training that checkpoints its progress. It's a bad fit for databases or anything with state it can't checkpoint, for single-zone dependencies that can't tolerate eviction, and for anything with a strict service-level agreement. The right pattern today is diversification: spread across types and zones so no single capacity crunch takes you all down.

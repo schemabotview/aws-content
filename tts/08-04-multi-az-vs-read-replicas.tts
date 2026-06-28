@@ -1,0 +1,7 @@
+Multi-zone versus read replicas.
+
+These two features look similar and solve completely different problems. A multi-zone deployment provisions a synchronous standby in a different zone in the same region; every write commits to both the primary and the standby before the application sees an acknowledgement. The standby carries no traffic, sitting idle as a hot spare, and when the primary fails, the service promotes it and flips the endpoint's name record, so the application reconnects to the same name and lands on the new primary, typically in a minute or two. Its whole purpose is high availability, not capacity. A newer cluster variant runs one writer plus two readable standbys across three zones, giving availability plus a little read scaling and faster failover.
+
+Read replicas, by contrast, are asynchronous copies that do serve read traffic; they have their own endpoint, you route reads to them explicitly, and you can place them in another zone or even another region, though each carries a little lag, so reads may be slightly stale.
+
+You combine them: multi-zone for availability in the primary region, read replicas for scaling read load, plus a cross-region replica for a warm disaster-recovery site.

@@ -1,0 +1,7 @@
+The event bridge: schema registry, pipes, and archive.
+
+Three features show up in real architectures. The schema registry auto-discovers the schema of events flowing through a bus and stores them, and from there you can generate typed code bindings, so application code consumes events as typed objects instead of raw dictionaries, useful as the event surface grows past what fits in one engineer's head.
+
+Pipes are point-to-point integrations between a source and a target with optional filtering and enrichment, no glue code: a source like a queue, a stream, or a database stream flows through an optional filter and an optional enrichment step to a target, replacing the very common pattern of a function that polls one service and forwards to another; it's cheaper, and the filter runs at the source, so unwanted records never reach the enrichment step.
+
+And archive-and-replay lets the bus archive every event matching a pattern for a retention period, then replay archived events back to a bus with optional filtering, which is invaluable for debugging by replaying a past day's events through new logic, onboarding a new consumer with historical data, or recovering from an incident. Finally, a bus in one account can deliver to buses in other accounts and regions, so the standard pattern is a central bus in a security account that receives events from every account in the organization, one place to attach detective rules and react to incidents.

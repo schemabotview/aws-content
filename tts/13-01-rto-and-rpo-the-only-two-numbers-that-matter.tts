@@ -1,0 +1,7 @@
+Recovery time and recovery point objectives.
+
+The entire conversation about high availability and disaster recovery reduces to two numbers, quoted per workload. The recovery time objective is how long the workload can be down before the business is in real trouble. The recovery point objective is how much data the business can afford to lose, measured in time, meaning the gap back to the last successful backup or replication point.
+
+Quote them per workload, not per company. A customer-facing checkout flow might need a recovery time under five minutes and a recovery point under thirty seconds, while a back-office reporting warehouse might be fine with a day of downtime and four hours of data loss. Every architectural choice that follows, synchronous versus asynchronous replication, multi-zone versus multi-region, a hot standby versus a cold backup, is paying for a smaller objective, and the question is always how small is small enough for this workload.
+
+Two costs scale with tightening those objectives: money, for more hardware, more replicas, and more cross-region bandwidth; and complexity, for more failover automation, more drift between primary and standby, and more to test. Buying multi-region active-active for everything is the costliest mistake in disaster-recovery planning.

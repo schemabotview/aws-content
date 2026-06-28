@@ -1,0 +1,7 @@
+The network load balancer.
+
+This one operates at layer four. It moves packets without parsing them, which makes it both extremely fast and protocol-agnostic.
+
+It gives you static addresses, one per zone, which you can even assign as elastic addresses, and that's what you need for firewall whitelisting. It preserves the client's real source address, so the target sees who's actually connecting, where the application load balancer instead rewrites it into a forwarded-for header. It scales to millions of requests per second at single-digit-millisecond latency. It can either terminate t-l-s with a certificate or pass it straight through. And it's the only load balancer that supports u-d-p.
+
+Reach for it when you need a static address, when the traffic isn't web traffic, when you need the real client address without a forwarded header, or when latency at the balancer matters more than layer-seven features.

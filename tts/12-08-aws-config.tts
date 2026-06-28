@@ -1,0 +1,9 @@
+The configuration service.
+
+The configuration service records the configuration of every supported resource as it changes, stores that history in object storage, and evaluates resources against rules; the output is a per-resource timeline, answering what a security group looked like at a specific time last week and whether it was compliant.
+
+The flow is: it records the configuration of instances, buckets, databases, identity resources, and more every time something changes; the history and point-in-time snapshots land in your bucket; it evaluates each resource against the rules attached to your account; notifications fire on compliance-state changes; and optional remediation auto-fixes non-compliant resources through a systems-manager runbook.
+
+The rules come in three kinds: managed rules, hundreds of pre-built checks from AWS like requiring encrypted volumes or prohibiting public buckets; custom rules, a function you write that returns compliant or non-compliant for any organization-specific check; and service-linked rules created by other services. A rule re-evaluates on every configuration change to the resources it watches, so non-compliant state surfaces within minutes rather than at a periodic audit.
+
+A conformance pack bundles rules and remediation into a single deployable artifact, and AWS publishes packs for common frameworks, so you turn on a whole compliance posture at once rather than rule by rule. An aggregator pulls data from multiple accounts and regions into one view for a cross-account dashboard, and remediation attaches an automation document to a rule to fix non-compliance, optionally with manual approval. The practical position is that this is the compliance-posture service, complementary to the audit log and the performance metrics.

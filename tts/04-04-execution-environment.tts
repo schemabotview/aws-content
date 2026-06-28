@@ -1,0 +1,7 @@
+The execution environment.
+
+When an event triggers your function, Lambda finds or creates an execution environment, a sandboxed micro virtual machine running your runtime and your code. The flow is: initialization code runs once when the environment starts, then the handler runs once per invocation.
+
+Put your expensive setup, database connections, software-development-kit clients, cached config, loaded models, into the initialization code, because it runs once per environment and is reused across later invocations on that same environment. The handler itself receives the event and a context object exposing the request identifier, the remaining time, and the log group. After it returns, the environment stays warm for a while and may serve more invocations before it's eventually torn down.
+
+This environment is the unit of caching, of cold-start cost, and of concurrency, so every later concept ties back to it.

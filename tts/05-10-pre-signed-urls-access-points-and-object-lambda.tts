@@ -1,0 +1,7 @@
+Pre-signed links, access points, and object functions.
+
+A pre-signed link is a short-lived url that grants temporary access to one specific object on behalf of an identity. The recipient needs no credentials, because the signature in the link carries the authorization, and it inherits whatever the signer can do, expiring within at most seven days. The two big uses are letting a user download a private object via a link, and letting a browser upload directly to storage without routing through your backend.
+
+Access points are named endpoints on a bucket, each with its own policy; instead of one tangled bucket policy serving every team, you make one access point per use case, each with a focused policy.
+
+And object Lambda sits in front of an access point and runs a function on the response before it reaches the caller, so it can redact personal data, resize an image, or convert a format on the fly, without storing a transformed copy.

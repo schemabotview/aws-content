@@ -1,0 +1,9 @@
+Hibernate, stop, and terminate.
+
+These three actions differ in what they keep. Stopping an instance loses what's in memory and loses any local instance-store disk, but keeps the root e-b-s volume; compute billing stops, though you still pay for that volume.
+
+Hibernating goes further: it writes memory to the encrypted root volume before stopping, so on resume the operating system doesn't boot from scratch; instead memory is restored and your processes pick up exactly where they left off.
+
+Terminating ends everything: memory gone, instance store gone, and the root volume deleted unless you've overridden that.
+
+Hibernate has requirements, an encrypted root volume large enough to hold memory, memory under a hundred and fifty gigabytes, a supported instance type, and a sixty-day limit, and it's worth it for slow-to-warm services, like heavy in-memory caches or just-in-time-warmed runtimes, where a normal stop would force a long re-warming on every restart.

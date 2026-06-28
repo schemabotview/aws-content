@@ -1,0 +1,7 @@
+Versioning, object lock, and multi-factor delete.
+
+Versioning preserves every upload and every delete. A new upload creates a new version; a delete just adds a delete marker that becomes the latest version, with the older versions still retrievable underneath, and you permanently remove an object by naming its exact version. Once enabled, versioning can only be suspended, never fully disabled, and storage costs pile up across versions, so a versioned bucket almost always wants a lifecycle rule that expires old versions.
+
+Multi-factor delete adds a requirement that permanently deleting a version, or changing the versioning state, needs a second-factor token; only the root account can enable it, and it's reserved for the highest-value buckets.
+
+Object lock is the strongest guarantee: write-once-read-many storage where objects can't be changed or deleted for a retention period. It must be enabled at bucket creation and forces versioning on. Governance mode can be bypassed with a special permission; compliance mode can't be overridden by anyone, not even root, until the period expires. A legal hold sits beside retention, locking an object indefinitely until someone with permission removes it.

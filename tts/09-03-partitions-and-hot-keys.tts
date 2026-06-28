@@ -1,0 +1,9 @@
+Partitions and hot keys.
+
+Under the hood the database shards data across many physical partitions, and the partition that holds an item is chosen by hashing the partition key. Two implications fall out, and both bite people in production.
+
+First, you want high cardinality on the partition key. If millions of items share a handful of values, say a status of active or a country code, then almost all reads and writes land on the same physical partition, whose throughput is capped, so the table throttles even though total capacity looks healthy; this is the classic hot-partition failure. The fix is to choose a key with many distinct values that traffic spreads across naturally, or to synthesize one by adding a random shard suffix.
+
+Second, you can't query across partitions cheaply. A query always targets one partition-key value, so to fetch across many you either run many parallel queries or fall back to a scan, which reads the entire table and is expensive at scale.
+
+The practical takeaway is that this database rewards designing your access patterns first and then choosing keys and indexes to support them; the relational habit of normalizing a schema and querying however you like doesn't transfer.

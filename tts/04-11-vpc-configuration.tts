@@ -1,0 +1,5 @@
+Virtual private cloud configuration.
+
+By default, a function runs outside your virtual private cloud, in an AWS-managed network with internet access. That's fine until it needs to reach private resources, a database in a private subnet, a cache, an internal service. To do that, you attach the function to a subnet in your virtual private cloud.
+
+But there's a trade: once attached, it can reach those private resources, but it loses direct internet access unless you route it through a nat gateway, exactly like a private instance. Older Lambda paid a heavy cold-start penalty for attaching a network interface, but AWS now shares interfaces across functions in a subnet, so that overhead is negligible. Today the decision is about reachability, not latency.

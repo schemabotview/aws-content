@@ -1,0 +1,5 @@
+The elastic container registry.
+
+The registry is AWS's managed container image registry, the private equivalent of a public image hub, integrated with identity and access management. You get one private registry per account per region, scoped by identity, and there's also a public registry for sharing images.
+
+It scans images for vulnerabilities, either on push or continuously. Lifecycle policies expire old image versions automatically so the registry doesn't fill up. It replicates across regions and accounts, and it encrypts images at rest. Authentication uses a short-lived token you fetch with a single command, so there are no long-lived registry credentials to manage.

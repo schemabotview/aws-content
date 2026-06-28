@@ -1,0 +1,9 @@
+The event bridge bus.
+
+The event bridge is a serverless event bus that routes events to targets based on rules; where the notification service does publish-subscribe by subscription, the bridge does routing by pattern match, so the rule is the abstraction, not the subscription.
+
+There are three kinds of bus. The default bus, which every account has, is where AWS services automatically publish their events, instance state changes, object events, pipeline transitions, and hundreds more. A custom bus is for your own application's events. And a partner bus is where software-as-a-service partners publish their events into your account. An event is a json object with a few standard fields and a free-form detail payload, the same shape across AWS, partner, and custom events.
+
+A rule has a pattern that filters incoming events and up to five targets that matching events are delivered to; patterns match on any field with a rich syntax of exact values, prefixes, numeric ranges, and existence checks, evaluated cheaply before any target is invoked. Targets cover most of the AWS surface, and a per-target input transformer can reshape the event before delivery, removing a lot of glue functions.
+
+A rule can also fire on a schedule instead of matching an event, the standard replacement for cron jobs on a box, and a dedicated scheduler product is preferred for new scheduling work. Notably, the event bridge replaced the older events feature; it's the same default bus and rules, extended with custom buses and partner sources.

@@ -1,0 +1,7 @@
+Volume types.
+
+The decision tree is short. Almost every new workload wants the general-purpose solid-state type, the current generation, which gives a baseline of three thousand operations per second and a fixed throughput regardless of size, with operations and throughput dialed independently, and it's about twenty percent cheaper than the previous generation, which tied operations to size.
+
+Reach for the provisioned-operations solid-state type when you need more than sixteen thousand operations per second or sustained very-low-latency performance for a critical database; prefer the second-generation version unconditionally, since it's the same price and far more durable, and its block-express variant unlocks the very top end on the newest instances.
+
+Then there are two hard-disk types that can't be boot volumes: the throughput-optimized one for streaming sequential workloads like log processing and big-data scans, where megabytes per second matter more than operations, and the cold one, the cheapest tier, for rarely-accessed bulk data.

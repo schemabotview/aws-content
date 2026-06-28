@@ -1,0 +1,7 @@
+The network and its address range.
+
+A virtual private cloud is region-scoped; it spans every availability zone in the region, while the subnets inside it are tied to one zone each. You pick an address range when you create it, written in cider notation, anywhere from a slash-sixteen with about sixty-five thousand addresses down to a slash-twenty-eight with sixteen, and you can add secondary ranges later if you outgrow the first.
+
+A few planning notes. Ranges must not overlap with anything you intend to connect to, so give distinct environments distinct ranges rather than reusing the same one three times. The conventional space is the private address ranges, though any range will route.
+
+Every account also gets a default network per region with a public subnet in each zone and an internet gateway already attached; it's fine for quick experiments and disastrous for production, which wants an intentional public-and-private subnet design.

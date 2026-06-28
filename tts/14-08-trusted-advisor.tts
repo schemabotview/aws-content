@@ -1,0 +1,7 @@
+The advisory service.
+
+The advisory service is the always-on companion to the well-architected tool. It runs checks across five categories, cost optimization, performance, security, fault tolerance, and service limits, and produces a colored dashboard with concrete findings.
+
+The basic tier, free for all accounts, includes a handful of core checks, chiefly the security ones like root multi-factor authentication, public buckets, and exposed access keys, plus the service limits. The business and enterprise support tiers unlock the full set of hundreds of checks, including idle resources, underused instances, and low reservation utilization.
+
+It can publish to the event bus, so a rule like alert me when a new public bucket appears is a one-rule wire-up. The standard pattern is a weekly review of new findings, with cost recommendations going to the finance queue and security findings to the security team. Its full enterprise feature set is now also exposed through the central security hub and the configuration service, so for organizations with many accounts you route those findings to a central security account.

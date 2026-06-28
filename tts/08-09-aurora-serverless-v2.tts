@@ -1,0 +1,7 @@
+Aurora serverless.
+
+The serverless version auto-scales a cluster's compute capacity in real time, in fine-grained steps, based on actual load. The unit is the capacity unit, roughly two gigabytes of memory plus proportional processor and network, and it scales in half-unit steps within seconds, without dropping connections. You set a minimum and maximum range; during quiet periods it sits near the minimum, and under load it scales up.
+
+The big difference from the older, deprecated version is that the old one paused and resumed by replacing the instance, with connection drops and a slow warm-up, while this one scales the live instance, so the application sees no break.
+
+It fits naturally for variable or unpredictable workloads where provisioning for peak is wasteful, for dev and test clusters, for multi-tenant software where any one tenant is small but the aggregate bursts, and for new applications whose load is still unknown. You can even mix serverless and provisioned instances in one cluster, for example a provisioned writer for steady writes with serverless readers that scale with read traffic.

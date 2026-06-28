@@ -1,0 +1,7 @@
+Encryption at rest for objects.
+
+Since early twenty-twenty-three, every new object is encrypted by default with keys AWS manages, no configuration needed. You override that only when you need stronger guarantees about the keys.
+
+The default option uses opaque AWS-managed keys, a sensible baseline. The key-management-service option uses your own customer key, which gives you an audit trail, since every decryption is a logged ay-pee-eye call, plus per-key access control and rotation; the catch is that those calls are billable and rate-limited, which bucket keys mitigate by caching a bucket-level data key and cutting calls by about ninety-nine percent. A customer-provided-key option means you send the key with every request and AWS never stores it. And client-side encryption means you encrypt before upload, so AWS only ever sees ciphertext.
+
+For regulated data, the key-management-service option is usually the right answer. For traffic in transit, enforce secure transport with a bucket policy that denies any non-secure request.

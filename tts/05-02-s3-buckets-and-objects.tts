@@ -1,0 +1,5 @@
+Storage buckets and objects.
+
+Object storage holds objects in buckets. A bucket is a container with a globally unique name; an object is a file plus its metadata, addressed by a key that is just a string. A key like images slash twenty-twenty-four slash photo looks like a path, but the store is flat; the slashes are simply part of the name. The console draws prefixes as folders for convenience, but underneath there are no directories.
+
+A bucket name must be globally unique across all accounts and lowercase. Data never leaves its region unless you replicate it. Objects range from zero bytes to five terabytes, and anything over five gigabytes, or really over a hundred megabytes, should use multipart upload. There's no limit on the number of objects, and request capacity scales with the number of prefixes. That flatness is exactly what makes object storage cheap and effectively infinite; every other feature bolts onto this minimal core.

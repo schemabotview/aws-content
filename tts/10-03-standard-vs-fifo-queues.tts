@@ -1,0 +1,7 @@
+Standard versus first-in-first-out queues.
+
+The queue service comes in two flavors, and the choice is almost always about ordering. A standard queue gives best-effort ordering, at-least-once delivery with occasional duplicates, and effectively unlimited throughput; most asynchronous work fits here, like image processing or email sending, as long as the consumer is idempotent, meaning it can process the same message twice without corrupting state, which is good design anyway.
+
+A first-in-first-out queue trades throughput for strict ordering and exactly-once processing, at a few hundred messages per second, with a couple thousand using batching. It comes with two concepts. A message group id: messages sharing a group are delivered in strict order, while different groups process in parallel, so picking something like a customer id lets customers process in parallel while each customer's messages stay ordered. And a deduplication id: messages with the same id within a five-minute window are de-duplicated, so retried sends from a flaky network don't create duplicates, and content-based deduplication computes that id from a hash of the body automatically.
+
+The decision rule: if order matters or duplicates would corrupt state, use first-in-first-out; otherwise, standard.

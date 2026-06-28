@@ -1,0 +1,7 @@
+The four disaster-recovery strategies.
+
+AWS frames disaster recovery as four named strategies, ordered by their objectives and cost, and many enterprises run two or three across their portfolio.
+
+Backup and restore is the cheapest and slowest: you take periodic backups, and on a disaster you provision new infrastructure in the recovery region and restore from backup, giving recovery times and points measured in hours to days. Pilot light keeps your core data continuously replicated to the recovery region with compute kept off or scaled down; on a disaster you scale up and switch name resolution, giving recovery in tens of minutes. Warm standby keeps a full but scaled-down stack always running in the recovery region, kept current via replication, so on a disaster you just scale up and shift traffic, giving recovery in minutes. And multi-site active-active has both regions serving traffic with data replicated both ways, so traffic shifts automatically on a disaster, the costliest and fastest option with recovery in seconds.
+
+The progression is really about how much of production you keep warm in the recovery region: none, just the data, the data plus a small fleet, or a full second production. The building blocks under everything above plain backup are the global database, global tables, cross-region replication, and health-check failover. And the non-negotiable across all four is to test the failover; a plan you've never run is a plan, but not a tested one.

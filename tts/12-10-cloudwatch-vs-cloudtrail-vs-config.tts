@@ -1,0 +1,7 @@
+The three observability services compared.
+
+These three overlap in casual conversation but answer distinct questions, and the map is worth memorizing. The monitoring service answers how is it doing: is my processor high, is my function erroring, are requests slow; it's about performance and health through metrics, logs, alarms, and dashboards. The audit-trail service answers who did what: who deleted that bucket, who changed this policy at a specific time; it's the ay-pee-eye audit log, retained and searchable. And the configuration service answers what changed and is it compliant: what did my security group look like last week and was it within the rules; it's resource state over time evaluated against rules.
+
+A few concrete examples sharpen the split. To alert when a database's processor stays high, that's a monitoring alarm. To alert when someone deletes the trail, that's the audit log feeding a metric filter and an alarm. To alert when a bucket becomes public, that's a configuration rule feeding a notification. And to automatically fix a non-compliant security group, that's a configuration rule plus an automation document.
+
+The mnemonic that works: the monitoring service is how is it doing, the audit-trail service is who did what, and the configuration service is what changed and is it compliant. They compose well, and the answer to most production questions touches at least two of them.

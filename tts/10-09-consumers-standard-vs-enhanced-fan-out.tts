@@ -1,0 +1,7 @@
+Stream consumers: standard versus enhanced fan-out.
+
+Kinesis has two consumer models with very different throughput. Standard consumers poll the stream, and the shard's two-megabyte read budget is shared across all of them, so five standard consumers reading one shard each get a fifth of that, with latency around two hundred milliseconds. Enhanced fan-out flips the model: each consumer subscribes to a shard and gets its own dedicated two megabytes per second, pushed over a streaming connection at around seventy milliseconds, so five such consumers each get the full budget rather than a split.
+
+Enhanced fan-out costs more per consumer but is the right pick whenever several consumers all need full throughput. The rule: one or two consumers and cost matters, use standard; many consumers or low-latency push, use enhanced fan-out.
+
+Consumers track their position with sequence-number checkpoints, typically stored by a client library that also distributes shards across consumer instances and rebalances when they join or leave. The key metric to watch is the iterator age, how far behind the latest record a consumer is; a rising iterator age means the consumer can't keep up, so you scale the fleet, add shards, or switch to enhanced fan-out.

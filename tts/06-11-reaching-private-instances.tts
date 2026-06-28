@@ -1,0 +1,7 @@
+Reaching private instances.
+
+The historical way to get a shell on a private instance was a bastion host, a hardened instance in a public subnet with secure-shell access locked down to your office address, used as a jump box into the private network. It still works, and agent forwarding keeps your private key off the bastion itself.
+
+The modern answer is to skip the bastion entirely. Session manager, part of systems manager, opens a shell to any instance running its agent, with no open secure-shell port, no public subnet, no key pair, and every session audited and optionally recorded. Instance connect is similar for secure-shell-style access, pushing a one-time key through the ay-pee-eye.
+
+Both work because the instance initiates the connection outward to AWS, so nothing inbound needs to be exposed; with a private endpoint, even that traffic stays off the internet. New infrastructure should default to session manager, with bastions as a fallback rather than the starting point.

@@ -1,0 +1,7 @@
+Around the warehouse.
+
+Four services round out the analytics stack. The serverless query service runs queries over data in object storage with no infrastructure and no loading: you point it at objects, catalogued in the shared catalog, write queries, and pay per terabyte scanned; it's for data-lake querying when a full warehouse is overkill, like log analysis and ad-hoc analyst queries. It looks similar to the warehouse's external-query feature, but the distinction is that the feature is part of a warehouse cluster and uses its pricing, while this service is fully standalone, so you use it when you don't already have a warehouse.
+
+The integration service is managed extract-transform-load plus a data catalog, the metastore for tables in object storage; its crawlers scan the store and infer table schemas into the catalog, which the query service, the warehouse, and others all read from, and its jobs are serverless distributed processing; the catalog is the genuinely important part.
+
+The managed big-data service runs the open-source ecosystem, distributed processing engines and query layers, for teams that want the full toolkit with control over cluster sizing and library versions, at the cost of heavier operations. And the search service is managed search and log analytics over documents, the default fit for full-text search and log dashboards, often kept in sync with operational data through a stream or a delivery service.

@@ -1,0 +1,7 @@
+Sustainability.
+
+The newest pillar is about minimizing the environmental impact of running cloud workloads, through the lens of less compute consumed, fewer resources idle, and more efficient hardware. Most of its checklist overlaps with cost optimization, which is the point.
+
+Right-sizing and decommissioning idle resources, the same lever that saves money, saves carbon. Modern instance generations, particularly arm-based processors, consume meaningfully less power per unit of work. Serverless and managed services share underlying hardware, raise utilization, and reduce each customer's footprint. Storage tiering to deep archive uses dramatically less energy for the same bytes. Region choice matters too, since some regions run on significantly more renewable energy than others, so for latency-flexible workloads, picking a low-carbon region helps. And there's a carbon-footprint tool that reports your estimated emissions in the billing console, which you track like any other metric.
+
+The pillar reinforces the discipline that most cloud waste is also business waste.

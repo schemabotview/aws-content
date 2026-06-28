@@ -1,0 +1,7 @@
+PrivateLink for your own services.
+
+The same machinery behind interface endpoints can be turned around to expose your own service to consumers in other networks, without peering, without exposing it to the internet, and without worrying about overlapping address ranges.
+
+On the provider side, you put a network load balancer in front of your service and create an endpoint service that registers it. On the consumer side, they create an interface endpoint targeting that service, and traffic flows over the AWS backbone from the consumer's private address to your load balancer, completely privately; you can permit specific accounts and even specific principals to discover and connect.
+
+This is the right answer for two shapes of problem. Software vendors on AWS use it to give thousands of customer networks a private connection without any of them peering. And internal microservices shared across accounts use it to expose, say, a shared identity service across an organization without a peering mesh. The shorthand: peering connects whole networks, while this exposes a single service, and it scales to thousands of consumers where peering does not.

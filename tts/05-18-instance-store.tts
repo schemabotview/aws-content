@@ -1,0 +1,7 @@
+Instance store.
+
+Instance store is physically attached fast disk on the host itself, with no network in between. The trade is brutal: millions of operations per second and sub-millisecond latency on one side, and complete ephemerality on the other. Stop the instance, terminate it, or lose the underlying host, and the data is gone; only a reboot keeps it, since the instance stays on the same host.
+
+Instance store is included in the instance price, fixed in size per instance type, and can't be detached or resized. Its use cases are workloads where speed matters more than durability and durability comes from elsewhere: local caches that rebuild on startup, scratch space for training and batch jobs, and distributed systems like Cassandra or Kafka that replicate at the application layer and heal themselves when a node's local data is lost.
+
+The split with network-attached volumes is the durability axis: use volumes for anything that must survive the instance, and instance store for anything that should be fast and is fine being lost.

@@ -1,0 +1,9 @@
+Invocation models.
+
+Lambda is triggered three ways, and the model decides the retry and error behavior.
+
+Synchronous invocation means the caller waits for the response. This is how the application load balancer, ay-pee-eye gateway, and function urls work, and there are no automatic retries; the error simply goes back to the caller.
+
+Asynchronous invocation means Lambda queues the event and returns to the caller immediately. This is how storage events, the notification service, and the event bus work, and Lambda retries up to twice with backoff, sending persistent failures to a dead-letter queue or a destination.
+
+The third model is an event source mapping, where Lambda polls the source and invokes your function with batches of records. This is how queues, Kinesis streams, and database streams work. Ordering and scaling differ by source: a standard queue has no ordering and scales out to your concurrency cap, while streams preserve order per shard and run one concurrent invocation per shard.

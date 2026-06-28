@@ -1,0 +1,9 @@
+The detective services.
+
+Four services detect problems after the fact; none of them block traffic, and all of them surface findings for you or a central hub to act on.
+
+The threat-detection service continuously analyzes audit logs, flow logs, and name-resolution logs, and optionally storage events and volumes, using machine learning to flag anomalies like unusual ay-pee-eye calls, communication with known-bad addresses, crypto-mining patterns, and credential exfiltration; you enable it once at the organization level and it covers every account, emitting findings as events you can route onward. The sensitive-data service discovers personal, financial, health, and credential data in object storage, using patterns and machine learning, producing a per-bucket inventory of what sensitive data lives where plus findings when something is exposed, which makes it the right answer for compliance audits over data lakes.
+
+The vulnerability service continuously assesses instances, container images, and functions for known vulnerabilities in packages and libraries and for unintended network exposure, running automatically on resources it discovers. And the investigation service pulls in audit logs, flow logs, and threat findings and stitches them into a graph linking principals, resources, addresses, and time, so when a finding fires, it's where you go to answer what else that principal touched, when, and from where.
+
+Sitting over all four is a central security hub that aggregates their findings, plus access-analyzer and configuration findings, into one place with a compliance view, the standard control plane for a security team across many accounts. The cue map is: unusual activity goes to threat detection, sensitive data in storage to the data service, vulnerability scanning to the vulnerability service, investigating a finding to the investigation service, and aggregating everything with compliance to the security hub.

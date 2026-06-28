@@ -1,0 +1,5 @@
+Backtrack and multi-master.
+
+Two Aurora features are worth knowing but rarely needed. Backtrack rewinds an Aurora MySQL cluster to a previous point in time in place, without restoring from a snapshot, creating a new instance, or changing the endpoint; the window is configurable up to seventy-two hours, and the operation takes seconds because the storage layer keeps a continuous change log. The classic use is when someone just ran a delete with no filter and wiped a table; you backtrack five minutes and it's recovered. It's available only for Aurora MySQL, not Postgres.
+
+Multi-master lets several instances accept writes at once, so a writer failure doesn't pause writes at all, but the trade is that the application has to reason about conflicts at the row level; it's a specialized feature for very-high-write-availability workloads, only in older versions. For almost every workload, the standard single-writer-with-fast-failover model is the right answer.

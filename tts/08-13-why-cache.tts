@@ -1,0 +1,7 @@
+Why cache.
+
+A database query takes a millisecond at best and hundreds of milliseconds under load, while an in-memory cache lookup takes microseconds, three or four orders of magnitude faster. For any read pattern where the same answer is computed over and over, putting a cache in front of the database is the single highest-leverage performance change available.
+
+The shape is simple: the application checks the cache first, and on a hit it returns the cached value immediately; on a miss it falls through to the database, writes the result into the cache, and returns it, so subsequent requests within the cache's lifetime get the fast path.
+
+AWS offers two services for this. The managed in-memory cache runs Redis, the newer Valkey, or Memcached, and works in front of anything. And a dedicated accelerator is a write-through cache purpose-built for the no-sequel database and only that, a drop-in for its client with no application changes. The rest of this discussion is about the general-purpose cache.

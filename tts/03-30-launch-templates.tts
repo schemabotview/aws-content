@@ -1,0 +1,7 @@
+Launch templates.
+
+A launch template describes how to configure a new instance: its image, instance types, key pair, security groups, role, user data, storage, network, and metadata options. The auto scaling group references it, and a plain run-instances call can too.
+
+It replaced the older launch configuration, and the differences are decisive. Templates are versioned, with multiple versions and a notion of latest and default; launch configurations had no versioning and were immutable, so you replaced them wholesale to change anything. Templates support mixing instance types and combining on-demand with spot in one group; configurations couldn't. And templates get new ee-see-two features, while configurations are frozen.
+
+The guidance is simple: always use launch templates.

@@ -1,0 +1,7 @@
+Replication.
+
+Object storage can asynchronously copy objects from a source bucket to a destination, either across regions for disaster recovery, latency, or data residency, or within a region for log aggregation and cross-account copies. Both buckets need versioning, and a service role lets the service read from one and write to the other.
+
+The surprises are in what replication does not do by default. Existing objects aren't backfilled; replication only catches new uploads, and you use a batch job to copy historical objects. Delete markers aren't replicated unless you opt in, which stops accidental deletes from cascading. Replication doesn't chain, so A to B doesn't trigger B to C. Objects already in archive are skipped. And encrypted objects need explicit key configuration on both sides.
+
+If your recovery objective is contractual, replication time control is the upgrade: ninety-nine point nine-nine percent of new objects replicated within fifteen minutes, with metrics for lag. Without it, replication is best-effort and usually fast but not guaranteed.

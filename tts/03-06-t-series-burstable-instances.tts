@@ -1,0 +1,7 @@
+T-series burstable instances.
+
+The t-three and t-four-g families don't give you full see-pee-you all the time. Instead they run at a baseline percentage and earn credits while they sit below that baseline. When you burst above it, you spend those credits.
+
+There are two modes for when the credits run out. In standard mode, the see-pee-you is simply capped back at the baseline. In unlimited mode, which is the default, the instance keeps bursting but you pay extra for the overage.
+
+Use t-series for workloads with idle stretches and occasional spikes, like low-traffic web servers, dev boxes, and internal tools. Don't use them for sustained, see-pee-you-heavy work, because you'll either get throttled or quietly rack up unlimited-mode charges.

@@ -1,0 +1,5 @@
+Elastic addresses.
+
+An elastic address is a static public address you own at the account level and can attach to any interface in your account. Two properties make it useful. It survives an instance stop, where an ordinary auto-assigned public address is released, and it can be remapped from one instance to another in minutes, which is the textbook failover pattern.
+
+Elastic addresses are free while attached to a running instance, billed a small hourly rate when allocated but idle, to discourage hoarding scarce addresses, and capped at five per region by default. The architectural rule is to use them where external clients need a fixed address, like a nat gateway, a vpn endpoint, or an on-premises firewall allow-list, and not to put them on application servers, since that's what load balancers are for.

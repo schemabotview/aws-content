@@ -1,0 +1,5 @@
+Kubernetes node options.
+
+There are three ways to provide worker capacity to a Kubernetes cluster. A managed node group lets AWS handle the instance lifecycle, launching, draining, updating, and terminating nodes; it's the sensible default for most clusters. Self-managed nodes put that lifecycle on you, with your own image and scaling group, which you'd only want for custom images, Windows, or kernel-level requirements. And a Fargate profile runs pods that match a selector on Fargate, with no nodes to patch or scale at all.
+
+Fargate for Kubernetes has real trade-offs, though: no per-node agents, no privileged containers, no block-storage volumes, though shared file storage works, and no graphics processors. For most clusters, managed node groups are the right default, with Fargate profiles added for specific workloads where node management isn't worth it.

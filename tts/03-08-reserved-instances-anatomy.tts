@@ -1,0 +1,7 @@
+Reserved instances in detail.
+
+A reserved instance isn't a different kind of machine; it's a billing construct. You commit to a particular instance shape, and AWS applies a discount to any matching on-demand instance running in your account.
+
+You choose how much to pay upfront, and more upfront means a bigger discount: all upfront pays the whole term now, partial upfront splits it, and no upfront is monthly only with the smallest discount.
+
+Scope matters too. A regional reservation applies across any zone in the region and is size-flexible within the family, but it doesn't reserve capacity. A zonal reservation is locked to one zone and exact size, but it does guarantee capacity. And convertible reserved instances let you change the family, operating system, or tenancy partway through, in exchange for a smaller discount; they're the escape hatch when you can't predict what you'll be running in two years.

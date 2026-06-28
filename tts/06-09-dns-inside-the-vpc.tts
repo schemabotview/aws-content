@@ -1,0 +1,5 @@
+Name resolution inside the network.
+
+Every network has two name-resolution toggles. One turns on the AWS-managed resolver, which answers for service endpoints and private hosted zones. The other auto-assigns public names to instances that have public addresses. Both default on in the default network and off in custom ones, so flip both on if you intend to use private hosted zones to resolve internal names.
+
+The resolver can also forward to resolver endpoints: outbound endpoints forward queries to your on-premises name servers, and inbound endpoints handle the reverse. That pair is how a hybrid network resolves names across the boundary in both directions, so a name in your data center resolves from AWS and a name in AWS resolves from your data center.

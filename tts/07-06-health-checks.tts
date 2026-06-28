@@ -1,0 +1,7 @@
+Health checks.
+
+Route fifty-three's health checkers are a fleet on the public internet that probe an endpoint from many locations and decide healthy or unhealthy by majority vote, so a handful of probers must agree before the status flips.
+
+There are three flavors. An endpoint check directly probes an address or hostname over the web or a raw connection, passing on a success response within a few seconds, and it can optionally match a string in the body, useful when an app returns success even while broken. A calculated check is a logical combination of other checks, for when the service being up depends on several components. And a check driven by a monitoring alarm reads health off that alarm; this is the only way to monitor a private resource, because the probers live on the public internet and can't reach private addresses, so you emit a metric, alarm on it, and point the health check at the alarm.
+
+You tune the probe interval and the failure threshold, and you wire failure notifications by hanging a topic off the alarm.

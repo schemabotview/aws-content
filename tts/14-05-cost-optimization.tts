@@ -1,0 +1,5 @@
+Cost optimization.
+
+The cost levers were covered in depth earlier, so the pillar's checklist is brief. Right-size weekly using the optimizer, the advisor, and the cost explorer together. Commit on the steady base with savings plans, and use reservations for stable databases and caches. Use spot for the burst layer, batch jobs, build runners, and stateless workers. Manage storage lifecycle with automatic tiering by default and the cheaper general-purpose volume type, deleting unattached volumes. Eliminate idle resources with auto-shutdown for dev and test and scheduled scaling for off-hours. Govern tags, putting a cost center, environment, owner, and application on everything so the cost explorer can pivot by them. And turn on anomaly detection from day one to catch a compromised-key cryptominer before the bill arrives.
+
+The operating discipline matters more than any single optimization: a team that reviews cost weekly will always beat a team that does an annual deep-dive.

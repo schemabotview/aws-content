@@ -1,0 +1,7 @@
+Stream analytics and managed kafka.
+
+Two more pieces complete the streaming picture. The managed analytics service runs real-time analytics over streams using a popular stream-processing engine, or with plain queries. It reads from a stream, runs windowed aggregations over tumbling, sliding, or session windows, joins multiple streams, and does anomaly detection, then writes results back to a stream or a delivery pipe, fully managed with no cluster to operate; the use cases are rolling per-minute dashboard metrics, anomaly flags when a sensor crosses a threshold, and on-stream filtering and enrichment before landing data.
+
+And managed kafka is fully managed Apache Kafka: the standard model of topics, partitions, brokers, and consumer groups, with AWS handling provisioning, patching, and multi-zone deployment, so you use existing Kafka producers, consumers, and connectors without code changes. It comes in a provisioned flavor where you pick the broker size and count, and a serverless flavor with no broker management, plus a managed connector feature to ferry data between Kafka and AWS services.
+
+Choosing between the native streaming service and managed kafka is mostly cultural: if there's already Kafka in the room, use managed kafka; for a net-new AWS-native pipeline, use the native streaming service.

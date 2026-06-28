@@ -1,0 +1,7 @@
+The nitro system.
+
+Nitro is the platform underlying all modern ee-see-two instances. The idea is to offload the work of virtualization, the networking, the storage, and the security, off the host see-pee-you and onto dedicated nitro cards, while a stripped-down hypervisor runs on the host.
+
+The payoff is several things at once. You get near bare-metal performance, because almost all of the host's see-pee-you and memory go to your instance instead of to virtualization overhead. You can get true bare-metal instances with no hypervisor at all. Disk encryption is done on the nitro card at no see-pee-you cost. Network ceilings rise to a hundred or two hundred gigabits. And there's a hard security boundary: the host is immutable, and AWS operators have no path into your instance's memory.
+
+Bare metal itself is rarely needed for ordinary apps; you reach for it to run a nested hypervisor, to satisfy socket-based licensing, or to measure hardware behavior without a hypervisor in the way.

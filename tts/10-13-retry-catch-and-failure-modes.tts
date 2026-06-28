@@ -1,0 +1,7 @@
+Retry, catch, and failure modes.
+
+The error-handling story is the main reason step functions exists, and it rests on two primitives. Retry: a task state can attach a list of retry rules, each naming a set of error types, an initial interval, a maximum attempt count, and a backoff rate, so a typical configuration of two seconds, three attempts, and doubling backoff retries at two, four, and eight seconds before giving up. Most transient failures, like function throttles, brief network blips, and capacity-exceeded errors, are absorbed by retries with no application code at all.
+
+Catch: when retries are exhausted, a catch clause routes to a specific error-handling state, like on any failure run a notify step and end, with a result path controlling where the error detail is injected so the handler can read it. Together, retry and catch turn what would be a tangle of try-catch in application code into a declarative part of the workflow.
+
+The most useful and most-missed integration is wait-for-task-token: a task sends a token to a downstream system and pauses the workflow until that system calls back with success or failure. That's the right shape for human-in-the-loop approvals, long-running third-party processes, or any wait-for-an-external-thing pattern, and the wait can be held for up to a year with no infrastructure cost.

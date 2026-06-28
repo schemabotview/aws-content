@@ -1,0 +1,7 @@
+Machine images.
+
+A machine image is the template an instance launches from. It bundles the operating system, any pre-installed software, and baked-in configuration. The image itself is just metadata; the actual bytes live in e-b-s snapshots that AWS manages for you.
+
+Images come from four sources: AWS-provided ones like Amazon Linux and Windows Server, kept patched by AWS; marketplace images from vendors with software and licensing included; community images shared publicly by other accounts; and custom images you build yourself, your golden image.
+
+One crucial fact: images are region-scoped. The same logical image has a different identifier in every region, so to use one elsewhere you copy it, which creates fresh snapshots in the destination region.

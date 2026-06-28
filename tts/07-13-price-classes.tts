@@ -1,0 +1,7 @@
+Price classes.
+
+The network's per-gigabyte cost varies by edge region; Europe and North America are cheapest, while Asia-Pacific and South America are more expensive. Price classes let you opt out of the pricier regions to save money, at the cost of users there being served from the next-nearest included edge, with slightly higher latency.
+
+The broadest class includes every edge worldwide. A middle class excludes the most expensive regions like South America and Australia. And the narrowest includes only North America and Europe.
+
+Pick the broadest for genuinely global low-latency requirements, and the narrowest for cost-sensitive apps whose users are mostly in North America and Europe. Importantly, the price class doesn't change who can reach your content; a user in an excluded region can still load the site, they're just served from a farther edge.

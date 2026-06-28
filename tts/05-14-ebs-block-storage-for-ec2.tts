@@ -1,0 +1,7 @@
+Block storage for instances.
+
+A block volume is a network-attached disk that an instance sees as a local drive. Because it's network-attached rather than physically inside the host, three things follow. It can be detached from one instance and reattached to another in the same zone. It persists independently of the instance, surviving stop and terminate unless you've set delete-on-termination. And it pays a tiny network latency tax, negligible for all but the most latency-sensitive work.
+
+Volumes are scoped to a single availability zone; crossing zones or regions goes through a snapshot. Each attachment has a delete-on-termination flag, on by default for the root volume and off for additional volumes.
+
+Most volumes attach to one instance at a time; multi-attach is the exception, letting certain high-performance volumes attach to up to sixteen instances in a zone, but only with a cluster-aware filesystem that coordinates writes, since a normal filesystem mounted by two writers will corrupt itself.

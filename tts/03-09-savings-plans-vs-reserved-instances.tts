@@ -1,0 +1,7 @@
+Savings plans versus reserved instances.
+
+Savings plans are the modern replacement for reserved instances in most cases. Instead of committing to specific instances, you commit to a steady spend rate, say ten dollars an hour for a year.
+
+Where a reserved instance ties you to a family and region, a savings plan auto-applies across instances as your fleet changes. Reserved instances cover only ee-see-two; a compute savings plan also covers Fargate and Lambda. Reserved instances can be resold on a marketplace; savings plans cannot.
+
+There are two kinds. Compute savings plans are the most flexible, spanning any region and family and the serverless services. Ee-see-two instance savings plans lock you to a family in a region but cut a bit deeper. The general rule: default to a compute savings plan, and reach for reserved instances only when you specifically need a capacity reservation or marketplace resale.

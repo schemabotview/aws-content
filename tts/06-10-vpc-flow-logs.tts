@@ -1,0 +1,5 @@
+Flow logs.
+
+Flow logs capture the metadata of every packet flowing through a network, a subnet, or a specific interface, the source and destination address, the port, the protocol, the byte and packet counts, and whether the traffic was accepted or rejected, but not the packet contents. You can send them to object storage for long-term retention and querying, to the monitoring service for real-time alerting, or stream them into a security-analytics system.
+
+Flow logs are the tool of last resort when traffic isn't doing what you expect. A security group or access control list silently dropping packets shows up as reject entries on the offending connection, and that's usually enough to pinpoint which rule to change. A few things they don't capture, like metadata-service traffic and queries to the network's own resolver, but for everything else they're the ground truth.

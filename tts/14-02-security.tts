@@ -1,0 +1,7 @@
+Security.
+
+Security is the pillar about protecting data and identities against credible threats, and it has a set of non-negotiables.
+
+For identity, use roles, not users, for everything, put permission boundaries on developer roles, and federate through single sign-on rather than local users. Practice least privilege, reviewing analyzer findings and sizing policies to actual usage. Encrypt data, using customer-managed keys for sensitive data, default encryption on storage and volumes, and secure transport everywhere. Keep secrets in a secrets manager with rotation, never in plain text in code, images, or environment variables. Apply network controls: private subnets for compute, public ones only where strictly needed, deny-by-default security groups, private endpoints for AWS services, and a firewall on internet-facing endpoints. Turn on detection everywhere, threat detection across the organization, a central findings hub, and sensitive-data discovery on data stores. And keep an audit trail to locked storage with continuous configuration recording and periodic access reviews.
+
+The customer side of the shared responsibility model, your data and your identities, is always yours; AWS protects the rest.

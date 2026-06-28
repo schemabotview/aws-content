@@ -1,0 +1,9 @@
+Edge functions.
+
+The content-delivery network can run your code at the edge to manipulate requests and responses, in two flavors with very different profiles.
+
+Edge functions, the lightweight kind, run constrained JavaScript at viewer request and response points, must finish within a millisecond, have no network access, and are roughly six times cheaper per invocation, scaling to millions of requests per second. They're for the trivially cheap things that have to run on every request: rewriting urls, normalizing cache keys, injecting security headers, or simple token validation with an embedded public key.
+
+The heavier kind, functions at edge, are full functions in Node or Python, with real memory and network access, running at all four trigger points, both viewer and origin, request and response; the origin triggers fire only on cache misses, so they run far less often for the same workload. You reach for these when the logic needs a network call, a database lookup, or a richer runtime.
+
+The decision is mechanical: if it fits in a millisecond of constrained JavaScript with no network, use the lightweight function; otherwise use the heavier one.

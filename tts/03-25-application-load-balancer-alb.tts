@@ -1,0 +1,7 @@
+The application load balancer.
+
+This one understands web traffic. It terminates the connection, parses the request, and routes based on its content. The object model goes like this: a listener watches a port and protocol; under it sit rules evaluated in priority order; each rule has conditions, on path, host, header, query string, source address, or method, and an action; and the action usually forwards to a target group, which holds the actual targets.
+
+A target group is the unit of routing, with its own health check and protocol, and its targets can be instances, raw addresses, or even a Lambda function.
+
+The listener actions are worth knowing: plain forward; weighted forward, which splits traffic across target groups by weight, for canary and blue-green deploys; redirect, most commonly sending web traffic to its secure version; a fixed response, for maintenance pages; and authenticate, which forces the user through an identity provider before the request ever reaches your app. The application load balancer also natively supports g-r-p-c, websockets, and the web application firewall, and its stickiness uses a balancer-generated cookie configured per target group.

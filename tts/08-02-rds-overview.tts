@@ -1,0 +1,7 @@
+The relational database service overview.
+
+The relational database service runs the database engine on instances behind the scenes, with block storage underneath, and exposes a connection endpoint, a maintenance window, and a small set of configuration knobs. Everything else, patching the operating system, upgrading the engine, replacing failed hardware, taking backups, setting up replicas, and flipping to a standby on failure, is AWS's job. You don't get a shell; there's no operating-system access, and the cost of that lockdown is that any feature AWS hasn't certified, a custom extension or a kernel-level agent, isn't reachable.
+
+It supports six engines: MySQL, Postgres, MariaDB, Oracle, Microsoft sequel server, and Db2, all sharing the same managed plane of backups, replicas, and monitoring. The right reason to run a database on a raw instance instead is a feature the service doesn't expose; for everything else, the managed service wins once you count the cost of operations.
+
+Underneath, it sits on block storage with autoscaling that grows the volume automatically as free space falls, which is the right default for any workload whose growth isn't perfectly predictable.

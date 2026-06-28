@@ -1,0 +1,7 @@
+The notification-plus-queue fan-out pattern.
+
+This is the most reused pattern in AWS messaging. One event needs to reach several downstream systems, each at its own pace and with its own retry behavior. Publishing directly to multiple queues from the producer would couple it to the fan-out topology and risk partial delivery.
+
+Instead, the producer publishes once to a topic; the notification service delivers atomically to each subscribed queue; each queue feeds an independent consumer; and each queue has its own dead-letter queue, visibility timeout, and scaling. The producer doesn't know who's downstream, so adding a new consumer is just one new queue and one new subscription, with no producer change, and each consumer survives its peers' failures because the queues are independent.
+
+The canonical use cases are everywhere: an order placement that must email the customer, charge the card, reserve inventory, and notify shipping; or an upload that should trigger processing, scanning, and indexing. In particular, object-storage event notifications support only a single direct destination per event type, so when several consumers need to react to them, the standard pattern is the bucket to a topic to multiple queues. Add filter policies and you get a small number of topics serving many consumers, closer to a routing layer than a fan-out cable.

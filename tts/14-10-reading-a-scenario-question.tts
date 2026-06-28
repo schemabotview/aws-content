@@ -1,0 +1,7 @@
+Reading a scenario question.
+
+Exam questions are paragraphs, not one-liners, and a repeatable reading pattern turns time into accuracy. First, find the verb. The question wants you to ensure, provide, minimize, or prevent something; that's the goal, so skim past the setup until you've found it. Second, highlight the constraints, like least operational overhead, most cost-effective, minimum downtime, no public address, or across two regions; each constraint eliminates options.
+
+Third, match the constraint to a service, not a feature: global, edge-cached, with a firewall points to the content network, not a load balancer; reliable in-order processing points to a first-in-first-out queue, not a standard one. Fourth, eliminate by capability mismatch: if an option simply cannot do what's asked, strike it, and usually two of four eliminate cleanly on capability alone. Fifth, decide the survivors on the explicit preference: least operational overhead favors a managed service, cost-effective favors object storage where it fits, and multi-region active-active favors the global database and global tables with health-check routing, not a single multi-zone deployment.
+
+Most scenarios reward recognizing which AWS noun is being described, and if the right noun is already in your head, the question becomes translation rather than a guess.

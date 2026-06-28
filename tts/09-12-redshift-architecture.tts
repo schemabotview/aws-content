@@ -1,0 +1,7 @@
+Warehouse architecture.
+
+A warehouse cluster has a leader node and a set of compute nodes. The leader receives queries from clients, parses and plans them, and distributes the work to the compute nodes; each compute node executes its slice in parallel and ships intermediate results back. This is massively parallel processing, and it's what lets the warehouse chew through terabytes by horizontally distributing the work.
+
+There are two node families. The managed-storage family separates compute and storage, keeping data in object storage with a local fast cache for hot data, so you add or remove compute without touching the data; it's the recommended default. The older local-disk family ties storage to the node, so compute and storage scale together, and it's mostly legacy now.
+
+There's also a serverless option that removes the cluster concept entirely: you pick a base capacity and it scales compute up and down automatically as queries run, paying per unit-hour, which is right for intermittent analytics and dev and test. And a multi-zone option on the managed-storage family spans two zones with fast automatic failover, made easy because the data already lives in object storage.

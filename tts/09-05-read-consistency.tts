@@ -1,0 +1,7 @@
+Read consistency.
+
+Writes are committed to multiple zones before they acknowledge, and reads come in three flavors that trade consistency against cost.
+
+An eventually-consistent read, the default, may be slightly stale, lagging by perhaps a second in the worst case, and it's the cheapest, costing half a unit; most reads tolerate that. A strongly-consistent read always returns the latest committed write, at double the cost, and you use it precisely when you've just written and need to read your own write. And a transactional read or write gives you full acid guarantees across multiple items and tables, at double again, for financial, inventory, or anywhere a multi-item invariant must hold.
+
+The practical pattern is to read eventually-consistent by default, reach for strongly-consistent only where the logic demands it, and reserve transactions for the small set of operations that genuinely need cross-item atomicity.

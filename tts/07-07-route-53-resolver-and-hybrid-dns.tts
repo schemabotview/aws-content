@@ -1,0 +1,7 @@
+The resolver and hybrid name resolution.
+
+Every network has a built-in resolver at its base address plus two; that's the Route fifty-three resolver, and it handles service endpoints, public lookups, and any private hosted zones associated with the network.
+
+For a hybrid network, you usually need queries to flow both ways across the boundary, and there are two endpoint types for that. An inbound endpoint lets your on-premises servers resolve names in a private hosted zone, so queries flow from your data center into AWS. An outbound endpoint, paired with resolver rules, lets instances resolve on-premises names, so a rule like forward queries for the corporate domain to a specific on-premises server makes internal names resolve transparently.
+
+Each endpoint is a set of network interfaces in your subnets, one per zone for availability, and the resolver rules can be shared across accounts through the resource access manager, which is how a multi-account network uses one set of endpoints from a single networking-hub account.

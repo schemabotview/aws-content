@@ -1,0 +1,7 @@
+The snow family: bulk data when the network won't do.
+
+For truly large datasets, the network is too slow; the classic example is half a petabyte of imagery on a modest link, which would take well over a year to upload. AWS will ship you a physical device instead.
+
+The smallest is a small ruggedized edge device with a few terabytes, battery-powered, for field collection and including some on-device compute. The workhorse is a hardened-case device with up to around eighty terabytes, in a storage-optimized variant and a compute-optimized variant with more processor and a graphics processor for edge compute. And the largest is a literal forty-five-foot shipping container delivering a hundred petabytes per unit, for exabyte-scale data-center evacuations.
+
+The workflow across the smaller devices is the same: you order from the console, AWS ships the device, you load data over local file or object protocols, ship it back, and AWS ingests it into object storage, with end-to-end encryption using keys you control. The rule of thumb is simple: if shipping a device is faster than your network link can sustain over the migration window, ship the box, and the math usually favors physical transport above tens of terabytes on most corporate connections.

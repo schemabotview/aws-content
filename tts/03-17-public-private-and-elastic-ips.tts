@@ -1,0 +1,9 @@
+Public, private, and elastic addresses.
+
+Every instance has a private address, which is routable only inside the virtual private cloud, is free, and stays fixed for the life of the network interface; all your internal traffic uses it.
+
+A public address is internet-routable, but it's auto-assigned at launch and changes every time you stop and start the instance, and since early twenty-twenty-four every public version-four address is billed hourly. So a public address suits throwaway, short-lived instances.
+
+An elastic address is also internet-routable, but it's allocated to your account and survives stop and start, which makes it the right choice for a stable inbound endpoint, address whitelisting, or pinning a d-n-s record; it's free while attached to a running instance and charged when left idle.
+
+One more thing: version-six addresses in AWS are always public-routable, with no address translation, so to keep a version-six instance unreachable from the internet you use an egress-only internet gateway.

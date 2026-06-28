@@ -1,0 +1,7 @@
+The cache for Memcached.
+
+Memcached is simpler than Redis on purpose. There's no replication, no persistence, and no multi-zone failover, so losing a node means losing whatever was on it, and the application rebuilds that data on the next cache miss.
+
+What it offers in return is multi-threading that scales with the instance's cores, and horizontal scaling by adding more nodes, with keys distributed across them by consistent hashing on the client side; the client uses auto-discovery to learn which nodes are in the cluster, so adding or removing one doesn't require an application redeploy.
+
+The honest use case is small: a pure object cache where the data doesn't matter on restart, where the workload is hot enough that per-node multi-threading really helps, and where you want the simplest possible operational model. In modern architectures, Redis or Valkey covers almost every case people once reached for Memcached.

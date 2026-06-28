@@ -1,0 +1,7 @@
+Network peering.
+
+Peering is a direct, point-to-point connection between two networks that lets instances in each reach the other by private address, as if they were on the same network. It works same-account or cross-account, same-region or cross-region, over the AWS backbone with no bandwidth cap.
+
+The constraints are sharper than people expect. The address ranges can't overlap; if both networks use the same range, peering simply won't establish. Peering is non-transitive: if A peers with B and B peers with C, A still can't reach C through B; you need a direct A-to-C peering. And after accepting the request, you have to update route tables on both sides to point at the connection, or it exists but carries no traffic.
+
+The right time for peering is a small number of networks, two to four, that need to talk; because the number of connections grows quadratically, a full mesh becomes unmanageable fast, and at that point you switch to a transit gateway.

@@ -1,0 +1,7 @@
+Caching strategies.
+
+A handful of patterns cover almost every real cache usage. Lazy loading, also called cache-aside, puts the logic in the application: read from the cache, and on a miss read from the database, write the result back, and return; writes go straight to the database and either invalidate or update the entry. Its advantages are that the cache only holds what's actually being read, and a cache outage doesn't break the app, since it falls through to the slower path; its downsides are a cold miss on the first request for any key, and possible staleness until an entry expires.
+
+Write-through sends every write to both the cache and the database, so the cache stays consistent and reads never miss for written data, at the cost of a double-write on every write and possibly caching data that's never read.
+
+A time-to-live puts an expiry on every entry, the cheap lossy answer to consistency, usually combined with lazy loading. A session store keeps session state in the cache rather than in any one server's memory, so the application tier is stateless and scales freely. And an eviction policy decides what to drop when the cache fills, with least-recently-used the sensible default.

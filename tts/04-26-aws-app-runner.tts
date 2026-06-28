@@ -1,0 +1,7 @@
+App Runner.
+
+App Runner is the highest-level container deployment service on AWS. You point it at a registry image or a git repository, and it builds, deploys, load-balances, terminates t-l-s, scales, and runs health checks for you.
+
+Compared with running containers yourself, it needs almost no setup, just an image or repo url, where the container service needs a cluster, a task definition, a service, and a load balancer. It has no request-duration cap, minimal cold starts, and optional access to your private network.
+
+Its sweet spot is the small-to-medium web service that just needs to be online behind secure h-t-t-p with autoscaling. As complexity grows, multiple services, custom networking, advanced load balancing, you outgrow App Runner and move down to the container service or Kubernetes.

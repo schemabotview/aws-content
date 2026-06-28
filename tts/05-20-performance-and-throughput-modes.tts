@@ -1,0 +1,7 @@
+Performance and throughput modes.
+
+The elastic file system has two independent performance knobs.
+
+Performance mode is set at creation and can't be changed: general purpose gives the lowest latency and is right for almost everything, while max input-output trades higher latency for scaling to thousands of concurrent clients, for large analytics and media pipelines.
+
+Throughput mode can be changed any time. Elastic auto-scales to demand and bills per gigabyte transferred, the best default for spiky or unknown patterns. Bursting ties baseline throughput to how much you've stored, with credits covering spikes, which is fine when your dataset is large enough. And provisioned sets a fixed throughput independent of size, for a small dataset that nonetheless needs high throughput. For a new filesystem, elastic removes the planning entirely and is the right default.

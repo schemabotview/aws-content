@@ -48,10 +48,13 @@ Four faithful ports of the NodeMap `aws*` scenes, one per topic:
 - **5 modules wired** in `manifest.json` (01, 02, 06, 09, 10 → the four scenes,
   82 sections, per-section `highlight`/`focus`). The other nine notebooks ship in
   `notebooks/` but are **not yet wired** (no dedicated scene yet).
-- **Audio pending.** The source repo carries only **whole-notebook** `.tts`/`.wav`;
-  the whole-notebook `.tts` are copied into `tts/` as raw material. Per-section
-  splitting and `.wav` generation (`scripts/colab_generate_audio.ipynb`) are the
-  next step; the manifest does not reference `audio/` yet.
+- **Per-section `.tts` authored** for **all 14 notebooks** (234 scripts,
+  `tts/NN-SS-slug.tts`), written from scratch from each `## ` section per the TTS
+  guidelines (plain spoken prose, no tables/code, acronyms spelled out). Intro
+  framing-overview sections and recap/decision outros are deliberately **silent**
+  (no `.tts`), so their section slot numbers have gaps. **Audio `.wav` generation
+  is the next step** (`scripts/colab_generate_audio.ipynb`); the manifest does not
+  reference `audio/` yet.
 
 ## Serving
 

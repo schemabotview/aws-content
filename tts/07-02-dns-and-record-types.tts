@@ -1,0 +1,7 @@
+Name resolution and record types.
+
+Name resolution turns a hostname into an address. The browser asks a recursive resolver, its provider's or a public one, which walks the hierarchy: the root, then the top-level domain, then the authoritative name servers for the domain. Route fifty-three is the authoritative tier for any zone it manages. The resolver caches each answer for the record's time-to-live and re-asks when that expires.
+
+Time-to-live is the lever you adjust when planning failover: a low value, say sixty seconds, means changes propagate fast, while a high value means fewer queries but slower cutover.
+
+The common record types each map a name to something. An address record maps a name to a version-four address, and the quad-A record to a version-six address. A canonical-name record points one name at another. The name-server record lists a zone's authoritative servers, the mail record routes email, and the text record holds arbitrary text for domain verification. One constraint matters: a canonical-name record can't live at the zone apex, the bare domain; that gap is exactly what Route fifty-three's alias records fill.

@@ -1,0 +1,7 @@
+Lambda at edge and CloudFront functions.
+
+Both run code at CloudFront edge locations, closer to users than your origin region, but they differ sharply in power and cost.
+
+Lambda at edge runs Node or Python, can run for several seconds, and crucially can make network calls to other services, so it's for things like authentication, a-b routing, and header rewrites that need a lookup. CloudFront functions run only JavaScript, must finish in well under a millisecond, and have no network access at all, so they're for pure header and url transforms and simple redirects.
+
+The rule: reach for CloudFront functions, the cheaper and faster default, for lightweight header and url work, and reach for Lambda at edge when the logic needs a network call or a richer runtime.

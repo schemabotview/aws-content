@@ -58,14 +58,20 @@ notebooks). Highlight/focus ids must be real node ids from the referenced scene.
 
 ## TTS / audio status
 
-Audio is **pending**. The source repo (`~/Projects/aws`) carries only
-**whole-notebook** `.tts`/`.wav` (one ~25-min clip per module). The whole-notebook
-`.tts` are copied into `tts/` as raw material; they still need **splitting into
-per-section `NN-MM-section-slug.tts`** (one per manifest section, plain spoken prose
-— see the TTS guidelines in a sibling content repo's CLAUDE.md), after which
-`scripts/colab_generate_audio.ipynb` generates `audio/<stem>.wav` and the manifest
-gains a per-section `audio` field. The 1 GB of whole-notebook `.wav` is intentionally
-**not** copied (it's not per-section and would replay a full module on every page).
+**Per-section `.tts` are authored** for all 14 notebooks — 234 scripts named
+`tts/NN-SS-slug.tts` (the `SS` is the section's 1-based order in the notebook, so the
+stem and the Colab sorted glob stay in order). They were written from scratch from
+each `## ` section per the TTS guidelines (plain spoken prose — no markdown, tables,
+or code; acronyms spelled out). **Intros and outros are silent** (no `.tts`): per
+notebook, the framing-overview opener (e.g. "The database zoo at a glance") and the
+recap/decision closer (e.g. "Picking the Right Tool") are skipped, leaving gaps in
+the section numbering — that's intentional.
+
+Regenerate the set from `scripts/_ttsgen.py` (the `author()` helper keys narration
+by `## ` heading; duplicate headings use `Heading@@N`). **Next steps:** generate
+`audio/<stem>.wav` with `scripts/colab_generate_audio.ipynb`, then add a per-section
+`audio` field to the manifest. The 1 GB of whole-notebook `.wav` from `~/Projects/aws`
+is intentionally **not** copied (it's not per-section).
 
 ## Source
 

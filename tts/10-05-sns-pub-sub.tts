@@ -1,0 +1,9 @@
+The notification service.
+
+The notification service is a fully managed publish-subscribe system. The model is one-to-many: a publisher sends a message to a topic, and the service delivers a copy to every subscriber simultaneously. Unlike a queue, there's no storage; once delivered, the message is gone from the service's perspective, so persistence is the subscriber's job.
+
+Subscribers can be queues, by far the most common, which turns it into a durable fan-out; functions, for event-driven processing; web endpoints, for webhooks; email, text message, and mobile push; and a delivery service for landing data in storage or a warehouse. A single topic can have millions of subscriptions.
+
+Filter policies let each subscriber declare what it cares about: by default every subscriber gets every message, but with a filter attached, a subscriber only receives messages whose attributes match, supporting exact matches, prefixes, numeric ranges, and existence checks. The architectural point is that a single topic can serve a dozen services, each subscribing with its own filter, instead of you provisioning a separate topic per event type.
+
+There's also a first-in-first-out variant for ordered, exactly-once fan-out, but with a hard constraint: it can only deliver to first-in-first-out queues.

@@ -1,0 +1,7 @@
+Instance naming.
+
+An instance name encodes four things. Take a name like m-seven-g-dot-x-large.
+
+The first letter is the family, here general purpose. The number is the generation, so seven is newer than six. The next letter is the processor: g means graviton, AWS's own arm chip; i means Intel, a means a-m-d, n means network-optimized, and d means local fast disk. And the last part is the size, the step of virtual see-pee-yous and memory.
+
+Sizes scale roughly linearly with cost: each step from large to extra-large to two-extra-large doubles the see-pee-you and memory. One practical tip: graviton instances are usually about twenty percent cheaper and noticeably better performance per dollar, so they're the default first choice whenever your workload runs on arm.

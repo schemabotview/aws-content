@@ -1,0 +1,7 @@
+The security model.
+
+Every bucket and every object is private by default, and access is granted through a few layered controls.
+
+Block public access is the outermost guard; it overrides any policy that would make objects public, and it's on by default for new buckets. A bucket policy is a resource-based policy attached to the bucket, your primary tool for cross-account and conditional grants. An identity policy grants same-account access from your own users and roles. And legacy access control lists are disabled by default; leave them off.
+
+The evaluation rule that catches people is that an explicit deny in any policy always wins, and block public access runs before everything else, so a bucket policy that opens to everyone is silently ignored when it's enabled. That's the safety net behind every accidentally-public-bucket headline, and AWS turned it on by default. For cross-account access, both sides must allow: the caller's identity policy and the bucket policy.

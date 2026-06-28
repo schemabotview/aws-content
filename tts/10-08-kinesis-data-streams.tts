@@ -1,0 +1,7 @@
+Kinesis data streams.
+
+Kinesis is a real-time streaming service. Producers push records into a stream, multiple consumers read them at their own pace, and records are retained in the stream for up to a year. The difference from a queue matters: a queue processes each message with one consumer and then deletes it, while a stream keeps records after consumption, lets multiple consumers read the same data independently, and lets consumers rewind and replay. So a queue is the right shape for asynchronous jobs, and a stream is the right shape for telemetry, clickstreams, sensor data, and change-capture, anything with multiple downstream consumers or a need to reprocess.
+
+A stream is divided into shards, the unit of capacity; each shard supports a megabyte per second of writes and two megabytes per second of reads shared across standard consumers. You scale by splitting or merging shards, and every record carries a partition key that's hashed to choose a shard, so high-cardinality keys spread load evenly while low-cardinality keys create hot shards that throttle, the same pattern as the no-sequel database.
+
+Retention defaults to a day, extendable to a year, and within that window any consumer can replay from the oldest record, from the latest, or from a precise timestamp. Capacity comes in a provisioned mode where you manage shard count, and an on-demand mode that auto-scales.

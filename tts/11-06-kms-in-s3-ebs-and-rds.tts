@@ -1,0 +1,7 @@
+Encryption integrations in storage and databases.
+
+Three integrations come up constantly. For object storage, there are four server-side encryption modes: the default uses AWS-managed keys with no service round-trip and no per-request audit; the key-management-service mode uses your key and logs every decryption, but every object read calls the service, which at high request rates can hit the regional rate limit, so you enable bucket keys, which generate a short-lived bucket-level data key used across many objects and dramatically cut those calls; a customer-provided-key mode encrypts with a key you send per request that AWS never stores; and client-side encryption means AWS never sees plaintext at all.
+
+For block volumes, encryption is set at volume creation, snapshots inherit the key automatically, and an account-level default forces every new volume to be encrypted, which is the right setting.
+
+For a relational database, encryption is set at instance creation and can't be added later, covering storage, backups, replicas, and snapshots; to encrypt an existing instance you snapshot it, copy the snapshot with encryption on, and restore that copy, the same flow that appears anywhere encryption must be enabled at creation.

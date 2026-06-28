@@ -1,0 +1,7 @@
+Concurrency.
+
+Concurrency is the number of execution environments running your function at the same time. The account has a regional limit, defaulting to a thousand, shared across every function that hasn't reserved any.
+
+Reserved concurrency is pinned to one function. It both guarantees that function always has at least that capacity, so nothing else can starve it, and caps it at that limit. A common use is protecting a downstream resource: if a database handles fifty connections, you cap the function at fifty.
+
+Provisioned concurrency is a different lever: it pre-warms a set number of environments so their requests have no cold start, and you pay for that count regardless of traffic, so it's for latency-sensitive ay-pee-eyes, not for throughput. When a function exceeds its limit, Lambda throttles: synchronous callers get an immediate too-many-requests error, asynchronous events are queued and retried, and pollers back off.

@@ -1,0 +1,7 @@
+The agent and the deeper insights variants.
+
+The agent runs inside an instance, or an on-premises host, and ships what the hypervisor can't see: in-operating-system memory usage, swap, disk space, and filesystem-level disk activity, plus the log files the operating system and applications write. Its configuration is a document often stored in the parameter store and pulled at startup, and the instance's role needs the agent's managed policy.
+
+The agent is the answer to two common scenarios: an instance ran out of memory and nobody noticed, so you install the agent, push memory metrics, and alarm on them; and we need application logs centralized, so you point the agent at the log files and it streams them into log groups.
+
+Two deeper variants are worth knowing. Container insights gives enhanced metrics and logs for the container services, per-container processor, memory, network, and disk, plus container output collected to log groups, enabled once per cluster. And function insights gives function-level diagnostics, cold-start counts, initialization duration, memory curves, and processor time per invocation, delivered as a layer added to the function; the standard function metrics work without it, and this is the deeper view when those aren't enough.

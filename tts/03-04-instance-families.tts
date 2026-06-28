@@ -1,0 +1,7 @@
+Instance families.
+
+Instance types group by the shape of the workload, so you pick the family first and the size second.
+
+General purpose balances see-pee-you, memory, and network, and suits web servers, small databases, and dev environments. Compute optimized gives you the most see-pee-you per dollar, for batch jobs, gaming servers, and inference. Memory optimized packs high memory per core, for in-memory databases and large analytics engines. Storage optimized gives local high-throughput disk, for no-sequel stores and data warehouses. Accelerated computing adds graphics processors and custom chips, for machine-learning training and video. And high-performance-computing instances are built for tightly coupled simulations.
+
+Match the family to what your workload is hungry for, then size within it.

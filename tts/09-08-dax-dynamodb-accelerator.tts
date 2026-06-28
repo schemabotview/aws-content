@@ -1,0 +1,7 @@
+The accelerator.
+
+The accelerator is an in-memory cache purpose-built for this database. It sits between the application and the table, delivers microsecond reads on cache hits versus single-digit milliseconds for the database itself, and is drop-in compatible with the database's client, so you swap the client and existing code works unchanged.
+
+Three properties are worth knowing. It's write-through: writes go to the database first, then update the cache on success, so a read after a write sees the new value immediately on the node that handled it. It has two separate caches with independent lifetimes, an item cache for get-item reads and a query cache for query and scan results. And it runs as nodes inside your private network, spread across zones for availability.
+
+The accelerator is the right answer when a workload is read-heavy on a hot subset, sub-millisecond latency matters, and you don't want application logic managing a cache. It only works in front of this one database; for caching arbitrary data you're back to the general-purpose cache.

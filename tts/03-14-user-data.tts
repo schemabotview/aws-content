@@ -1,0 +1,7 @@
+User data.
+
+User data is a script you supply at launch that runs once, as root, on the instance's first boot. You use it to install packages, pull code, configure the operating system, or register the instance with a discovery service.
+
+A few practical points. It's capped at sixteen kilobytes, so for anything larger you keep a short stub in user data that downloads the real script from ess-three. Its output goes to a cloud-init log file, and that's the first place to look when an instance comes up running but the app doesn't respond. And by default it runs only once; if you want it to run on every boot, you have to configure cloud-init explicitly.
+
+Treat user data as your first-boot bootstrap, not as ongoing configuration management.

@@ -1,0 +1,7 @@
+Event notifications.
+
+Object storage emits events when objects are created, removed, restored from archive, replicated, or transitioned by lifecycle, and those events can be routed to a queue, a topic, a function, or the event bus.
+
+The direct destinations, queue, topic, or function, are simple but limited: one destination per event type, with basic prefix and suffix filters. The event bus, by contrast, receives every event when you enable it on the bucket, and adds proper pattern matching, multiple targets per rule, archive and replay, and routing to any of its targets.
+
+The decision rule is simple: use a direct destination for the one-trigger-one-handler case, and switch to the event bus as soon as the routing has any real complexity.

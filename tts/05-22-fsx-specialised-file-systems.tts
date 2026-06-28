@@ -1,0 +1,5 @@
+Specialized file systems.
+
+The f-s-x family is a set of managed third-party filesystems, each purpose-built for a workload the elastic file system doesn't fit. The Windows file server speaks the Windows sharing protocol, stores files in the Windows filesystem, and integrates with Active Directory, for Windows workloads. The Lustre variant is for high-performance computing, machine-learning training, and media processing that need extreme throughput. The NetApp variant speaks multiple protocols at once and is a lift-and-shift target for existing NetApp deployments. And the open-z-f-s variant is for z-f-s workloads with fast clones and snapshots.
+
+The two everyone needs to know are the Windows file server, the answer whenever Windows sharing or Active Directory enters the question, and Lustre, the answer for high-performance computing and training at scale; the other two you choose because you already run that technology and don't want to rearchitect.

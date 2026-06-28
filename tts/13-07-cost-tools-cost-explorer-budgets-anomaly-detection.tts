@@ -1,0 +1,7 @@
+Cost tools: the explorer, budgets, and anomaly detection.
+
+Three tools do three jobs. The cost explorer is the interactive analysis console: you slice spend by service, account, region, or tag over any time window, get reservation and savings-plan recommendations based on recent usage, and forecast month-end spend from the trend; it's where finance and engineering meet over the same data.
+
+Budgets are the proactive alarms: you set a monthly spend budget, a usage budget, or a savings-plan-utilization budget, and they email or notify you when you cross thresholds; the trick is to budget per team or per workload, not just for the account total, because a one-team overrun is invisible inside a healthy whole-account budget.
+
+Anomaly detection is the machine-learning layer on top: it learns each service's normal spending pattern and alerts on unexpected spikes, and the classic catch is a compromised key running a cryptominer, which it flags as an instance-spend explosion before the bill even arrives. And for the deepest view, the cost and usage reports export hourly, resource-level data to object storage, queryable for chargeback in any organization big enough to need it.

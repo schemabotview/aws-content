@@ -1,0 +1,7 @@
+The backup service.
+
+The backup service is the managed, central backup tool that covers a long list of services, instances, volumes, databases, file systems, object storage, and more; the length of the list is the point, because without it you'd run a different backup configuration per service.
+
+The model has three pieces. Backup vaults hold the recovery points, each with an encryption key and an access policy, and a vault lock makes a vault write-once: once locked in compliance mode, even the root user can't shorten retention or delete recovery points, which is the ransomware-resilience answer. Backup plans define schedules, retention, and transitions to cold storage, and one plan can target many resource types. And resource assignment matches resources to plans by tag, so you tag the resources you want covered and the plan picks them up automatically.
+
+Two features are worth highlighting: a cross-region copy as part of the plan automatically duplicates recovery points to another region, the cheapest disaster-recovery option for many workloads; and a cross-account copy keeps backups in a separate account, isolating them from a compromise of the primary. But remember this is backup, not replication: the recovery point is the schedule interval, typically hours, so for a recovery point in seconds you need engine-level replication, not backup.

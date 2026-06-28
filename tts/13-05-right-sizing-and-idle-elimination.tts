@@ -1,0 +1,7 @@
+Right-sizing and eliminating idle resources.
+
+The first lever on every cost review is resources that aren't doing the work they're sized for, in two patterns. Over-sized: an instance running at eight percent processor for the last three months, which you drop to a smaller size or move to an arm-based equivalent to save sixty percent or more. And idle: an instance that gets no requests but was forgotten after a project ended, a dev database running around the clock but used only at office hours, a volume detached from any instance for months, or an unused elastic address.
+
+The right-sizing engine analyzes a couple of weeks of metrics for instances, scaling groups, volumes, functions, and databases, and recommends a specific smaller or differently-shaped resource with a projected saving, accounting for performance impact. The advisory service flags idle resources in its cost-optimization category, like idle load balancers and underused volumes.
+
+The operational pattern that actually works is a weekly review of the optimizer, the advisor, and the cost explorer, with right-sizing changes made the same week, because costs that aren't reviewed simply grow.

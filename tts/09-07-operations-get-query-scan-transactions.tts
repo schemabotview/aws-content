@@ -1,0 +1,7 @@
+Operations: get, query, scan, and transactions.
+
+There are four shapes of read, with very different cost profiles. Get-item fetches a single item by primary key, the cheapest and fastest read. Query fetches items within one partition-key value, optionally filtered by a sort-key range; it only reads the relevant partition, and it's the workhorse of access patterns. Scan reads every item in the table and then filters, charging capacity for the entire table regardless of how many items match, which is almost always wrong in production; if you're reaching for a scan, the access pattern probably wants a global index instead. And batch operations do up to a hundred reads or twenty-five writes in one call, saving round-trips but not capacity.
+
+A note on filter expressions: they apply after the read, so filtered-out items still cost capacity; they trim the response, they don't make a query cheap.
+
+Transactions are the acid layer, performing up to a hundred writes or checks across tables atomically, all succeed or all roll back, at roughly double the cost, but the alternative of application-side compensation logic is usually worse. And condition expressions are the quieter feature: a write can require an attribute to be in a certain state to succeed, so insert-only-if-absent or decrement-only-if-positive are single-call patterns with no transaction needed.

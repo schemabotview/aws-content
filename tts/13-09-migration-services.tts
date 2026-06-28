@@ -1,0 +1,7 @@
+Migration services.
+
+A family of services moves the bytes. The application migration service is the modern lift-and-shift tool: you install a lightweight agent on each source server, physical, virtual, or cross-cloud, and it continuously block-level replicates the disks to a low-cost staging area; when you're ready, you launch test instances or cut over, and the source machine becomes an instance in minutes, byte-identical.
+
+The database migration service handles the database tier in two modes: homogeneous, where the source and target are the same engine, and heterogeneous, where they differ, which uses a schema conversion tool to translate the schema and stored procedures, then streams the data with ongoing change capture so the source and target stay in sync until cutover, enabling near-zero-downtime moves.
+
+The data-sync service is network-based bulk file transfer, for moving large file and object datasets, terabytes to petabytes, over the network with built-in encryption, integrity checks, and bandwidth controls, faster than generic tools because its agent parallelizes aggressively. The transfer family is managed file transfer over the standard protocols for ongoing exchange with partners, a steady-state service rather than a one-shot move. And the migration hub is the umbrella dashboard, a single place to track migrations across these tools with portfolio reporting and a recommendation service that proposes the right strategy from discovery data.

@@ -1,0 +1,7 @@
+Aurora global database.
+
+A global database spans multiple regions as a single logical cluster. One primary region accepts writes, while up to five secondary regions accept reads, and replication happens at the storage layer rather than at the query level, so typical lag is under a second even across continents.
+
+The disaster-recovery numbers are the headline: the data-loss objective is under a second, and the recovery-time objective is under a minute through a managed planned failover. You can also do an unplanned manual detach, promoting a secondary region to a standalone primary even if the original region is fully unreachable.
+
+Each secondary region can have its own read replicas, giving regional users local-latency reads against a globally consistent dataset. The whole arrangement is the standard pattern for globally distributed applications and the strongest cross-region disaster-recovery option Aurora offers.

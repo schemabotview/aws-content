@@ -1,0 +1,7 @@
+The no-sequel database core model.
+
+This database is a fully managed no-sequel store. Tables hold items, which are records; items hold attributes, which are fields; and items in the same table can have different attributes, because the database is schemaless apart from the primary key, which every item must carry. The mapping to the relational world is simple: a table is a table, an item is a row, and an attribute is a column.
+
+Attributes support a rich set of types, strings, numbers, binary, booleans, sets, lists, and nested maps, and a single item is capped at four hundred kilobytes.
+
+The primary key uniquely identifies each item and comes in two shapes. A simple key is just a partition key, where each item has a globally unique value, like a user id. A composite key is a partition key plus a sort key, where many items share a partition key and the sort key orders them and provides uniqueness, like a customer id paired with an order id. The composite form is the unlock for almost every interesting access pattern: you query by the partition key and use the sort key to filter or order within it, so getting all orders for a customer or all readings for a device in a time range becomes one efficient query.

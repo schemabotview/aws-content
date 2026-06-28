@@ -1,0 +1,7 @@
+The machine image lifecycle.
+
+You create an image from a running instance, which produces the image plus its backing snapshots. From there you can launch new instances from it, copy it to another region, or share it so other accounts can launch from it.
+
+A few things people miss are worth calling out. When you deregister an image, the image is removed but the snapshots remain and keep billing, so you have to delete those explicitly. Sharing an encrypted image isn't enough on its own; you also have to share the key that encrypted the snapshots, or the recipient can't launch. And by default, creating an image briefly reboots the instance to get a clean, consistent filesystem snapshot; you can skip the reboot for speed, but you risk an inconsistent image.
+
+To produce golden images repeatably, the native pipeline is image builder, which layers build and test steps onto a base image and distributes the result.

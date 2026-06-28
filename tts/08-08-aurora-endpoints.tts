@@ -1,0 +1,7 @@
+Aurora endpoints.
+
+An Aurora cluster exposes several endpoints; they look like ordinary names, but each routes differently. The cluster, or writer, endpoint always points at the current primary, for writes. The reader endpoint load-balances across all the replicas, for reads. A custom endpoint points at a subset of instances you define. And an instance endpoint points at one specific instance, for debugging.
+
+The application connects to the writer endpoint for writes and the reader endpoint for reads, and if the primary fails and a replica is promoted, both endpoints update automatically, so the application never has to know which instance is currently the writer. The reader endpoint round-robins across replicas, giving you a name-level load balancer for reads without managing one.
+
+Custom endpoints are the lever for mixed workloads on one cluster, for example dedicating a couple of large replicas to overnight analytics through their own endpoint while the main reader endpoint serves everyday traffic from the smaller ones.

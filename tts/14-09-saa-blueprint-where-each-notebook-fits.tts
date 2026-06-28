@@ -1,0 +1,7 @@
+The exam blueprint, and where each module fits.
+
+The solutions architect associate exam has four domains, weighted roughly equally, so you shouldn't over-study one. Designing secure architectures is the largest at about thirty percent, drawing on the identity, security-services, and networking modules. Designing resilient architectures is next, drawing on compute, databases, and the disaster-recovery module. Designing high-performing architectures draws on compute, serverless, storage, the edge module, and the data and integration modules. And designing cost-optimized architectures draws on the cost levers, the storage classes, and instance choice.
+
+The foundations module and the observability module cut across all four domains, and this final module is the integration; there's no exam topic not covered somewhere in the previous thirteen.
+
+The two hardest domains tend to be resilient architectures and secure architectures, for the same reason: each has several services that look similar, and a question often hinges on one small distinguishing constraint, like multi-zone versus a read replica, or which encryption option the scenario demands.

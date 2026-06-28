@@ -1,0 +1,7 @@
+Content-delivery security.
+
+Several security knobs sit on a distribution. For certificates, you get a default one on the AWS-provided domain, and for a custom domain you attach a managed certificate, which crucially must live in the Northern Virginia region regardless of where your origin or users are, a detail that catches people out.
+
+Two independent protocol policies control encryption: the viewer policy for the user-to-edge leg and the origin policy for the edge-to-origin leg; encrypt at least the viewer leg, ideally both. Geo restriction blocks or allows whole countries at the edge before any cache lookup. Signed urls and signed cookies grant time-bounded access to private content, a signed url for one specific object and a signed cookie for many objects at once, each carrying an expiry and a signature validated at the edge.
+
+Attaching a web application firewall adds application-layer protection like rate limiting and managed rule groups, and combined with the free always-on network-layer protection it's the default front line, with an advanced tier adding a response team and bill-spike protection. And field-level encryption encrypts specific submitted fields at the edge with your public key, so sensitive data stays encrypted until a backend with the matching private key decrypts it.

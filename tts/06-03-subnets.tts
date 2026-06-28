@@ -1,0 +1,7 @@
+Subnets.
+
+A subnet is a slice of the network's address range confined to a single availability zone. The labels public and private are not properties of the subnet itself; they're a consequence of the route table the subnet is associated with. A subnet is public because its route table has a route to an internet gateway, and private because it doesn't, and the same subnet flips identity the moment you associate it with a different route table.
+
+AWS reserves five addresses in every subnet, the first four and the last, so a slash-twenty-four gives you two hundred fifty-one usable addresses rather than two hundred fifty-six; this bites when you size a small subnet for a function attachment or an endpoint and come up short. Each subnet has an auto-assign-public-address flag, on for default public subnets and off in custom networks.
+
+The canonical pattern is three tiers across two or three zones, public subnets for load balancers and nat, private subnets for application servers, and isolated subnets for databases, so that a zone failure never takes more than one tier offline.

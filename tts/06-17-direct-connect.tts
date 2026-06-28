@@ -1,0 +1,7 @@
+Direct connect.
+
+Direct connect is a dedicated physical fiber link from your data center or colocation facility to an AWS direct-connect location, bypassing the public internet entirely. It gives you consistent bandwidth, predictable latency, and a private path for compliance regimes that forbid data transit over the internet.
+
+A single connection carries one or more virtual interfaces, each targeting a different kind of resource: a private interface reaches resources in a network by private address, a public interface reaches AWS public service endpoints over the dedicated link, and a transit interface reaches a transit gateway through a direct-connect gateway to fan out to many networks. That direct-connect gateway is what lets one physical connection reach networks in multiple regions.
+
+Two things trip people up. It's not encrypted by default, since it's already a private physical link, so if you need cryptographic encryption you run an encrypted tunnel over it. And provisioning takes weeks to months, because cross-connects are physically installed, so you can't add it on the day you need it. The standard hybrid pattern is therefore direct connect as the primary path with a site-to-site vpn as same-day failover, and for true resiliency, two connections at two different locations.

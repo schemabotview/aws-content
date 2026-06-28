@@ -1,0 +1,7 @@
+The transit gateway.
+
+When the number of networks that need to talk grows past a handful, peering's full mesh stops being sustainable. A transit gateway replaces the mesh with a hub-and-spoke topology: every network attaches once to the gateway, and the gateway routes between them. Ten networks that would have needed forty-five peering connections need ten attachments instead.
+
+It's regional but accepts rich attachment types: networks, site-to-site vpn connections, direct-connect gateways, and even other transit gateways for inter-region peering. Routing is transitive by default, so any attachment can reach any other, which immediately raises the question of isolation. The answer is the gateway's own route tables: it can have several, and each attachment is associated with one, so a dev attachment on the dev route table sees other dev networks but not production. That's how you build a single global network with multiple isolation domains.
+
+The gateway can be shared across accounts through the resource access manager, so one networking-hub account owns it and every other account attaches its networks; this is the default architecture for any non-trivial multi-account network.

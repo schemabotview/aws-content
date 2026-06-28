@@ -1,0 +1,7 @@
+Standard versus express workflows.
+
+There are two workflow types with very different cost and execution models. A standard workflow can run for up to a year, guarantees each state runs exactly once, is priced per state transition, stores its history viewable forever, and handles up to a couple thousand starts per second. It's the right pick for business workflows, order fulfilment, data pipelines, and human approvals, anything where each step must run exactly once, the audit trail matters, and the flow might stay open for hours or days; per-transition pricing is cheap on long flows that don't transition often.
+
+An express workflow runs for at most five minutes, uses an at-least-once or at-most-once model, is priced by duration and request count, logs its history to the monitoring service, and handles over a hundred thousand starts per second. It's the right pick for high-throughput, short-duration event handlers, like ingestion or per-request orchestration; its pricing is cheap on short executions but punishing if you accidentally use it for long ones.
+
+The rule: long, careful, and auditable means standard; short, frequent, and high-volume means express. You can even call an express workflow as a step inside a standard one when you want a high-throughput sub-step within an audited parent.

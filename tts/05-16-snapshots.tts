@@ -1,0 +1,7 @@
+Snapshots.
+
+A snapshot is a point-in-time backup of a volume, stored behind the scenes in object storage that AWS manages for you. Snapshots are incremental: the first copies every used block, and each later one copies only the blocks that changed since the prior. Restoring creates a new volume from the snapshot, in any zone of the same region, or in another region after you copy the snapshot across.
+
+Three features extend this. Snapshot archive is a separate tier about seventy-five percent cheaper for snapshots you keep for compliance but rarely restore, with restoration taking a day or more. The recycle bin holds deleted snapshots for a retention window before permanent deletion, your safety net against accidental cleanups. And fast snapshot restore pre-warms a snapshot in chosen zones so new volumes have full performance immediately; it's expensive, so reserve it for disaster-recovery drills and rapid scaling from a golden snapshot.
+
+Snapshots are also how you encrypt an existing unencrypted volume: snapshot it, copy the snapshot with encryption on, and make a new volume from that copy, since there's no in-place encryption.

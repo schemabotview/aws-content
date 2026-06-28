@@ -1,0 +1,5 @@
+Performance.
+
+Object storage scales request rate per prefix: about thirty-five hundred writes and fifty-five hundred reads per second per prefix, with no limit on the number of prefixes, so you scale throughput horizontally by spreading objects across more prefixes. The old advice about randomizing key prefixes is obsolete; the service partitions automatically now.
+
+For object size, three patterns matter. Multipart upload splits a large object into parts uploaded in parallel and reassembled on the server; it's required above five gigabytes and recommended above a hundred megabytes, and its real win is retry granularity, since a failed part is retried alone. Byte-range fetches are the read-side analogue: request specific ranges in parallel for faster downloads, or grab just a header. And transfer acceleration routes uploads through the nearest edge location and over the AWS backbone, which helps global users uploading across continents; it's an upload optimization, not a content-delivery network.

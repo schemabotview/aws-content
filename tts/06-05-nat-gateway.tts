@@ -1,0 +1,5 @@
+The nat gateway.
+
+Private subnets often need outbound internet access, to pull updates or reach service endpoints, but they should never be reachable inbound from the internet. A nat gateway is the standard answer: a managed component that sits in a public subnet, holds an elastic address, and translates outbound traffic from private subnets so it appears to come from that address. It's stateful, allowing outbound and the matching responses but nothing unsolicited inbound, it auto-scales its bandwidth, and notably it can't have a security group attached.
+
+The important caveat is availability: a nat gateway lives in one zone, so if you put a single one in zone a and that zone fails, every private subnet routed through it loses internet, even subnets in other zones. The correct pattern is one nat gateway per zone, with each zone's private route table pointing at its own. The older self-managed nat instance still exists, but the modern default is always the nat gateway.

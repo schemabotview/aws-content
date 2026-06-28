@@ -1,0 +1,7 @@
+Container service networking.
+
+A task can use one of four network modes, but for almost all new workloads the answer is the v-p-c networking mode. In that mode, each task gets its own elastic network interface and private address inside your virtual private cloud; it's required for Fargate and the default on instances.
+
+The legacy bridge and host modes exist only for the instance launch type, and there's a none mode for fully isolated tasks. The big payoff of per-task networking is that each task carries its own security group and address, so you treat tasks like small instances on the network and never need dynamic port mapping.
+
+For load balancing, you attach the service to a target group, and the service registers tasks as they launch and deregisters them as they stop, respecting the draining delay so in-flight requests finish.

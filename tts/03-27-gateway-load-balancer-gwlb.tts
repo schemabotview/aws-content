@@ -1,0 +1,7 @@
+The gateway load balancer.
+
+This is a niche but elegant one. It sits inline as a transparent bump in the wire for third-party network appliances, things like next-generation firewalls and intrusion-detection systems.
+
+Traffic flows into the gateway load balancer, out to a scalable fleet of appliances for inspection, back to the gateway load balancer, and on to its real destination. It uses the geneve protocol on port six-thousand-eighty-one to wrap up the original packet, hand it to an appliance, and then deliver the possibly-modified packet onward, and the source and destination workloads never know the appliance was in the path.
+
+Most architectures never need it. The signal to recognize it is a requirement to deploy a fleet of third-party firewalls scalably and transparently.

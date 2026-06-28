@@ -1,0 +1,7 @@
+The cache for Redis.
+
+A few things shape a Redis deployment. The unit of deployment is a replication group: one primary node plus up to five read replicas, optionally spread across zones, and with multi-zone enabled, the cache automatically promotes a replica to primary on failure; the application uses the primary endpoint for writes and an optional reader endpoint to load-balance reads.
+
+There are two cluster modes. With cluster mode disabled, you have one shard, all data in one key space, right for any workload that fits on a single primary. With cluster mode enabled, the key space is sharded across up to five hundred shards, each with its own primary and replicas, which scales write throughput linearly and lets the dataset grow well past a single node's memory; the trade is that multi-key operations become harder because keys may live on different shards.
+
+Redis's data structures are the reason it shows up everywhere: a sorted set gives you a real-time leaderboard with logarithmic rank lookups, a string with increment and expiry gives you a rate limiter, and a list gives you a recent-activity feed. And security wraps it on four sides: encryption in transit, encryption at rest, an authentication token, and identity-based authentication on newer versions, plus a tight security group on its port.

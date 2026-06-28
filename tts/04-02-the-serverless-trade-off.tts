@@ -1,0 +1,5 @@
+The serverless trade-off.
+
+So why ever choose serverless over plain instances or containers? With instances you manage capacity, scaling is something you configure, and you pay around the clock even when idle. With serverless, meaning Lambda or Fargate, AWS manages everything, scaling is automatic and near-instant, and idle costs nothing, because you pay per request and per millisecond of duration.
+
+There's a ceiling to keep in mind: Lambda caps a single unit of work at fifteen minutes, while Fargate is unbounded. Serverless wins on event-driven, intermittent, or unpredictable workloads. But long-running, stateful, or sustained-see-pee-you work usually belongs on instances or containers, because at high steady utilization, per-invocation pricing eventually costs more than per-hour.

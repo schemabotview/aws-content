@@ -1,0 +1,5 @@
+What ee-see-two is.
+
+Ee-see-two, the elastic compute cloud, is AWS's virtual server service, and it's the most fundamental compute primitive in AWS. Almost every workload runs on it in some form, either directly or as the engine behind a managed service.
+
+An instance is simply a virtual machine. AWS picks the physical hardware, runs a hypervisor on it, and hands you a slice. You choose the operating system, the see-pee-you, the memory, the storage, and the networking, and AWS takes care of the hardware underneath.

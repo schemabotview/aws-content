@@ -1,0 +1,7 @@
+Reliability.
+
+Reliability is the pillar about meeting your uptime and recovery targets. The checklist starts with distributing every production tier across availability zones, with scaling groups, databases, and caches all spanning zones. Keep compute stateless, with sessions in a cache, files in object storage, and secrets in a secrets manager, so local disk holds nothing of value.
+
+Lean on automatic recovery: scaling groups self-heal failed instances, health checks remove bad targets, and the container scheduler replaces failed tasks. Manage your service quotas, requesting increases before you hit them. Choose and test a disaster-recovery strategy per workload, with regular drills. Keep backups in locked vaults with cross-region and cross-account copies. And design resilient clients, with exponential backoff and jitter on every call and idempotency tokens on writes.
+
+The core message is that reliability is measured, not asserted: if you can't quote your recovery time and recovery point objectives per workload, you don't have a reliability story, you have a hope.

@@ -1,0 +1,7 @@
+Ay-pee-eye gateway and function urls.
+
+Lambda needs something in front of it to speak h-t-t-p, and there are two options. A function url is a built-in secure endpoint directly on a function, one per function, with identity-based or open authentication; use it for simple internal services, webhooks, or quick prototypes.
+
+Ay-pee-eye gateway is the full front door and the canonical pairing for production serverless ay-pee-eyes: it adds routing, throttling, keys and usage plans, request and response transformation, validation, caching, custom domains, and authentication. Within gateway there are two flavors: the h-t-t-p ay-pee-eye is simpler and cheaper and handles most production rest workloads, while the rest ay-pee-eye is the most configurable, the one you choose only when you need response caching, request transformation, or fine-grained per-key throttling.
+
+The rule: function url for the simplest case, h-t-t-p ay-pee-eye for most production, rest ay-pee-eye when you need its extras.

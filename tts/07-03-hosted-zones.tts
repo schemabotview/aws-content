@@ -1,0 +1,7 @@
+Hosted zones.
+
+A hosted zone is the container for a domain's records, and there are two kinds. A public hosted zone answers queries from the internet, for any domain you serve externally. A private hosted zone answers queries only from the networks you associate with it, so internal names resolve to private addresses; for that to work, the associated network needs both name-resolution toggles on, the same pair from the networking chapter.
+
+Route fifty-three is also a domain registrar, so you can register a domain through it and it wires everything up automatically. But even if your domain is registered elsewhere, you can still use Route fifty-three for resolution: create the hosted zone, then copy the four name-server records AWS assigns into your registrar's settings. The registrar still owns the domain; Route fifty-three just answers the queries.
+
+There's also an option to sign your responses cryptographically, so validating resolvers can detect tampered answers, cheap insurance against spoofing.

@@ -1,0 +1,7 @@
+Backups and point-in-time restore.
+
+The service runs two backup mechanisms at once. Automated backups are on by default: it takes a daily snapshot and ships transaction logs every five minutes, with retention from one to thirty-five days. Within that window you can restore to any second, since the snapshot is the base and the logs replay forward. But automated backups are tied to the instance, so deleting it takes them with it unless you take a final snapshot.
+
+Manual snapshots, by contrast, are triggered by you and persist until you delete them; they can be copied to another region, the standard cross-region disaster-recovery pattern, and shared with other accounts.
+
+The behavior to remember is that restoring always creates a new instance; a point-in-time restore doesn't rewind the existing database in place, it spins up a parallel one at the target timestamp, and you repoint the application at the new endpoint. There's also a cross-service backup orchestrator that manages these snapshots alongside block-storage, database, and file-system backups under one central policy, which is the right answer when one compliance story has to span the whole estate.

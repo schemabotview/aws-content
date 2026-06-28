@@ -1,0 +1,7 @@
+The web application firewall.
+
+The web application firewall is an application-layer filter for web traffic: it inspects requests against rules you define and allows, blocks, counts, or challenges them before they reach your application. It attaches to the content network at the edge, to a load balancer, to ay-pee-eye gateway, to a graph-query ay-pee-eye, and to a user directory. Its top-level resource is a web access control list, a container of rules with a default action for requests that match nothing, where rules are evaluated in priority order and the first match wins.
+
+Rule types include matching specific address ranges, matching by country, rate-based rules that block addresses exceeding a per-five-minute threshold, string and pattern matches on any part of the request, sequel-injection and cross-site-scripting detectors, size constraints, and managed rule groups. Those managed rule groups are pre-built and regularly updated with no tuning: a core set covering the most common web vulnerabilities, a known-bad-inputs set, engine-specific exploit sets, bot control, account-takeover prevention, and an anonymous-address list. The practical starting point for any new access control list is the core set plus known-bad-inputs plus a rate-based rule.
+
+Actions are allow, block, count, which records a match without acting so you can dry-run a rule, and a challenge that presents a puzzle; decisions are logged for debugging false positives and analyzing attacks.

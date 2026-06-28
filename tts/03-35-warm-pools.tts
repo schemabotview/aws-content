@@ -1,0 +1,7 @@
+Warm pools.
+
+A warm pool keeps a buffer of pre-initialized instances standing by, ready to activate quickly on scale-out. Without one, a scale-out trigger has to launch a fresh instance and bootstrap it, which can take several minutes before it's in service; with one, the group takes a ready instance from the pool and it's in service in seconds.
+
+The pooled instances can sit in one of three states. Stopped costs only for storage but is slower to activate, since it does a full boot. Hibernated also costs only for storage but activates fast, because memory is restored from disk. And running costs full compute but activates fastest.
+
+Use warm pools when bootstrap time is the bottleneck for scale-out, with heavy images, large downloads, or long runtime warm-up, and pair them with lifecycle hooks so the warm-up work happens once, before the instance enters the pool, rather than on every scale-out.

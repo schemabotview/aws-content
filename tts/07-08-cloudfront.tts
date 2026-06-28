@@ -1,0 +1,7 @@
+The content-delivery network.
+
+The content-delivery network does the standard job: cache content close to the user so most requests are answered from the edge instead of dragging across the internet to the origin. AWS runs it from hundreds of edge locations in over a hundred cities, with a tier of larger regional caches between the edge and the origin to absorb misses.
+
+In a request, the user's name lookup resolves a distribution name to the nearest edge; the edge checks its cache; on a hit, it returns the object immediately; on a miss, it fetches from the regional cache, and on a miss there, from the origin over the AWS backbone, caching the response on the way back.
+
+Beyond raw caching, it terminates secure connections at the edge, much closer than your origin can be, includes free protection against network-layer denial-of-service attacks, accepts a web application firewall for application-layer protection, and speaks the modern web protocols regardless of what your origin speaks.

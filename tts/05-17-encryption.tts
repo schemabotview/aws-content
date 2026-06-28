@@ -1,0 +1,5 @@
+Encryption for block volumes.
+
+Block-volume encryption uses strong symmetric encryption backed by the key management service, applied transparently: data at rest, the snapshots, and the traffic between the volume and the instance are all encrypted, and the nitro hardware does the work, so the latency overhead is negligible. Snapshots of an encrypted volume are encrypted, and volumes restored from an encrypted snapshot are encrypted.
+
+The one knob worth flipping early is account-level default encryption: once set, every new volume and every snapshot copy is automatically encrypted with your chosen key. Existing unencrypted volumes are not retroactively encrypted, so turn this on in fresh accounts before any workloads land in them.

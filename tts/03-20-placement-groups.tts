@@ -1,0 +1,11 @@
+Placement groups.
+
+By default, AWS spreads your instances across hardware to minimize the chance that one failure takes out several of them. Placement groups let you override that default in one of three ways.
+
+A cluster placement group packs instances onto the same rack in a single zone, giving you the lowest possible latency and the highest bandwidth between them; the trade is that a rack-level failure can take the whole group down, so it's for tightly coupled high-performance computing and big-data jobs with heavy shuffle.
+
+A spread placement group does the opposite, putting each instance on a different rack with distinct power and hardware, capped at seven instances per zone; it's for small fleets of critical instances where you can't tolerate two failing together, like a primary and standby database pair.
+
+A partition placement group groups instances into partitions that share no hardware between them, and instances can read their partition number, which suits large, topology-aware distributed systems like Cassandra, Kafka, and the hadoop file system.
+
+So: cluster for latency, spread for isolation, partition for big topology-aware systems.

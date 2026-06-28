@@ -1,0 +1,7 @@
+Cache behaviors, time-to-live, and cache keys.
+
+A cache behavior is a routing rule on a distribution: a path pattern, the origin it maps to, and the caching settings for that path. A distribution has a default behavior and any number of more specific ones evaluated in precedence order, so you might send the ay-pee-eye path to a load balancer with no caching while caching images from a bucket for a day. Per behavior you also set the protocol policy, the allowed methods, any edge functions, and the cache policy that defines the cache key.
+
+For time-to-live, the network respects the caching headers from the origin, falling back to the behavior's defaults, with a default of about a day. To evict cached objects you can issue invalidations by path, but they cost money and take a few minutes to fan out, so the better pattern is versioned filenames: deploy a new name instead of overwriting the old one, and the new url is a fresh cache key.
+
+The cache key itself defaults to just the path; cache policies let you add query strings, headers, or cookies, but every distinct value becomes a separate cache entry, so include only what actually changes the response, or you'll hurt your hit ratio. A separate origin-request policy controls what gets forwarded to the origin independent of the cache key.

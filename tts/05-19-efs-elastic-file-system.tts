@@ -1,0 +1,7 @@
+The elastic file system.
+
+This service is a managed network filesystem that many Linux instances mount at the same time, across zones, across accounts, and even from on-premises over a private link. Unlike a block volume, it's regional: data is replicated across multiple zones automatically, capacity grows and shrinks elastically, and you pay per gigabyte stored with no provisioning.
+
+Clients reach it through mount targets, one per zone, each with a private address in your network, and security groups on the mount target control which instances can connect; all mount targets resolve to the same filesystem, so a write through any one is immediately visible to all.
+
+It's Linux-only and standards-compliant; Windows clients need the Windows file server instead. Typical workloads are content shared across web servers, Linux home directories, shared config across a scaling group, and container volumes.

@@ -1,0 +1,5 @@
+Packaging and layers.
+
+There are three ways to get code into a function. You can paste a tiny zip inline in the console, good only for small utilities. You can upload a zip, up to two hundred fifty megabytes unzipped, the standard path. Or you can ship a container image up to ten gigabytes, which is right for large dependencies, machine-learning models, or custom runtimes.
+
+Layers are a separate mechanism: versioned archives of shared libraries or runtimes that mount into the execution environment, up to five per function and shareable across functions and accounts. Use layers to keep your function package small, share company-wide helpers, and avoid re-uploading large dependencies on every deploy.

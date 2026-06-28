@@ -1,0 +1,7 @@
+Lifecycle policies.
+
+Lifecycle rules move objects between storage classes and eventually delete them automatically, based on age. A rule can target the whole bucket, a prefix, objects with certain tags, or a size range.
+
+Transitions only flow downward on the cost ladder; you can move standard to colder tiers, but you can't use lifecycle to promote an object back to a warmer class, and the minimum age before moving out of standard into an infrequent-access tier is thirty days.
+
+The useful expiration actions are: expire current versions after some days, the basic retention cap; expire non-current versions, the cost lever that makes versioned buckets affordable; delete expired delete markers, housekeeping; and abort incomplete multipart uploads, which kills orphaned parts that would otherwise bill forever. A typical production bucket runs four rules in parallel, one transition ladder for cooling data plus those three housekeeping rules.

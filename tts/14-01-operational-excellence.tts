@@ -1,0 +1,7 @@
+Operational excellence.
+
+Operational excellence is the pillar about running the system well day to day: can you ship changes safely, respond to incidents, and improve from what you learn? In practice it comes down to a few habits drawn from everything you've seen.
+
+Define your infrastructure as code, so manual console changes are the exception, flagged and reverted. Deploy through pipelines that authenticate with short-lived federated credentials rather than long-lived keys. Ship changes safely with blue-green and canary strategies and automated rollback on an alarm. Wire observability in by default, metrics, logs, and alarms, with the audit trail enabled across the whole organization. Capture your common operational tasks as runbooks so response isn't improvised. And genuinely improve from incidents through post-incident reviews that turn into tracked action items, so the same incident never happens twice.
+
+The pillar's anti-pattern is the heroic operator who keeps it all in their head; that works right up until they go on holiday.

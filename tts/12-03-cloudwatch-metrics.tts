@@ -1,0 +1,7 @@
+Monitoring metrics.
+
+A metric is a time-series of numeric data points, like processor percentage, request count, error rate, or latency, and metrics are the foundation that alarms and dashboards build on. Every metric has a namespace, a logical grouping where AWS services emit into service-specific namespaces and your custom metrics use any namespace you like; a name; dimensions, which are key-value pairs identifying the specific resource, where each unique combination is a separate metric stream; and a resolution, standard at one minute or high-resolution down to one second.
+
+AWS services push standard metrics for free, like processor, network, and disk for instances, and invocation counts for functions. The catch worth remembering is that an instance's standard metrics come from the hypervisor, so memory usage and in-operating-system disk space are not collected by default; those need an agent running inside the instance. Custom metrics are anything you push yourself, like application counters or business indicators, with the first ten thousand free.
+
+And retention is tiered: the monitoring service keeps data points longer the older they are by aggregating to coarser resolution, from a few hours at sub-minute resolution up to fifteen months at hourly, so for longer retention you export elsewhere, since it isn't a long-term warehouse.

@@ -1,0 +1,7 @@
+The well-architected tool.
+
+The well-architected tool lives in the console. You define a workload, with its name, regions, and lens, pick the lenses, the general framework by default plus specialized ones for serverless, software-as-a-service, machine learning, and others, and walk through the official questionnaire.
+
+Each question has multiple options corresponding to best practices, and the options you leave unchecked become high-risk or medium-risk issues, scored per pillar. You add improvement notes, link to tickets, and re-run the review every six to twelve months to see how the workload's posture is trending. Custom lenses let you encode organization-specific standards on top of the AWS baseline, useful for regulated industries with their own compliance list.
+
+The tool is free; the value is the structured conversation it forces. Most teams find high-risk issues they were vaguely aware of but had never named, and a few they hadn't considered. The first review takes a few hours, and later ones an hour or two.

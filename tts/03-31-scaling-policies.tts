@@ -1,0 +1,11 @@
+Scaling policies.
+
+An auto scaling group adjusts its capacity through policies, and you often combine them.
+
+The simplest, and the right default, is target tracking: you pick a metric and a target value, say keep average see-pee-you at fifty percent, and AWS adds and removes instances to hold the metric there, managing the alarms and cooldowns for you.
+
+Step scaling is for when the relationship between metric and capacity is non-linear: you define an alarm and then steps, adding more instances the worse the breach gets, so a small overshoot adds one instance and a large one adds four.
+
+Scheduled scaling sets the capacity at specific times, for predictable patterns like business hours or end-of-month batches. And predictive scaling uses machine learning on the last couple of weeks of metrics to forecast load and pre-scale before demand arrives; you pair it with target tracking, letting prediction handle the forecastable bulk and target tracking absorb the rest.
+
+The old simple scaling, one step with a blocking cooldown, is legacy; don't use it for new designs.

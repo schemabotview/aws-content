@@ -1,0 +1,7 @@
+The seven migration strategies.
+
+AWS frames migration around what it calls the seven r's: every workload is being retired, retained, rehosted, relocated, replatformed, repurchased, or refactored.
+
+Retire means turning it off, for a workload that's unused or duplicated. Retain means leaving it on-premises, when latency, compliance, or vendor lock makes the move uneconomic. Rehost is the lift-and-shift, forklifting the workload to instances with minimal change; it's the fastest move. Relocate is the specific case of moving virtualization workloads to the managed virtualization service on AWS. Replatform is lift-and-tinker, making small optimizations on the way, like moving a database onto the managed database service, for modest gains without an app rewrite. Repurchase means replacing the workload with a software-as-a-service equivalent, dropping a licensed product for a hosted one. And refactor means rebuilding for the cloud, breaking a monolith into microservices or going serverless, the highest value and highest effort with the longest timeline.
+
+The practical sequencing most enterprises follow is to retire and retain first to cut scope, then rehost the majority to get out of the data center fast, then replatform and refactor over time as workloads earn the investment; this two-phase get-there-then-make-it-cloud-native pattern almost always beats refactoring everything in flight.

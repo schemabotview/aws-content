@@ -1,0 +1,7 @@
+Routing policies.
+
+A routing policy decides which record value Route fifty-three returns when several records share a name. There are eight, and most real designs combine two or three.
+
+Simple returns one record, with no health awareness, right when there's a single target. Weighted splits responses across records in proportion to weights you set, and it's health-aware, which makes it the tool for canary deployments, shifting a small slice of traffic to a new version before going all in. Latency returns the record for the region with the lowest measured latency from the resolver, based on AWS's own measurements rather than raw geography. Failover is active-passive: while the primary's health check passes it's returned, and the moment it fails, traffic shifts to the secondary, the cleanest hot-standby pattern.
+
+Geolocation routes strictly by the user's location, used for data sovereignty and localized content. Geoproximity adds a bias dial to expand or shrink a region's coverage, for gradual migration. Address-based routing routes by the client's address range. And multi-value answer returns several healthy records at random, giving health-aware distribution at the name-resolution layer without standing up a load balancer.

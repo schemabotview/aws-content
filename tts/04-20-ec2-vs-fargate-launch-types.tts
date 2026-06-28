@@ -1,0 +1,7 @@
+Instance versus Fargate launch types.
+
+The container service runs the same task definition under two launch types, and the difference is who owns the host.
+
+With the instance launch type, you manage the instances, you pick the type and image and can connect in, you pay per instance-hour, and you pay even when zero tasks run; in exchange you can use special hardware or custom kernels. With the Fargate launch type, AWS owns the host and it's invisible, you pay per task's see-pee-you and memory by the second, and there's no idle cost and nothing to patch. Fargate sizing uses discrete see-pee-you and memory pairs; you pick a valid pair and AWS picks the host.
+
+The general rule: start with Fargate for simplicity, and move to the instance launch type with savings plans once you've grown into steady, predictable utilization where per-hour math beats per-second.

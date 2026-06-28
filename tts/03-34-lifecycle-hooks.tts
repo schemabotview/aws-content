@@ -1,0 +1,7 @@
+Lifecycle hooks.
+
+A lifecycle hook pauses an instance at a transition state so you can run custom logic before it joins or leaves the fleet.
+
+On scale-out, the instance pauses in a waiting state where you can bootstrap it, register it with service discovery, and run smoke tests, then you signal that the action is complete and it moves into service. On scale-in, it pauses in a terminating-wait state where you can drain connections, upload logs, and deregister it from external systems before it's gone.
+
+The instance waits up to a configurable timeout, defaulting to an hour and capping at forty-eight. If that timeout expires without your completion signal, the group either continues or terminates the instance, depending on the hook's default result. Hooks are how you insert orderly setup and teardown into an otherwise automatic process.

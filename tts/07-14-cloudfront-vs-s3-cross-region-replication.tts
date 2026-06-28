@@ -1,0 +1,7 @@
+The content network versus cross-region replication.
+
+These two come up together because both reduce latency for distant users, but they solve different problems. The content-delivery network caches objects at hundreds of edges; cross-region replication copies objects to another bucket in another region.
+
+The network's freshness is governed by time-to-live, so a copy can be stale until it expires or you invalidate it, while replication is near real-time. The network is automatically global; replication only reaches the regions you replicate to. At the edge the content is read-only; a replication destination bucket is fully writable.
+
+So the network is the right answer when the content is the same everywhere and you want it cached everywhere automatically, and replication is the right answer when you need the data itself living in another region, for failover, regional reads, or legal residency. They combine well: replicate to a backup region and use an origin group so the network fails over between buckets if the primary returns errors.

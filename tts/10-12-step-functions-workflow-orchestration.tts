@@ -1,0 +1,7 @@
+Step functions, workflow orchestration.
+
+A workflow that chains a few functions usually starts as one function calling the next; it works on day one and turns into a swamp by month three, with every function carrying its own retry logic, inconsistent error handling, no visibility into which step failed, and a fifteen-minute ceiling on long flows. Step functions is the managed answer: you describe the workflow as a state machine in a json-based states language, and the service runs it, invokes each step, retries on failure with configured policies, and shows the full execution history.
+
+There are several state types: a task invokes a function or calls a service directly; a choice branches on the input; a wait pauses for a duration; a parallel state runs multiple branches at once; a map state iterates over an array; and there are pass, succeed, and fail states. The task state is the workhorse: besides invoking a function, it can call hundreds of AWS services directly, which removes the need for functions whose only job is gluing services together.
+
+Three integration patterns matter: request-response calls a service and moves on immediately; run-a-job calls a service and waits for the job to finish; and wait-for-task-token pauses the workflow, hands out a callback token, and resumes when something external, like a human approval, signals success.

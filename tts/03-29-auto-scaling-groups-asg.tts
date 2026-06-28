@@ -1,0 +1,7 @@
+Auto scaling groups.
+
+An auto scaling group manages a fleet of instances. It keeps a target number running, replaces failed instances automatically, and scales the count up or down based on policies you attach.
+
+Three capacity settings frame it: a minimum, the floor it never goes below; a desired count, the target it actively maintains; and a maximum, the ceiling it won't exceed.
+
+It distributes instances across the subnets you give it, one per zone for high availability, and it attaches to one or more target groups, so newly launched instances are automatically registered with the load balancer and terminated ones are automatically deregistered. That auto-registration is the glue that makes the whole web tier self-healing.

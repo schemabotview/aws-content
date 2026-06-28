@@ -1,0 +1,7 @@
+The key management service.
+
+The key management service is the managed service that creates and protects cryptographic keys for AWS. Keys live inside validated hardware security modules; they never leave the service in plaintext, and every cryptographic operation happens inside the module. Almost every AWS service that encrypts data, storage, databases, queues, functions, uses this service underneath, and every call is logged to the audit trail.
+
+There are three key types by ownership. An AWS-managed key is created automatically the first time you enable encryption on a service, controlled by AWS, free, and rotated yearly; you can't see or modify its policy. A customer-managed key is one you create yourself when you need full control: a custom policy, a custom rotation schedule, cross-account sharing, and the ability to disable or delete it, for about a dollar a month plus usage. And an AWS-owned key is shared across accounts and entirely invisible to you.
+
+Keys also come in two flavors. A symmetric key uses one key for both encrypt and decrypt, never leaves the service, and is what every AWS-service integration uses; it's the default and what most architectures need. An asymmetric key is a public-private pair, used for digital signatures and for cases where an external party encrypts with your public key that only the service can decrypt. If the scenario is encrypting data at rest in a service, it's always a symmetric key.

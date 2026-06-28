@@ -1,0 +1,7 @@
+Permissions, the two sides.
+
+Lambda uses two distinct identity constructs, and it's easy to confuse them.
+
+The execution role controls what the function can do. It's attached to the function and assumed at runtime, so the credentials inside your handler are this role's credentials. You apply least privilege rigorously here, granting only the specific actions the code needs.
+
+The resource-based policy is the other side: it controls who can invoke the function. The console adds it automatically when you wire up a trigger like ay-pee-eye gateway or storage events, and you set it manually for cross-account invocation. One sentence to remember: the execution role is what the function can reach; the resource policy is who can reach the function.

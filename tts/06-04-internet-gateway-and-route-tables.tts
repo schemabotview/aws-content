@@ -1,0 +1,7 @@
+The internet gateway and route tables.
+
+An internet gateway is a horizontally-scaled, redundant component that lets network traffic reach the internet and back; there's one per network, attached to it and then referenced from route tables. It also performs the address translation that maps an instance's private address to its public address on the way out.
+
+For an instance to be reachable from the internet, three things must line up together: a public or elastic address, a route to the gateway in its subnet's route table, and a security group rule allowing the inbound port. Miss any one and the traffic is silently dropped.
+
+A route table is just a list of destination-range to target mappings, and every subnet is associated with exactly one. The local route, which covers the network's own range, is implicit and can't be deleted, and routing uses longest-prefix match, so the most specific route wins, with the catch-all default route as the last resort.

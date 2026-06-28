@@ -1,0 +1,7 @@
+The queue service.
+
+The queue service is a fully managed message queue. A producer sends a message, which sits in the queue; a consumer receives up to ten messages, does its work, and then deletes each one to remove it. If the consumer never deletes, because it crashed, timed out, or threw, the message reappears after the visibility timeout and another consumer picks it up.
+
+That reappearance is the heart of the at-least-once guarantee: while a message is being processed it's hidden from other consumers, so two workers don't both run the same job; if processing succeeds, the consumer deletes it and it's gone; if it fails short of an explicit delete, the timer expires and the message is delivered again. A consumer can extend the timeout if the work turns out to take longer.
+
+The single most important rule is to set the visibility timeout longer than your maximum processing time. If processing routinely takes ninety seconds but the timeout is thirty, every message gets handed to a second consumer while the first is still working, causing duplicate work and downstream chaos; pick a timeout comfortably above your worst-case processing time.

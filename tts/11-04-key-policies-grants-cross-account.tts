@@ -1,0 +1,7 @@
+Key policies, grants, and cross-account access.
+
+Access control for the key management service is different from most AWS services. For storage or a database, identity policies alone grant access; for a key, the key policy is the primary mechanism, and identity policies only work if the key policy explicitly delegates to them. A minimal key policy has two pieces: a statement enabling identity-based access, which tells the service to honor identity policies for principals in your account, without which even an administrator's policy granting everything does nothing on the key; and statements granting specific principals specific actions like decrypt and generate-data-key.
+
+Grants are a programmatic way to delegate specific permissions on a key without editing the policy; AWS services use them internally, so when you encrypt a volume, the service creates a grant permitting decrypt for that one volume, and because grants are created and retired by code, they're the right tool for short-lived service-to-service delegation.
+
+For cross-account use, you need permission in two places: the key policy in the key's account grants the foreign principal access, and the identity policy in the foreign account grants that principal decrypt on the key; both must allow, the same pattern as a bucket policy plus identity.

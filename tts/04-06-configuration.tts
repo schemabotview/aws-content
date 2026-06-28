@@ -1,0 +1,5 @@
+Configuration.
+
+A few settings size and bound a function. Memory ranges from a hundred twenty-eight megabytes up to about ten gigabytes, and this is the most important knob, because see-pee-you scales with memory. There is no separate see-pee-you dial, so for compute-heavy work you raise memory until you have enough processor, even if you don't need the extra ram.
+
+Timeout runs from one second to fifteen minutes, and it's a hard cap; the function is killed if it exceeds it. There's a temporary scratch directory you can size up to ten gigabytes, which survives across warm invocations on the same environment. Environment variables are encrypted at rest. And the account has a default concurrency limit of a thousand per region, which is a soft limit you can raise.

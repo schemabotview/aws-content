@@ -1,0 +1,7 @@
+Choosing between the managed service and Aurora.
+
+Both are managed relational databases, and the choice comes down to engine, performance ceiling, and how variable the workload is.
+
+If your engine isn't on Aurora's list, Oracle, sequel server, or Db2, you use the standard service. If it's MySQL or Postgres and the workload is cost-sensitive, predictable, and fine with a minute-or-two failover, the standard service is cheaper. If you want faster failover, faster replication, and up to fifteen replicas, choose Aurora. For a variable workload, multi-tenant software, or dev and test, Aurora serverless fits. And for cross-region disaster recovery with sub-second data loss, or global low-latency reads, the global database is the answer.
+
+Cost shape matters too: Aurora is priced per-second compute plus per-gigabyte storage plus per-million input-output requests, while the standard service is per-second instance plus pre-provisioned storage. For very small steady workloads the standard service often comes out cheaper, but for anything bursty or growing, Aurora's pay-for-what-you-use storage model usually wins.
