@@ -1,0 +1,7 @@
+Availability zones.
+
+Inside a region sit availability zones. An availability zone is one or more discrete data centers, each with its own power, cooling, and physical security.
+
+A region typically has three to six of them, named by a letter suffix: you-ess-east-one-a, you-ess-east-one-b, you-ess-east-one-c. They sit tens of miles apart, far enough that a single fire or flood cannot take out more than one, but close enough that they are joined by high-bandwidth, low-latency fiber. To your application, the network between zones is fast and effectively local.
+
+Here is why they matter. Running your workload across two or three availability zones inside a region is the foundation of high availability on AWS. Anytime you see the phrase multi-availability-zone in the documentation, whether it is a multi-zone database, an auto scaling group spread across zones, or a load balancer across zones, this is the principle at work. Spread across zones, and one data center failing no longer takes your service down.

@@ -1,0 +1,9 @@
+Service control policies.
+
+A service control policy attaches to the organization root, to an organizational unit, or to an individual account, and it defines the maximum permissions for every principal in scope, including the root user of member accounts.
+
+There are two strategies. The common one is a deny-list: you start from the built-in policy that allows everything, then add explicit denies for what you want to block. It's the easier one to maintain. The alternative is an allow-list: you remove the allow-everything policy and then explicitly allow each permitted action. That's far more work, because every new service you adopt requires an update.
+
+Three things a service control policy does not do, and these are classic traps. It does not grant permissions; an allow in one of these policies is meaningless unless identity and access management also grants the action. It does not apply to the management account, which is always exempt, and that's exactly why you don't run workloads there. And it does not affect service-linked roles, the special pre-built roles AWS services create on your behalf.
+
+Two patterns are worth recognizing. A region restriction denies any action whose requested region is not on your approved list, while carefully exempting global services like identity and access management and Route fifty-three so they don't break. And an org lock-in denies the leave-organization action, so member accounts can't escape governance.

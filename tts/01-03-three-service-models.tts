@@ -1,0 +1,11 @@
+Three service models.
+
+When you use the cloud, the layer you consume decides how much of the operational stack you still own. There are three models, and each step up the stack trades flexibility for less operational burden.
+
+The first is infrastructure as a service. The provider manages virtualization, networking, and hardware, and you manage the operating system, the runtime, the application, and the data. On AWS, picture ee-see-two, e-b-s, and the virtual private cloud.
+
+The second is platform as a service. Now the provider also manages the operating system and the runtime, so you are left with just your application and your data. Elastic Beanstalk and the relational database service are good examples.
+
+The third is software as a service. Here the provider runs the entire stack, and you simply use the application or bring your own data. Think of finished products like QuickSight or Chime.
+
+The pattern to hold onto is this: the higher you climb, from infrastructure up to software, the less you have to operate, but the less low-level control you keep.

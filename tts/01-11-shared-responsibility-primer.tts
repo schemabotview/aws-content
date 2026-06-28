@@ -1,0 +1,9 @@
+Shared responsibility, a primer.
+
+When something goes wrong in the cloud, whose problem is it? AWS answers with the shared responsibility model, and the slogan captures it: AWS is responsible for security of the cloud, and you are responsible for security in the cloud.
+
+AWS always owns the physical buildings, the hypervisors, the networking gear, the host operating system, and the services they operate. You always own your data, your identity users, roles, and policies, your firewall rules, and your encryption choices.
+
+The important subtlety is that the dividing line moves depending on how managed the service is. With ee-see-two, AWS handles the hardware and hypervisor, but you patch the guest operating system and set the network rules. With the relational database service, AWS also patches the database engine, leaving you the users, the queries, and the backup configuration. With ess-three, AWS guarantees storage durability, while you own the data and the bucket policies.
+
+So the line slides up the stack as the service gets more managed. But notice what never moves: responsibility for what you put in, and who you let see it, is always yours.

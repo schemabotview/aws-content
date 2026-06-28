@@ -1,0 +1,7 @@
+Permission boundaries and delegated administration.
+
+Here is a real problem. You want to let a developer create roles for the services they own, but you absolutely do not want them able to create a role with administrator access and then assume it. If you can grant them the power to make roles, can't they just grant themselves anything?
+
+The answer is the permission boundary. You give the developer permission to create roles, but with a condition: every role they create must carry a specific permission boundary. That boundary caps what those new roles can ever do, no matter what permissions policy gets attached to them later.
+
+The crucial thing to understand is that a permission boundary grants nothing on its own. It only sets a ceiling. By itself it's useless; combined with a create-role permission, it becomes the mechanism for safely handing out identity administration. You're delegating the ability to make roles without delegating the ability to escalate privilege.

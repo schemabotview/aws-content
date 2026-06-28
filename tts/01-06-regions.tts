@@ -1,0 +1,9 @@
+Regions.
+
+A region is a physical geographic area containing a cluster of AWS data centers, places like Northern Virginia, Ireland, Frankfurt, or Mumbai. Each region has a code, such as you-ess-east-one, ee-you-west-one, or ay-pee-south-one. The number on the end is just an identifier; it does not count anything.
+
+The defining property of a region is independence. Regions do not share power, networking, or control planes, so a failure in one has no causal connection to another. Most AWS resources live inside a single region: an ess-three bucket, a relational database, a virtual private cloud. To have a presence in another region, you deploy there explicitly.
+
+There is one important exception, the global services. Identity and access management, Route fifty-three, CloudFront, and Organizations are not tied to a region, and the region selector grays out for them.
+
+One quirk is worth remembering. The you-ess-east-one region in Northern Virginia is special. New services launch there first, and several global services use it as their home control plane. Because of that, an outage there occasionally has a wider blast radius than an outage in any other region.

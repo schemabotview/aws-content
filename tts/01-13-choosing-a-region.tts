@@ -1,0 +1,11 @@
+Choosing a region.
+
+The most concrete first decision AWS forces on you is which region to deploy in. Four factors drive it, in roughly this order of weight.
+
+First, compliance and data residency. Some regulations require data to stay inside a particular country or economic zone. This factor is often non-negotiable, so it comes first.
+
+Second, latency. The closest region to your users wins. If your users are spread across continents, you design for multiple regions, with Route fifty-three and CloudFront in front to route each user to the nearest one.
+
+Third, service availability. New services launch in you-ess-east-one and a handful of other regions first, then spread out over months or years. Before you commit, verify that every service you need actually exists in your target region.
+
+Fourth, pricing. Costs vary modestly between regions. Treat this as a tiebreaker, not a driver. Let compliance, latency, and availability decide first, and let price settle a close call.

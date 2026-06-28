@@ -1,0 +1,9 @@
+Cross-account access: two patterns.
+
+When code in one account needs to reach a resource in another, there are two patterns, and they differ in what happens to the caller's identity.
+
+The first is role assumption. The resource account creates a role that trusts the caller's account, and the caller makes an assume-role call. Here the caller's original identity is dropped; for the duration of the session, the caller becomes the role.
+
+The second is a resource policy. The resource account names the caller's principal directly in the resource's own policy, for example in a bucket policy. Here the caller's identity is preserved end to end; they keep being themselves the whole way through.
+
+There's an important trap that comes with letting outsiders assume your roles, called the confused deputy problem. When a third-party vendor assumes a role in your account, that same vendor role is trusted by many of their customers. You don't want a different customer of theirs tricking the vendor into reaching into your account. The fix is a condition. For a third-party vendor, require an external eye-dee, a unique secret value you generate, that the caller must present. When an AWS service is calling on your behalf, instead pin it with the source resource name or the source account, so the service can only act for a specific resource or account.

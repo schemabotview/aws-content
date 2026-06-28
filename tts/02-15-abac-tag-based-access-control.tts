@@ -1,0 +1,9 @@
+Attribute-based access control.
+
+Attribute-based access control writes policies whose effect depends on tags rather than hard-coded resource names.
+
+Picture this. You tag your principals with a project name, say project Atlas, and you tag the resources for that project with the same project Atlas. Then you write one single policy that allows access only when the principal's project tag matches the resource's project tag.
+
+The payoff arrives when a new project starts. You don't write any new policies at all. You simply tag the new resources and the new identities with the project name, and access flows automatically, because the matching rule already covers them.
+
+The reason this matters is scale. Without it, every new team or project means another hand-written permission set, and the number of distinct policies eventually explodes. Attribute-based access control collapses all of that into one tag-matching rule. Reach for it when you can feel that explosion coming.

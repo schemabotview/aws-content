@@ -1,0 +1,7 @@
+Policy evaluation order.
+
+The previous section listed where policies live, organized by scope. This one is about how AWS actually combines them when a real call arrives. The starting position is always implicit deny: everything is denied until something allows it.
+
+From there, evaluation runs in a definite order. First, explicit deny. AWS checks every applicable policy, and any deny anywhere wins immediately and unconditionally. Second, service control policies along the path from the organization root down to the account must allow the action. Third, resource-based policies, which can grant access on their own within the same account. Fourth, the permission boundary on the principal must allow it. Fifth, any session policy passed at assume time must allow it. And sixth, the identity-based policies on the principal must allow it.
+
+The single rule to remember is this: the effective permission is the intersection of every layer that needs to say yes, and any explicit deny anywhere kills it outright. When you're debugging a mysterious access-denied, walk these layers in order, and remember that a deny always beats an allow.

@@ -1,0 +1,11 @@
+How you talk to AWS.
+
+Here is something worth understanding once. Every single interaction with AWS, every resource you create and every action you take, is a signed h-t-t-p-s ay-pee-eye call to a regional endpoint. There are three doors into that same control plane, and most engineers use all three in the same day.
+
+The first door is the management console, a web interface in your browser. It is ideal when you are learning a new service or doing one-off exploration.
+
+The second door is the command-line interface, run from your terminal. You reach for it when you are scripting, automating, or doing quick ad-hoc operations.
+
+The third door is the software development kits, for example boto-three in Python. These give you programmatic access from your own application code, for infrastructure as code and repeatable workflows.
+
+Underneath all three the mechanism is identical: signed h-t-t-p-s requests to a regional ay-pee-eye endpoint. The console is a web app calling those endpoints, the command-line tool is a thin wrapper around them, and the software development kit is a typed wrapper. Different doors, one control plane.

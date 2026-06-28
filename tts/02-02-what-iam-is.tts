@@ -1,0 +1,7 @@
+What identity and access management is.
+
+Identity and access management, usually shortened to eye-ay-em, is the AWS service that decides, for every single ay-pee-eye call, whether the caller is allowed to do what they are asking. A click in the console, a command-line action, a boto-three call from your code: they all funnel through the same authorization engine.
+
+Three properties are worth fixing in your mind. First, it is a global service. There is no region selector; your users, groups, roles, and policies exist account-wide. Second, it is default-deny. If no policy explicitly allows an action, that action is denied. Permissions are something you grant on purpose, never something you have by default. Third, it is free. You pay for the resources it grants access to, but never for the service itself.
+
+The key thing to hold onto is that this one engine sits underneath every other AWS service. Whatever you build later, every action it takes is checked here first.

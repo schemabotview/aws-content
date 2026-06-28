@@ -1,0 +1,7 @@
+Traditional I-T versus cloud.
+
+Picture the old way of running software. You buy and own the hardware. Because ordering and racking a server takes weeks, you over-provision for peak load and then pay for that idle capacity all year round. The cost is a large upfront payment, what finance calls a capital expense, and your own team manages the racks, the power, and the cooling.
+
+Now picture the cloud way. You rent hardware on demand. You scale up or down in minutes instead of guessing your capacity eighteen months out. Provisioning drops from weeks to seconds. The cost flips from a big upfront payment to pay-as-you-go, an operating expense, where you pay only for what you use. And the provider handles the undifferentiated heavy lifting of the racks, the power, and the cooling.
+
+To put it plainly, cloud removes four old pains: paying for idle capacity, multi-week procurement, guessing demand far in advance, and running a physical data center yourself. On top of that, it lets you deploy worldwide in minutes rather than slowly and at great expense.

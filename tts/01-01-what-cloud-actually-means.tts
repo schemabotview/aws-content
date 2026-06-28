@@ -1,0 +1,7 @@
+What cloud actually means.
+
+Cloud computing is the on-demand delivery of compute, storage, networking, and dozens of other services over the internet, paid for by what you actually consume. The provider owns the hardware, the buildings, the cooling, the security, and the network. You request resources through an ay-pee-eye, they appear in seconds, and you pay only while they exist.
+
+The key insight here is a single shift: you move from owning capacity to renting it. In the old world you bought servers, racked them in a building you had to cool and secure, and hired people to look after them. In the cloud you rent that same capacity by the hour from a company that already does all of that.
+
+That one change, from owning to renting, ripples downstream into almost every architectural decision you will make. Everything that follows comes from that choice: what you give up, what you get, and how the trade plays out at scale.

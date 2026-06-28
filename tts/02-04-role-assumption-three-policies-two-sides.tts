@@ -1,0 +1,11 @@
+Role assumption: three policies, two sides.
+
+Assuming a role is a two-sided handshake, and three separate policies all have to agree. The role itself holds two of them, and the caller holds the third.
+
+On the role sits a trust policy. It answers the question: who is allowed to assume this role? It might name the ee-see-two service, or another account, or one specific user. Also on the role sits a permissions policy, which answers: what can the role do once assumed? For example, read objects from a particular bucket.
+
+On the caller's side sits an identity policy, which answers a different question: is this caller even allowed to make the assume-role call on this role?
+
+That caller-side policy is the one people forget. Without it, AWS returns access denied on the assume-role call itself, before the trust policy is ever evaluated. The trust policy is necessary but not sufficient; the caller must also have permission to make the call.
+
+Picture a backup bot assuming a backup role. The bot's own policy says only: you may assume the backup role, and nothing about storage at all. The role's trust policy names the bot as allowed to assume it. And the role's permissions policy carries the actual storage access. The bot itself has no storage permissions; it only has the right to become the role. That is the whole point: broad power exists only as a short-lived session, never as a long-lived key sitting on the bot. The structure is identical whether the two live in the same account or different ones.

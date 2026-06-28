@@ -1,0 +1,7 @@
+Useful condition keys.
+
+Conditions are what make a policy context-aware, granting access only when the surrounding circumstances are right. A handful of them solve most real-world problems, so they're worth knowing by name.
+
+There's one that's true only when multi-factor authentication is present, which you combine with a deny to force a second factor before sensitive actions. There's one for the caller's source eye-pee, to restrict access to your office or virtual private network ranges. There's one for the requested region, the building block of region restriction. There's one for the principal's organization eye-dee, to limit a resource to principals from your own organization. There's one that requires secure transport, meaning h-t-t-p-s. There are principal-tag and resource-tag keys, which are the foundation of attribute-based access control. And there's the external eye-dee key, plus the source-resource and source-account keys, which protect against the confused deputy problem.
+
+The pattern to internalize is that conditions turn a blunt allow or deny into a precise one: this action, but only over h-t-t-p-s, only from these addresses, only with a second factor present.

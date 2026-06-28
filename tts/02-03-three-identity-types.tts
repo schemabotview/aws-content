@@ -1,0 +1,11 @@
+Three identity types.
+
+Identity and access management gives you three kinds of identity, and the distinction between them matters.
+
+A user represents a single human, or a single long-lived application. It has real credentials: a console password, or an access key and secret. The golden rule is one user per person, never shared.
+
+A group is just a bag of users. Groups don't authenticate and hold no credentials of their own; they exist so you can attach a policy once and have it apply to everyone inside. A user can belong to many groups, but groups can't be nested.
+
+A role is the important one. A role has policies but no permanent credentials. Nobody logs in as a role. Instead, something assumes it, and at the moment of assumption AWS issues short-lived credentials that automatically expire.
+
+Roles are how an ee-see-two instance talks to ess-three, how a Lambda function reads from a database, how one account reaches a bucket in another, and how federated employees enter AWS at all. Here is the rule of thumb that will save you again and again: if you find yourself creating a long-lived access key to solve a problem, the answer is almost always a role instead.

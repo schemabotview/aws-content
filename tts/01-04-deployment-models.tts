@@ -1,0 +1,13 @@
+Deployment models.
+
+Beyond who manages the stack, there is the question of where the infrastructure lives and who shares it. There are four deployment models.
+
+Public cloud is provider-owned and multi-tenant. Many customers share the same underlying hardware, safely isolated from one another. This is the default for essentially everything in this course.
+
+Private cloud is infrastructure dedicated to a single organization. You see it with banks, governments, and tightly regulated workloads where sharing simply is not allowed.
+
+Hybrid connects public and private together over a dedicated link. Most large enterprises land here, keeping some systems on premises while extending into AWS.
+
+Multi-cloud means using more than one public provider at once, often to avoid being locked into a single vendor, or to reach a niche service only one provider offers.
+
+For nearly everything ahead, picture the public model. It is where the cloud's economics and elasticity show up most clearly.

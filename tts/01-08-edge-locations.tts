@@ -1,0 +1,7 @@
+Edge locations.
+
+Edge locations are not regions. They do not run ee-see-two or a relational database. They are much smaller facilities, deployed in many more cities than regions are, and their only job is to terminate user connections close to the user.
+
+Picture a handful of services living at the edge. CloudFront caches and delivers your content from the nearest edge location. Route fifty-three answers d-n-s queries from the edge. The web application firewall filters web traffic at the edge. Shield provides denial-of-service protection there. And small functions, CloudFront Functions and Lambda at edge, run code right at the edge to customize requests and responses on their way through.
+
+The takeaway is simple. Regions are where your application and data live; edge locations are a thin, wide layer whose whole purpose is speed, getting that first hop as close to the user as possible.

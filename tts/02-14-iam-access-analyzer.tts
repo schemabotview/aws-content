@@ -1,0 +1,9 @@
+Identity and access management access analyzer.
+
+Access analyzer watches your account for two kinds of drift: unintended openness, and permissions wandering away from least privilege.
+
+Its external-access feature continuously inspects resource policies, on buckets, roles, keys, functions, queues, and secrets, and flags anything reachable from outside your account or organization. So if a bucket policy accidentally opens to the world, you hear about it.
+
+Its unused-access feature flags users, roles, permissions, and access keys that haven't been touched recently, which is how you find and trim the permissions nobody actually needs.
+
+Policy validation checks the policies you write before you deploy them, catching syntax problems, redundant statements, and best-practice violations. And policy generation goes a step further: it reads your audit-trail history for an identity and proposes a tighter policy based on what that identity actually used. Together, these turn least privilege from a one-time aspiration into something you can continuously measure.

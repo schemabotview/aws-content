@@ -1,0 +1,9 @@
+The root user.
+
+When you first create an AWS account, you get one identity for free, the root user. It owns the account and has unlimited, un-restrictable access. No policy can take a single permission away from root, which is exactly why you treat it with such care.
+
+A small handful of tasks genuinely require root, and nothing else can do them: changing the account's email address or the root password, closing the account, restoring administrative access if you have locked yourself out, registering as a seller in the reserved instance marketplace, and a few billing tasks.
+
+Because root is so powerful, its hygiene is non-negotiable. Give it a long, unique password. Turn on hardware multi-factor authentication. Never, ever issue access keys for root. Store the credentials physically somewhere safe. And then leave it alone. A well-run account can go months or even years without anyone signing in as root at all.
+
+The mental model is simple: get root right on day one, lock it in a drawer, and do all of your real work with other identities.

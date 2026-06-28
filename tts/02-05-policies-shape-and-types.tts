@@ -1,0 +1,7 @@
+Policies: shape and types.
+
+Every AWS policy is a document, and once you strip away the syntax, each statement comes down to four fields. The effect is either allow or deny. The action is the operation, such as get an object from ess-three, or every ee-see-two action. The resource is the Amazon resource name the action applies to, or a star meaning everything. And the condition, which is optional, adds context checks like the caller's eye-pee address, whether multi-factor authentication is present, the region, or a tag.
+
+Managed policies come in three flavors. AWS managed policies are written and maintained by AWS; you can't edit them, but they're reusable and handy for common cases like read-only access. Customer managed policies are your own reusable, version-controlled policies, and they are the default best practice. Inline policies are embedded directly in a single identity, one-to-one; they can't be reused and they're deleted along with the identity, so reserve them for genuine one-offs.
+
+The takeaway: reach for customer managed policies by default, lean on AWS managed ones for the obvious cases, and use inline policies only when a permission is truly bound to one identity.

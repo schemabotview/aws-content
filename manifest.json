@@ -1,0 +1,744 @@
+{
+  "concept": "AWS",
+  "design": "DESIGN.md",
+  "scenes": [
+    {
+      "id": "aws-global",
+      "title": "AWS Foundations — the cloud, end to end",
+      "status": "built"
+    },
+    {
+      "id": "aws-iam",
+      "title": "AWS IAM — identities, roles & policy evaluation",
+      "status": "built"
+    },
+    {
+      "id": "aws-vpc",
+      "title": "AWS VPC — traffic flow (SG vs NACL)",
+      "status": "built"
+    },
+    {
+      "id": "aws-data-engineering",
+      "title": "AWS Data Engineering — the lake-house pipeline",
+      "status": "built"
+    }
+  ],
+  "presentations": [
+    {
+      "id": "01-cloud-and-aws-foundations",
+      "title": "Cloud & AWS Foundations",
+      "notebook": "notebooks/01-cloud-and-aws-foundations.ipynb",
+      "defaultScene": "aws-global",
+      "sections": [
+        {
+          "heading": "What cloud actually means",
+          "scene": "aws-global",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "awsf-service-models"
+          ],
+          "focus": "awsf-service-models"
+        },
+        {
+          "heading": "Traditional IT vs. Cloud",
+          "scene": "aws-global",
+          "spine": true,
+          "highlight": [
+            "awsf-svc-you",
+            "awsf-service-models"
+          ],
+          "focus": "awsf-service-models"
+        },
+        {
+          "heading": "Three Service Models",
+          "scene": "aws-global",
+          "spine": true,
+          "highlight": [
+            "awsf-svc-saas",
+            "awsf-svc-paas",
+            "awsf-svc-iaas"
+          ],
+          "focus": "awsf-service-models"
+        },
+        {
+          "heading": "Deployment Models",
+          "scene": "aws-global",
+          "spine": true,
+          "highlight": [
+            "awsf-deployment-models"
+          ],
+          "focus": "awsf-deployment-models"
+        },
+        {
+          "heading": "AWS Global Infrastructure",
+          "scene": "aws-global",
+          "spine": true,
+          "highlight": [
+            "awsf-global-infra"
+          ],
+          "focus": "awsf-global-infra"
+        },
+        {
+          "heading": "Regions",
+          "scene": "aws-global",
+          "spine": true,
+          "highlight": [
+            "awsf-region"
+          ],
+          "focus": "awsf-region"
+        },
+        {
+          "heading": "Availability Zones (AZs)",
+          "scene": "aws-global",
+          "spine": true,
+          "highlight": [
+            "awsf-az-a",
+            "awsf-az-b",
+            "awsf-az-c"
+          ],
+          "focus": "awsf-region"
+        },
+        {
+          "heading": "Edge Locations",
+          "scene": "aws-global",
+          "spine": false,
+          "highlight": [
+            "awsf-global-infra"
+          ],
+          "focus": "awsf-global-infra"
+        },
+        {
+          "heading": "Beyond Regions: Local Zones, Wavelength, Outposts",
+          "scene": "aws-global",
+          "spine": false,
+          "highlight": [
+            "awsf-dep-private",
+            "awsf-priv-onprem"
+          ],
+          "focus": "awsf-dep-private"
+        },
+        {
+          "heading": "How You Talk to AWS",
+          "scene": "aws-global",
+          "spine": true,
+          "highlight": [
+            "awsf-connecting"
+          ],
+          "focus": "awsf-connecting"
+        },
+        {
+          "heading": "Shared Responsibility — Primer",
+          "scene": "aws-global",
+          "spine": false,
+          "highlight": [
+            "awsf-conn-apis"
+          ],
+          "focus": "awsf-connecting"
+        },
+        {
+          "heading": "Well-Architected Framework — Six Pillars",
+          "scene": "aws-global",
+          "spine": false
+        },
+        {
+          "heading": "Choosing a Region",
+          "scene": "aws-global",
+          "spine": false,
+          "highlight": [
+            "awsf-region"
+          ],
+          "focus": "awsf-region"
+        }
+      ]
+    },
+    {
+      "id": "02-iam-organizations-and-account-security",
+      "title": "IAM, Organizations & Account Security",
+      "notebook": "notebooks/02-iam-organizations-and-account-security.ipynb",
+      "defaultScene": "aws-iam",
+      "sections": [
+        {
+          "heading": "The Root User",
+          "scene": "aws-iam",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "anat-root"
+          ],
+          "focus": "anatomy-banner"
+        },
+        {
+          "heading": "What IAM is",
+          "scene": "aws-iam",
+          "spine": true,
+          "highlight": [
+            "anatomy-banner"
+          ],
+          "focus": "anatomy-banner"
+        },
+        {
+          "heading": "Three Identity Types",
+          "scene": "aws-iam",
+          "spine": true,
+          "highlight": [
+            "anat-users",
+            "anat-roles",
+            "anat-policies"
+          ],
+          "focus": "anatomy-banner"
+        },
+        {
+          "heading": "Role Assumption — Three Policies, Two Sides",
+          "scene": "aws-iam",
+          "spine": true,
+          "highlight": [
+            "handshake"
+          ],
+          "focus": "handshake"
+        },
+        {
+          "heading": "Policies — Shape and Types",
+          "scene": "aws-iam",
+          "spine": false,
+          "highlight": [
+            "anat-policies"
+          ],
+          "focus": "anatomy-banner"
+        },
+        {
+          "heading": "The Five Policy Slots",
+          "scene": "aws-iam",
+          "spine": false,
+          "highlight": [
+            "eval-col"
+          ],
+          "focus": "eval-col"
+        },
+        {
+          "heading": "Policy Evaluation Order",
+          "scene": "aws-iam",
+          "spine": true,
+          "highlight": [
+            "eval-scp",
+            "eval-boundary",
+            "eval-identity",
+            "eval-resource",
+            "eval-session",
+            "eval-deny"
+          ],
+          "focus": "eval-col"
+        },
+        {
+          "heading": "Permission Boundaries — Delegated Administration",
+          "scene": "aws-iam",
+          "spine": false,
+          "highlight": [
+            "eval-boundary"
+          ],
+          "focus": "eval-col"
+        },
+        {
+          "heading": "STS — Security Token Service",
+          "scene": "aws-iam",
+          "spine": true,
+          "highlight": [
+            "sts",
+            "sts-assume"
+          ],
+          "focus": "handshake"
+        },
+        {
+          "heading": "Cross-Account Access — Two Patterns",
+          "scene": "aws-iam",
+          "spine": false,
+          "highlight": [
+            "deployer-role",
+            "role-side"
+          ],
+          "focus": "handshake"
+        },
+        {
+          "heading": "Identity Federation",
+          "scene": "aws-iam",
+          "spine": true,
+          "highlight": [
+            "corp-idp",
+            "idc"
+          ],
+          "focus": "story"
+        },
+        {
+          "heading": "AWS Organizations",
+          "scene": "aws-iam",
+          "spine": true,
+          "highlight": [
+            "org"
+          ],
+          "focus": "org"
+        },
+        {
+          "heading": "Service Control Policies (SCPs)",
+          "scene": "aws-iam",
+          "spine": false,
+          "highlight": [
+            "org-scps"
+          ],
+          "focus": "org"
+        },
+        {
+          "heading": "IAM Access Analyzer",
+          "scene": "aws-iam",
+          "spine": false,
+          "highlight": [
+            "anat-policies"
+          ],
+          "focus": "anatomy-banner"
+        },
+        {
+          "heading": "ABAC — Tag-Based Access Control",
+          "scene": "aws-iam",
+          "spine": false,
+          "highlight": [
+            "eval-identity",
+            "eval-resource"
+          ],
+          "focus": "eval-col"
+        },
+        {
+          "heading": "Useful Condition Keys",
+          "scene": "aws-iam",
+          "spine": false,
+          "highlight": [
+            "eval-col"
+          ],
+          "focus": "eval-col"
+        },
+        {
+          "heading": "Multi-Factor Authentication (MFA)",
+          "scene": "aws-iam",
+          "spine": false,
+          "highlight": [
+            "breakglass-role"
+          ],
+          "focus": "workload-acct"
+        }
+      ]
+    },
+    {
+      "id": "06-vpc-and-connectivity",
+      "title": "VPC & Connectivity",
+      "notebook": "notebooks/06-vpc-and-connectivity.ipynb",
+      "defaultScene": "aws-vpc",
+      "sections": [
+        {
+          "heading": "What a VPC is",
+          "scene": "aws-vpc",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "ans-vpc"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "VPC and CIDR",
+          "scene": "aws-vpc",
+          "spine": true,
+          "highlight": [
+            "ans-vpc"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "Subnets",
+          "scene": "aws-vpc",
+          "spine": true,
+          "highlight": [
+            "ans-public-subnet",
+            "ans-private-a",
+            "ans-private-b"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "Internet Gateway and Route Tables",
+          "scene": "aws-vpc",
+          "spine": true,
+          "highlight": [
+            "ans-igw"
+          ],
+          "focus": "ans-aws-cloud"
+        },
+        {
+          "heading": "NAT Gateway",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-private-a"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "Security Groups",
+          "scene": "aws-vpc",
+          "spine": true,
+          "highlight": [
+            "ans-sg-alb",
+            "ans-sg-ec2-a",
+            "ans-sg-ec2-b"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "Network ACLs",
+          "scene": "aws-vpc",
+          "spine": true,
+          "highlight": [
+            "ans-nacl-public",
+            "ans-nacl-a",
+            "ans-nacl-b"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "Elastic IPs",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-igw"
+          ],
+          "focus": "ans-aws-cloud"
+        },
+        {
+          "heading": "DNS Inside the VPC",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-vpc"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "VPC Flow Logs",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-vpc"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "Reaching Private Instances",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-private-a",
+            "ans-asg-a"
+          ],
+          "focus": "ans-private-a"
+        },
+        {
+          "heading": "VPC Peering",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-vpc"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "VPC Endpoints",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-vpc"
+          ],
+          "focus": "ans-vpc"
+        },
+        {
+          "heading": "PrivateLink for Your Own Services",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-nlb"
+          ],
+          "focus": "ans-public-subnet"
+        },
+        {
+          "heading": "Transit Gateway",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-aws-cloud"
+          ],
+          "focus": "ans-aws-cloud"
+        },
+        {
+          "heading": "Site-to-Site VPN",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-igw"
+          ],
+          "focus": "ans-aws-cloud"
+        },
+        {
+          "heading": "Direct Connect",
+          "scene": "aws-vpc",
+          "spine": false,
+          "highlight": [
+            "ans-igw"
+          ],
+          "focus": "ans-aws-cloud"
+        },
+        {
+          "heading": "Picking a Connectivity Option",
+          "scene": "aws-vpc",
+          "spine": false
+        }
+      ]
+    },
+    {
+      "id": "09-nosql-and-analytics",
+      "title": "NoSQL & Analytics",
+      "notebook": "notebooks/09-nosql-and-analytics.ipynb",
+      "defaultScene": "aws-data-engineering",
+      "sections": [
+        {
+          "heading": "The database zoo at a glance",
+          "scene": "aws-data-engineering",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "DynamoDB — Core Model",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Partitions and Hot Keys",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Capacity Modes",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Read Consistency",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Secondary Indexes",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Operations: Get, Query, Scan, Transactions",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "DAX — DynamoDB Accelerator",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Streams and Global Tables",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "TTL and PITR",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Redshift — Data Warehouse for OLAP",
+          "scene": "aws-data-engineering",
+          "spine": true,
+          "highlight": [
+            "redshift"
+          ],
+          "focus": "query"
+        },
+        {
+          "heading": "Redshift Architecture",
+          "scene": "aws-data-engineering",
+          "spine": false,
+          "highlight": [
+            "redshift"
+          ],
+          "focus": "query"
+        },
+        {
+          "heading": "Loading Data — COPY and Spectrum",
+          "scene": "aws-data-engineering",
+          "spine": false,
+          "highlight": [
+            "redshift",
+            "s3-serving"
+          ],
+          "focus": "query"
+        },
+        {
+          "heading": "Distribution and Sort Keys",
+          "scene": "aws-data-engineering",
+          "spine": false,
+          "highlight": [
+            "redshift"
+          ],
+          "focus": "query"
+        },
+        {
+          "heading": "Around Redshift — Athena, Glue, EMR, OpenSearch",
+          "scene": "aws-data-engineering",
+          "spine": true,
+          "highlight": [
+            "athena",
+            "glue",
+            "emr",
+            "opensearch"
+          ],
+          "focus": "process"
+        },
+        {
+          "heading": "Purpose-Built Databases",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Picking the Right Database",
+          "scene": "aws-data-engineering",
+          "spine": false
+        }
+      ]
+    },
+    {
+      "id": "10-integration-and-streaming",
+      "title": "Integration & Streaming",
+      "notebook": "notebooks/10-integration-and-streaming.ipynb",
+      "defaultScene": "aws-data-engineering",
+      "sections": [
+        {
+          "heading": "Five services, one question",
+          "scene": "aws-data-engineering",
+          "spine": true,
+          "role": "hook"
+        },
+        {
+          "heading": "SQS — The Queue",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Standard vs FIFO Queues",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "DLQs, Polling, Delays, Large Messages",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "SNS — Pub/Sub",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "The SNS + SQS Fan-Out Pattern",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "SQS vs SNS vs EventBridge — the messaging triangle",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Kinesis Data Streams",
+          "scene": "aws-data-engineering",
+          "spine": true,
+          "highlight": [
+            "kinesis-streams"
+          ],
+          "focus": "ingest"
+        },
+        {
+          "heading": "Consumers — Standard vs Enhanced Fan-Out",
+          "scene": "aws-data-engineering",
+          "spine": false,
+          "highlight": [
+            "kinesis-streams"
+          ],
+          "focus": "ingest"
+        },
+        {
+          "heading": "Kinesis Data Firehose",
+          "scene": "aws-data-engineering",
+          "spine": true,
+          "highlight": [
+            "firehose"
+          ],
+          "focus": "ingest"
+        },
+        {
+          "heading": "Data Analytics on Streams, and MSK",
+          "scene": "aws-data-engineering",
+          "spine": false,
+          "highlight": [
+            "msk",
+            "emr"
+          ],
+          "focus": "ingest"
+        },
+        {
+          "heading": "Step Functions — Workflow Orchestration",
+          "scene": "aws-data-engineering",
+          "spine": true,
+          "highlight": [
+            "stepfn-b"
+          ],
+          "focus": "process"
+        },
+        {
+          "heading": "Retry, Catch, and Failure Modes",
+          "scene": "aws-data-engineering",
+          "spine": false,
+          "highlight": [
+            "stepfn-b"
+          ],
+          "focus": "process"
+        },
+        {
+          "heading": "Standard vs Express Workflows",
+          "scene": "aws-data-engineering",
+          "spine": false,
+          "highlight": [
+            "stepfn-b"
+          ],
+          "focus": "process"
+        },
+        {
+          "heading": "EventBridge — the Event Bus",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "EventBridge — Schema Registry, Pipes, Archive",
+          "scene": "aws-data-engineering",
+          "spine": false
+        },
+        {
+          "heading": "Picking the Right Tool",
+          "scene": "aws-data-engineering",
+          "spine": false
+        }
+      ]
+    }
+  ]
+}

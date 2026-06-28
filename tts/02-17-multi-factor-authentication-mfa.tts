@@ -1,0 +1,7 @@
+Multi-factor authentication.
+
+Multi-factor authentication layers a second factor on top of a password, so that a stolen password alone is not enough to get in. The attacker would also need the physical second factor, which they don't have.
+
+That second factor comes in a few forms. A virtual authenticator app, like Google Authenticator or Authy, shows rotating codes on your phone. A hardware token is a small physical device that displays those rotating codes. And a fido security key, like a YubiKey, plugs in or taps to prove presence.
+
+The simple rule is this. Put multi-factor authentication on the root user. Put it on every user with console access. And, for the operations that hurt the most when they go wrong, like deleting objects or any identity-management action, enforce it through a condition key, so the action is denied outright unless a second factor was present. That last step is what turns multi-factor authentication from a login nicety into a real guardrail on your most dangerous actions.

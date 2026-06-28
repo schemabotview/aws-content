@@ -1,0 +1,17 @@
+The five policy slots.
+
+A policy can live in five different places, and it helps to picture them ordered by blast radius, broadest first.
+
+The first slot is the service control policy, attached at the organization level. It sets an organization-wide ceiling and caps every principal in scope, including the root user of member accounts. Think of it as the corporate law.
+
+The second slot is the permission boundary, attached to a single user or role. It caps what that identity's policies can ever grant. Even if someone later attaches administrator access, the boundary still holds.
+
+The third slot is the identity-based policy, on a user, group, or role. This is the job description, and it's where most of your allows come from. Without an allow here, or in a resource-based policy, the answer is an implicit deny.
+
+The fourth slot is the resource-based policy, attached to the asset itself, like a bucket, a queue, or a key. It's special in two ways: it names a principal directly, and it enables cross-account access without role assumption, because the resource simply names the outside principal.
+
+The fifth slot is the session policy, passed at assume-role time. It shrinks a role for one specific session only.
+
+Here is the single rule that ties them together. When a call arrives, AWS checks all five. The effective permission is the intersection: every cap, slots one, two, and five, must allow the action, and at least one grant, slot three or four, must explicitly allow it. And an explicit deny anywhere kills it, unconditionally. As you move down the list, the blast radius shrinks and the lifetime gets shorter, from organization-permanent at the top to a single session at the bottom.
+
+One special case worth flagging. A key in the key management service must have a key policy, and by default that key policy is the only thing that grants access. Identity-based permissions have no effect on a key unless the key policy itself delegates authority to them. The reason is deliberate: losing control of an administrator account should not automatically mean losing control of your encryption keys.

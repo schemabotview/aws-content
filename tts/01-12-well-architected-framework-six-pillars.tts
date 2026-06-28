@@ -1,0 +1,17 @@
+The Well-Architected Framework and its six pillars.
+
+Given the parts that are your responsibility, what does good look like? AWS publishes its answer as the Well-Architected Framework. It is not a checklist to tick off. Think of it instead as a shared vocabulary for the trade-offs you will keep facing. There are six pillars.
+
+Operational excellence is about running and improving your systems to keep delivering value, through infrastructure as code, observability, runbooks, and post-mortems.
+
+Security is protecting your data, systems, and assets, through identity, encryption, detective controls, and incident response.
+
+Reliability is performing correctly and recovering from failure, through multi-zone designs, auto scaling, and disaster-recovery planning.
+
+Performance efficiency is using the right resources for the job and keeping them right as demand shifts, through right-sizing and picking the right database for the workload.
+
+Cost optimization is delivering that same value at the lowest sensible price, through right-sizing, commitment discounts, and killing idle resources.
+
+And sustainability is minimizing your environmental impact, through efficient regions, right-sizing, and leaning on managed services.
+
+Hold these six as a lens. Whenever you review a workload, they give you the words to name what is strong and what is at risk.

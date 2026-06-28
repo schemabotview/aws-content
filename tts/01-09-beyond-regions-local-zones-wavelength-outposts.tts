@@ -1,0 +1,11 @@
+Beyond regions: local zones, wavelength, and outposts.
+
+Sometimes even the nearest region is too far away. AWS offers three options for those cases, and each one pushes services closer to a different kind of user.
+
+Local zones extend AWS into an individual city. They are built for workloads that need very low latency to a metro area, things like live media production, interactive gaming, and real-time finance.
+
+Wavelength embeds AWS inside a 5G carrier's network. That is for ultra-low-latency mobile use cases, such as connected vehicles, smart factories, and augmented reality on a phone, where the traffic never has to leave the carrier network to reach your compute.
+
+Outposts go the other direction entirely. AWS ships rack hardware into your own data center. You would choose this for strict data residency, where the data physically cannot leave your building, or for ultra-low latency to local industrial systems.
+
+So picture a spectrum of reach. A region is the baseline, and local zones, wavelength, and outposts each carry AWS one step closer, to the city, to the carrier, or onto your own floor.

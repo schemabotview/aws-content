@@ -1,0 +1,7 @@
+The security token service.
+
+The security token service, shortened to ess-tee-ess, is the engine that mints temporary credentials whenever a role is assumed. What it hands back is a set of short-lived keys: an access key, a secret key, a session token, and an expiration time somewhere between fifteen minutes and twelve hours. After that, they simply stop working.
+
+There are five flavors of the assume-role call. The standard one handles same-account and cross-account assumption. There's a version for federation from an enterprise identity provider that speaks samm-ul, like Active Directory federation or Okta. There's another for federation from a provider that speaks oh-eye-dee-see, like Cognito, Google, or GitHub Actions. A fifth wraps an existing user's keys with multi-factor authentication, and a sixth supports a custom identity broker you build yourself.
+
+This is also what's happening behind instance profiles and service roles. An instance profile wraps a role for an ee-see-two instance, and the instance metadata service vends rotating credentials that the software development kit picks up automatically. A Lambda execution role does the same for Lambda, and task roles do it for containers. The rule that follows from all of this: never plant a long-lived access key on an ee-see-two box. Let the role and the token service do the work.

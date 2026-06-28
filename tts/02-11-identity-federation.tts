@@ -1,0 +1,9 @@
+Identity federation.
+
+Federation lets external identities assume roles without ever becoming users in your account. Your five hundred employees log in through your corporate identity provider, and AWS hands them a temporary role session; you never create an account-level user for any of them.
+
+Two protocols carry this. Enterprise identity providers like Active Directory federation, Okta, and Ping speak samm-ul, and they use the assume-role-with-samm-ul call. More modern providers, and things like Cognito, Google, and GitHub Actions, speak oh-eye-dee-see and use the assume-role-with-web-identity call.
+
+The modern, preferred way to wire all of this across an organization is identity center, which used to be called single sign-on. It lives in your management account and connects to one source of truth, whether that's its own directory, Active Directory, or an external provider. It gives users one sign-on portal that lists every account and role they're allowed to use, and behind the scenes it's just calling assume-role and handing out temporary credentials.
+
+Its unit of authorization is the permission set: a template bundling policies, an optional boundary, and an optional session duration. You define it once and assign it to users in specific accounts, and identity center quietly provisions a hidden role into each target account. Update the permission set, and the role updates everywhere it's assigned. For any new AWS environment today, default to identity center over per-account users; it eliminates the whole category of long-lived passwords and access keys.

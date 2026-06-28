@@ -1,0 +1,9 @@
+AWS Organizations.
+
+Organizations is the service that turns one AWS account into a managed fleet of many. Real companies rarely have a single account; they have dozens or hundreds, split by environment, by team, by blast radius, and by billing line.
+
+The structure is a tree. At the top is the root. Inside it are organizational units, which are logical containers you can nest. And the leaves are the accounts themselves.
+
+There are two kinds of account. The management account owns the organization, pays all the bills, and is the only one that can attach the org-wide policies and create new member accounts. You deliberately do not run workloads there. Every other account is a member account.
+
+Why bother? Four payoffs. Consolidated billing gives you one invoice, with volume discounts and savings plans applying across the whole fleet. Programmatic account creation lets you spin up new accounts as code, which is the foundation of landing zones. Centralized governance lets you enforce rules from above. And cross-account sharing lets you share reserved instances, savings plans, and machine images through the resource access manager.

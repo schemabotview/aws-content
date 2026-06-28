@@ -1,0 +1,11 @@
+AWS global infrastructure.
+
+Look at an AWS map and you will see a lot of words for where your code runs: regions, availability zones, edge locations, local zones, wavelength zones, outposts. It looks like jargon, but it is not. Every layer answers one of three pressures the cloud has to handle at once.
+
+The first pressure is latency. Your users are spread around the world, and the speed of light is fixed, so you want your compute close to them.
+
+The second is sovereignty. Data has legal homes. European customer data may need to stay in Europe, and some workloads must stay inside one country entirely.
+
+The third is failure isolation. Your service cannot go down just because one building loses power or one network spine has a bad day.
+
+The key idea is that AWS infrastructure is a set of nested layers, and each layer trades breadth for proximity to the user. A region is the broad outer layer that runs every service. Inside it sit availability zones. Smaller and far more numerous are edge locations. And then specialised variants, local zones, wavelength, and outposts, push AWS even closer to particular kinds of users. Read what follows as answers to those three pressures, not as a feature catalogue.
