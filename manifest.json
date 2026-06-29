@@ -38,7 +38,8 @@
           "highlight": [
             "awsf-service-models"
           ],
-          "focus": "awsf-service-models"
+          "focus": "awsf-service-models",
+          "audio": "audio/01-01-what-cloud-actually-means.wav"
         },
         {
           "heading": "Traditional IT vs. Cloud",
@@ -48,7 +49,8 @@
             "awsf-svc-you",
             "awsf-service-models"
           ],
-          "focus": "awsf-service-models"
+          "focus": "awsf-service-models",
+          "audio": "audio/01-02-traditional-it-vs-cloud.wav"
         },
         {
           "heading": "Three Service Models",
@@ -59,7 +61,8 @@
             "awsf-svc-paas",
             "awsf-svc-iaas"
           ],
-          "focus": "awsf-service-models"
+          "focus": "awsf-service-models",
+          "audio": "audio/01-03-three-service-models.wav"
         },
         {
           "heading": "Deployment Models",
@@ -68,7 +71,8 @@
           "highlight": [
             "awsf-deployment-models"
           ],
-          "focus": "awsf-deployment-models"
+          "focus": "awsf-deployment-models",
+          "audio": "audio/01-04-deployment-models.wav"
         },
         {
           "heading": "AWS Global Infrastructure",
@@ -77,7 +81,8 @@
           "highlight": [
             "awsf-global-infra"
           ],
-          "focus": "awsf-global-infra"
+          "focus": "awsf-global-infra",
+          "audio": "audio/01-05-aws-global-infrastructure.wav"
         },
         {
           "heading": "Regions",
@@ -86,7 +91,8 @@
           "highlight": [
             "awsf-region"
           ],
-          "focus": "awsf-region"
+          "focus": "awsf-region",
+          "audio": "audio/01-06-regions.wav"
         },
         {
           "heading": "Availability Zones (AZs)",
@@ -97,7 +103,8 @@
             "awsf-az-b",
             "awsf-az-c"
           ],
-          "focus": "awsf-region"
+          "focus": "awsf-region",
+          "audio": "audio/01-07-availability-zones-azs.wav"
         },
         {
           "heading": "Edge Locations",
@@ -106,7 +113,8 @@
           "highlight": [
             "awsf-global-infra"
           ],
-          "focus": "awsf-global-infra"
+          "focus": "awsf-global-infra",
+          "audio": "audio/01-08-edge-locations.wav"
         },
         {
           "heading": "Beyond Regions: Local Zones, Wavelength, Outposts",
@@ -116,7 +124,8 @@
             "awsf-dep-private",
             "awsf-priv-onprem"
           ],
-          "focus": "awsf-dep-private"
+          "focus": "awsf-dep-private",
+          "audio": "audio/01-09-beyond-regions-local-zones-wavelength-outposts.wav"
         },
         {
           "heading": "How You Talk to AWS",
@@ -125,7 +134,8 @@
           "highlight": [
             "awsf-connecting"
           ],
-          "focus": "awsf-connecting"
+          "focus": "awsf-connecting",
+          "audio": "audio/01-10-how-you-talk-to-aws.wav"
         },
         {
           "heading": "Shared Responsibility — Primer",
@@ -134,12 +144,14 @@
           "highlight": [
             "awsf-conn-apis"
           ],
-          "focus": "awsf-connecting"
+          "focus": "awsf-connecting",
+          "audio": "audio/01-11-shared-responsibility-primer.wav"
         },
         {
           "heading": "Well-Architected Framework — Six Pillars",
           "scene": "aws-global",
-          "spine": false
+          "spine": false,
+          "audio": "audio/01-12-well-architected-framework-six-pillars.wav"
         },
         {
           "heading": "Choosing a Region",
@@ -148,7 +160,8 @@
           "highlight": [
             "awsf-region"
           ],
-          "focus": "awsf-region"
+          "focus": "awsf-region",
+          "audio": "audio/01-13-choosing-a-region.wav"
         }
       ]
     },
@@ -166,7 +179,8 @@
           "highlight": [
             "anat-root"
           ],
-          "focus": "anatomy-banner"
+          "focus": "anatomy-banner",
+          "audio": "audio/02-01-the-root-user.wav"
         },
         {
           "heading": "What IAM is",
@@ -175,7 +189,8 @@
           "highlight": [
             "anatomy-banner"
           ],
-          "focus": "anatomy-banner"
+          "focus": "anatomy-banner",
+          "audio": "audio/02-02-what-iam-is.wav"
         },
         {
           "heading": "Three Identity Types",
@@ -186,7 +201,8 @@
             "anat-roles",
             "anat-policies"
           ],
-          "focus": "anatomy-banner"
+          "focus": "anatomy-banner",
+          "audio": "audio/02-03-three-identity-types.wav"
         },
         {
           "heading": "Role Assumption — Three Policies, Two Sides",
@@ -195,7 +211,8 @@
           "highlight": [
             "handshake"
           ],
-          "focus": "handshake"
+          "focus": "handshake",
+          "audio": "audio/02-04-role-assumption-three-policies-two-sides.wav"
         },
         {
           "heading": "Policies — Shape and Types",
@@ -204,7 +221,8 @@
           "highlight": [
             "anat-policies"
           ],
-          "focus": "anatomy-banner"
+          "focus": "anatomy-banner",
+          "audio": "audio/02-05-policies-shape-and-types.wav"
         },
         {
           "heading": "The Five Policy Slots",
@@ -213,7 +231,8 @@
           "highlight": [
             "eval-col"
           ],
-          "focus": "eval-col"
+          "focus": "eval-col",
+          "audio": "audio/02-06-the-five-policy-slots.wav"
         },
         {
           "heading": "Policy Evaluation Order",
@@ -227,7 +246,8 @@
             "eval-session",
             "eval-deny"
           ],
-          "focus": "eval-col"
+          "focus": "eval-col",
+          "audio": "audio/02-07-policy-evaluation-order.wav"
         },
         {
           "heading": "Permission Boundaries — Delegated Administration",
@@ -236,7 +256,8 @@
           "highlight": [
             "eval-boundary"
           ],
-          "focus": "eval-col"
+          "focus": "eval-col",
+          "audio": "audio/02-08-permission-boundaries-delegated-administration.wav"
         },
         {
           "heading": "STS — Security Token Service",
@@ -246,7 +267,8 @@
             "sts",
             "sts-assume"
           ],
-          "focus": "handshake"
+          "focus": "handshake",
+          "audio": "audio/02-09-sts-security-token-service.wav"
         },
         {
           "heading": "Cross-Account Access — Two Patterns",
@@ -256,7 +278,8 @@
             "deployer-role",
             "role-side"
           ],
-          "focus": "handshake"
+          "focus": "handshake",
+          "audio": "audio/02-10-cross-account-access-two-patterns.wav"
         },
         {
           "heading": "Identity Federation",
@@ -266,7 +289,8 @@
             "corp-idp",
             "idc"
           ],
-          "focus": "story"
+          "focus": "story",
+          "audio": "audio/02-11-identity-federation.wav"
         },
         {
           "heading": "AWS Organizations",
@@ -275,7 +299,8 @@
           "highlight": [
             "org"
           ],
-          "focus": "org"
+          "focus": "org",
+          "audio": "audio/02-12-aws-organizations.wav"
         },
         {
           "heading": "Service Control Policies (SCPs)",
@@ -284,7 +309,8 @@
           "highlight": [
             "org-scps"
           ],
-          "focus": "org"
+          "focus": "org",
+          "audio": "audio/02-13-service-control-policies-scps.wav"
         },
         {
           "heading": "IAM Access Analyzer",
@@ -293,7 +319,8 @@
           "highlight": [
             "anat-policies"
           ],
-          "focus": "anatomy-banner"
+          "focus": "anatomy-banner",
+          "audio": "audio/02-14-iam-access-analyzer.wav"
         },
         {
           "heading": "ABAC — Tag-Based Access Control",
@@ -303,7 +330,8 @@
             "eval-identity",
             "eval-resource"
           ],
-          "focus": "eval-col"
+          "focus": "eval-col",
+          "audio": "audio/02-15-abac-tag-based-access-control.wav"
         },
         {
           "heading": "Useful Condition Keys",
@@ -312,7 +340,8 @@
           "highlight": [
             "eval-col"
           ],
-          "focus": "eval-col"
+          "focus": "eval-col",
+          "audio": "audio/02-16-useful-condition-keys.wav"
         },
         {
           "heading": "Multi-Factor Authentication (MFA)",
@@ -321,7 +350,8 @@
           "highlight": [
             "breakglass-role"
           ],
-          "focus": "workload-acct"
+          "focus": "workload-acct",
+          "audio": "audio/02-17-multi-factor-authentication-mfa.wav"
         }
       ]
     },
@@ -335,177 +365,212 @@
           "heading": "What EC2 is",
           "scene": "aws-vpc",
           "spine": true,
-          "role": "hook"
+          "role": "hook",
+          "audio": "audio/03-01-what-ec2-is.wav"
         },
         {
           "heading": "The minimum to launch a working web server",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-02-the-minimum-to-launch-a-working-web-server.wav"
         },
         {
           "heading": "What You Configure at Launch",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-03-what-you-configure-at-launch.wav"
         },
         {
           "heading": "Instance Families",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-04-instance-families.wav"
         },
         {
           "heading": "Instance Naming",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-05-instance-naming.wav"
         },
         {
           "heading": "T-Series Burstable Instances",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-06-t-series-burstable-instances.wav"
         },
         {
           "heading": "Purchasing Options",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-07-purchasing-options.wav"
         },
         {
           "heading": "Reserved Instances — Anatomy",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-08-reserved-instances-anatomy.wav"
         },
         {
           "heading": "Savings Plans vs Reserved Instances",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-09-savings-plans-vs-reserved-instances.wav"
         },
         {
           "heading": "Spot Instances",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-10-spot-instances.wav"
         },
         {
           "heading": "Amazon Machine Images (AMIs)",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-11-amazon-machine-images-amis.wav"
         },
         {
           "heading": "AMI Lifecycle",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-12-ami-lifecycle.wav"
         },
         {
           "heading": "Baked vs Bootstrapped",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-13-baked-vs-bootstrapped.wav"
         },
         {
           "heading": "User Data",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-14-user-data.wav"
         },
         {
           "heading": "Security Groups",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-15-security-groups.wav"
         },
         {
           "heading": "Instance Metadata Service (IMDS)",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-16-instance-metadata-service-imds.wav"
         },
         {
           "heading": "Public, Private, and Elastic IPs",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-17-public-private-and-elastic-ips.wav"
         },
         {
           "heading": "Tenancy Options",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-18-tenancy-options.wav"
         },
         {
           "heading": "ENIs, ENA, and EFA",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-19-enis-ena-and-efa.wav"
         },
         {
           "heading": "Placement Groups",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-20-placement-groups.wav"
         },
         {
           "heading": "The Nitro System",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-21-the-nitro-system.wav"
         },
         {
           "heading": "Hibernate, Stop, Terminate",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-22-hibernate-stop-terminate.wav"
         },
         {
           "heading": "Elastic Load Balancing",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-23-elastic-load-balancing.wav"
         },
         {
           "heading": "The Four ELB Types",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-24-the-four-elb-types.wav"
         },
         {
           "heading": "Application Load Balancer (ALB)",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-25-application-load-balancer-alb.wav"
         },
         {
           "heading": "Network Load Balancer (NLB)",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-26-network-load-balancer-nlb.wav"
         },
         {
           "heading": "Gateway Load Balancer (GWLB)",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-27-gateway-load-balancer-gwlb.wav"
         },
         {
           "heading": "Target Groups, Health Checks, Draining",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-28-target-groups-health-checks-draining.wav"
         },
         {
           "heading": "Auto Scaling Groups (ASG)",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-29-auto-scaling-groups-asg.wav"
         },
         {
           "heading": "Launch Templates",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-30-launch-templates.wav"
         },
         {
           "heading": "Scaling Policies",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-31-scaling-policies.wav"
         },
         {
           "heading": "ASG Health Checks",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-32-asg-health-checks.wav"
         },
         {
           "heading": "Instance Refresh",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-33-instance-refresh.wav"
         },
         {
           "heading": "Lifecycle Hooks",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-34-lifecycle-hooks.wav"
         },
         {
           "heading": "Warm Pools",
           "scene": "aws-vpc",
-          "spine": true
+          "spine": true,
+          "audio": "audio/03-35-warm-pools.wav"
         }
       ]
     },
@@ -524,127 +589,152 @@
         {
           "heading": "The Serverless Trade-off",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-02-the-serverless-trade-off.wav"
         },
         {
           "heading": "AWS Lambda",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-03-aws-lambda.wav"
         },
         {
           "heading": "Execution Environment",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-04-execution-environment.wav"
         },
         {
           "heading": "Packaging and Layers",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-05-packaging-and-layers.wav"
         },
         {
           "heading": "Configuration",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-06-configuration.wav"
         },
         {
           "heading": "Cold Starts and Warm Starts",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-07-cold-starts-and-warm-starts.wav"
         },
         {
           "heading": "Invocation Models",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-08-invocation-models.wav"
         },
         {
           "heading": "Concurrency",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-09-concurrency.wav"
         },
         {
           "heading": "Permissions — Two Sides",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-10-permissions-two-sides.wav"
         },
         {
           "heading": "VPC Configuration",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-11-vpc-configuration.wav"
         },
         {
           "heading": "Error Handling and Destinations",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-12-error-handling-and-destinations.wav"
         },
         {
           "heading": "Lambda@Edge and CloudFront Functions",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-13-lambda-edge-and-cloudfront-functions.wav"
         },
         {
           "heading": "API Gateway and Function URLs",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-14-api-gateway-and-function-urls.wav"
         },
         {
           "heading": "The Serverless Stack",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-15-the-serverless-stack.wav"
         },
         {
           "heading": "Containers — the Other Compute Model",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-16-containers-the-other-compute-model.wav"
         },
         {
           "heading": "Amazon ECR",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-17-amazon-ecr.wav"
         },
         {
           "heading": "Amazon ECS — Object Model",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-18-amazon-ecs-object-model.wav"
         },
         {
           "heading": "Task Definitions and the Two Roles",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-19-task-definitions-and-the-two-roles.wav"
         },
         {
           "heading": "EC2 vs Fargate Launch Types",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-20-ec2-vs-fargate-launch-types.wav"
         },
         {
           "heading": "ECS Networking",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-21-ecs-networking.wav"
         },
         {
           "heading": "ECS Service Auto Scaling",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-22-ecs-service-auto-scaling.wav"
         },
         {
           "heading": "Amazon EKS — Managed Kubernetes",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-23-amazon-eks-managed-kubernetes.wav"
         },
         {
           "heading": "EKS Node Options",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-24-eks-node-options.wav"
         },
         {
           "heading": "ECS vs EKS — Choosing",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-25-ecs-vs-eks-choosing.wav"
         },
         {
           "heading": "AWS App Runner",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/04-26-aws-app-runner.wav"
         },
         {
           "heading": "Choosing a Compute Service",
@@ -668,117 +758,140 @@
         {
           "heading": "S3 — Buckets and Objects",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-02-s3-buckets-and-objects.wav"
         },
         {
           "heading": "Storage Classes",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-03-storage-classes.wav"
         },
         {
           "heading": "Security Model",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-04-security-model.wav"
         },
         {
           "heading": "Encryption",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-05-encryption.wav"
         },
         {
           "heading": "Versioning, Object Lock, and MFA Delete",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-06-versioning-object-lock-and-mfa-delete.wav"
         },
         {
           "heading": "Lifecycle Policies",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-07-lifecycle-policies.wav"
         },
         {
           "heading": "Replication",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-08-replication.wav"
         },
         {
           "heading": "Performance",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-09-performance.wav"
         },
         {
           "heading": "Pre-signed URLs, Access Points, and Object Lambda",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-10-pre-signed-urls-access-points-and-object-lambda.wav"
         },
         {
           "heading": "Event Notifications",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-11-event-notifications.wav"
         },
         {
           "heading": "S3 Select, Batch Operations, and Storage Lens",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-12-s3-select-batch-operations-and-storage-lens.wav"
         },
         {
           "heading": "Static Website Hosting",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-13-static-website-hosting.wav"
         },
         {
           "heading": "EBS — Block Storage for EC2",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-14-ebs-block-storage-for-ec2.wav"
         },
         {
           "heading": "Volume Types",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-15-volume-types.wav"
         },
         {
           "heading": "Snapshots",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-16-snapshots.wav"
         },
         {
           "heading": "Encryption",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-17-encryption.wav"
         },
         {
           "heading": "Instance Store",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-18-instance-store.wav"
         },
         {
           "heading": "EFS — Elastic File System",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-19-efs-elastic-file-system.wav"
         },
         {
           "heading": "Performance and Throughput Modes",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-20-performance-and-throughput-modes.wav"
         },
         {
           "heading": "Storage Tiers and One Zone",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-21-storage-tiers-and-one-zone.wav"
         },
         {
           "heading": "FSx — Specialised File Systems",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-22-fsx-specialised-file-systems.wav"
         },
         {
           "heading": "Windows File Server and Lustre in More Detail",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-23-windows-file-server-and-lustre-in-more-detail.wav"
         },
         {
           "heading": "Storage Gateway — the Hybrid Bridge",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/05-24-storage-gateway-the-hybrid-bridge.wav"
         },
         {
           "heading": "Choosing Among the File Storage Options",
@@ -801,7 +914,8 @@
           "highlight": [
             "ans-vpc"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-01-what-a-vpc-is.wav"
         },
         {
           "heading": "VPC and CIDR",
@@ -810,7 +924,8 @@
           "highlight": [
             "ans-vpc"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-02-vpc-and-cidr.wav"
         },
         {
           "heading": "Subnets",
@@ -821,7 +936,8 @@
             "ans-private-a",
             "ans-private-b"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-03-subnets.wav"
         },
         {
           "heading": "Internet Gateway and Route Tables",
@@ -830,7 +946,8 @@
           "highlight": [
             "ans-igw"
           ],
-          "focus": "ans-aws-cloud"
+          "focus": "ans-aws-cloud",
+          "audio": "audio/06-04-internet-gateway-and-route-tables.wav"
         },
         {
           "heading": "NAT Gateway",
@@ -839,7 +956,8 @@
           "highlight": [
             "ans-private-a"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-05-nat-gateway.wav"
         },
         {
           "heading": "Security Groups",
@@ -850,7 +968,8 @@
             "ans-sg-ec2-a",
             "ans-sg-ec2-b"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-06-security-groups.wav"
         },
         {
           "heading": "Network ACLs",
@@ -861,7 +980,8 @@
             "ans-nacl-a",
             "ans-nacl-b"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-07-network-acls.wav"
         },
         {
           "heading": "Elastic IPs",
@@ -870,7 +990,8 @@
           "highlight": [
             "ans-igw"
           ],
-          "focus": "ans-aws-cloud"
+          "focus": "ans-aws-cloud",
+          "audio": "audio/06-08-elastic-ips.wav"
         },
         {
           "heading": "DNS Inside the VPC",
@@ -879,7 +1000,8 @@
           "highlight": [
             "ans-vpc"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-09-dns-inside-the-vpc.wav"
         },
         {
           "heading": "VPC Flow Logs",
@@ -888,7 +1010,8 @@
           "highlight": [
             "ans-vpc"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-10-vpc-flow-logs.wav"
         },
         {
           "heading": "Reaching Private Instances",
@@ -898,7 +1021,8 @@
             "ans-private-a",
             "ans-asg-a"
           ],
-          "focus": "ans-private-a"
+          "focus": "ans-private-a",
+          "audio": "audio/06-11-reaching-private-instances.wav"
         },
         {
           "heading": "VPC Peering",
@@ -907,7 +1031,8 @@
           "highlight": [
             "ans-vpc"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-12-vpc-peering.wav"
         },
         {
           "heading": "VPC Endpoints",
@@ -916,7 +1041,8 @@
           "highlight": [
             "ans-vpc"
           ],
-          "focus": "ans-vpc"
+          "focus": "ans-vpc",
+          "audio": "audio/06-13-vpc-endpoints.wav"
         },
         {
           "heading": "PrivateLink for Your Own Services",
@@ -925,7 +1051,8 @@
           "highlight": [
             "ans-nlb"
           ],
-          "focus": "ans-public-subnet"
+          "focus": "ans-public-subnet",
+          "audio": "audio/06-14-privatelink-for-your-own-services.wav"
         },
         {
           "heading": "Transit Gateway",
@@ -934,7 +1061,8 @@
           "highlight": [
             "ans-aws-cloud"
           ],
-          "focus": "ans-aws-cloud"
+          "focus": "ans-aws-cloud",
+          "audio": "audio/06-15-transit-gateway.wav"
         },
         {
           "heading": "Site-to-Site VPN",
@@ -943,7 +1071,8 @@
           "highlight": [
             "ans-igw"
           ],
-          "focus": "ans-aws-cloud"
+          "focus": "ans-aws-cloud",
+          "audio": "audio/06-16-site-to-site-vpn.wav"
         },
         {
           "heading": "Direct Connect",
@@ -952,7 +1081,8 @@
           "highlight": [
             "ans-igw"
           ],
-          "focus": "ans-aws-cloud"
+          "focus": "ans-aws-cloud",
+          "audio": "audio/06-17-direct-connect.wav"
         },
         {
           "heading": "Picking a Connectivity Option",
@@ -976,72 +1106,86 @@
         {
           "heading": "DNS and Record Types",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-02-dns-and-record-types.wav"
         },
         {
           "heading": "Hosted Zones",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-03-hosted-zones.wav"
         },
         {
           "heading": "Alias Records",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-04-alias-records.wav"
         },
         {
           "heading": "Routing Policies",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-05-routing-policies.wav"
         },
         {
           "heading": "Health Checks",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-06-health-checks.wav"
         },
         {
           "heading": "Route 53 Resolver and Hybrid DNS",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-07-route-53-resolver-and-hybrid-dns.wav"
         },
         {
           "heading": "CloudFront",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-08-cloudfront.wav"
         },
         {
           "heading": "Origins and Origin Access Control",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-09-origins-and-origin-access-control.wav"
         },
         {
           "heading": "Cache Behaviours, TTL, and Cache Keys",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-10-cache-behaviours-ttl-and-cache-keys.wav"
         },
         {
           "heading": "CloudFront Security",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-11-cloudfront-security.wav"
         },
         {
           "heading": "Edge Functions: CloudFront Functions vs Lambda@Edge",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-12-edge-functions-cloudfront-functions-vs-lambda-edge.wav"
         },
         {
           "heading": "Price Classes",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-13-price-classes.wav"
         },
         {
           "heading": "CloudFront vs S3 Cross-Region Replication",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-14-cloudfront-vs-s3-cross-region-replication.wav"
         },
         {
           "heading": "Global Accelerator",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/07-15-global-accelerator.wav"
         },
         {
           "heading": "Picking the Right Edge Service",
@@ -1065,82 +1209,98 @@
         {
           "heading": "RDS Overview",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-02-rds-overview.wav"
         },
         {
           "heading": "Backups and Point-in-Time Restore",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-03-backups-and-point-in-time-restore.wav"
         },
         {
           "heading": "Multi-AZ vs Read Replicas",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-04-multi-az-vs-read-replicas.wav"
         },
         {
           "heading": "RDS Security",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-05-rds-security.wav"
         },
         {
           "heading": "RDS Proxy",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-06-rds-proxy.wav"
         },
         {
           "heading": "Aurora — a Different Engine",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-07-aurora-a-different-engine.wav"
         },
         {
           "heading": "Aurora Endpoints",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-08-aurora-endpoints.wav"
         },
         {
           "heading": "Aurora Serverless v2",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-09-aurora-serverless-v2.wav"
         },
         {
           "heading": "Aurora Global Database",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-10-aurora-global-database.wav"
         },
         {
           "heading": "Backtrack and Multi-Master",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-11-backtrack-and-multi-master.wav"
         },
         {
           "heading": "RDS vs Aurora — Picking Which",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-12-rds-vs-aurora-picking-which.wav"
         },
         {
           "heading": "Why Cache?",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-13-why-cache.wav"
         },
         {
           "heading": "Caching Strategies",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-14-caching-strategies.wav"
         },
         {
           "heading": "Redis vs Memcached",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-15-redis-vs-memcached.wav"
         },
         {
           "heading": "ElastiCache for Redis",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-16-elasticache-for-redis.wav"
         },
         {
           "heading": "ElastiCache for Memcached",
           "scene": "aws-data-engineering",
-          "spine": true
+          "spine": true,
+          "audio": "audio/08-17-elasticache-for-memcached.wav"
         },
         {
           "heading": "Putting the Tier Together",
@@ -1164,47 +1324,56 @@
         {
           "heading": "DynamoDB — Core Model",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-02-dynamodb-core-model.wav"
         },
         {
           "heading": "Partitions and Hot Keys",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-03-partitions-and-hot-keys.wav"
         },
         {
           "heading": "Capacity Modes",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-04-capacity-modes.wav"
         },
         {
           "heading": "Read Consistency",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-05-read-consistency.wav"
         },
         {
           "heading": "Secondary Indexes",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-06-secondary-indexes.wav"
         },
         {
           "heading": "Operations: Get, Query, Scan, Transactions",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-07-operations-get-query-scan-transactions.wav"
         },
         {
           "heading": "DAX — DynamoDB Accelerator",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-08-dax-dynamodb-accelerator.wav"
         },
         {
           "heading": "Streams and Global Tables",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-09-streams-and-global-tables.wav"
         },
         {
           "heading": "TTL and PITR",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-10-ttl-and-pitr.wav"
         },
         {
           "heading": "Redshift — Data Warehouse for OLAP",
@@ -1213,7 +1382,8 @@
           "highlight": [
             "redshift"
           ],
-          "focus": "query"
+          "focus": "query",
+          "audio": "audio/09-11-redshift-data-warehouse-for-olap.wav"
         },
         {
           "heading": "Redshift Architecture",
@@ -1222,7 +1392,8 @@
           "highlight": [
             "redshift"
           ],
-          "focus": "query"
+          "focus": "query",
+          "audio": "audio/09-12-redshift-architecture.wav"
         },
         {
           "heading": "Loading Data — COPY and Spectrum",
@@ -1232,7 +1403,8 @@
             "redshift",
             "s3-serving"
           ],
-          "focus": "query"
+          "focus": "query",
+          "audio": "audio/09-13-loading-data-copy-and-spectrum.wav"
         },
         {
           "heading": "Distribution and Sort Keys",
@@ -1241,7 +1413,8 @@
           "highlight": [
             "redshift"
           ],
-          "focus": "query"
+          "focus": "query",
+          "audio": "audio/09-14-distribution-and-sort-keys.wav"
         },
         {
           "heading": "Around Redshift — Athena, Glue, EMR, OpenSearch",
@@ -1253,12 +1426,14 @@
             "emr",
             "opensearch"
           ],
-          "focus": "process"
+          "focus": "process",
+          "audio": "audio/09-15-around-redshift-athena-glue-emr-opensearch.wav"
         },
         {
           "heading": "Purpose-Built Databases",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/09-16-purpose-built-databases.wav"
         },
         {
           "heading": "Picking the Right Database",
@@ -1282,32 +1457,38 @@
         {
           "heading": "SQS — The Queue",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/10-02-sqs-the-queue.wav"
         },
         {
           "heading": "Standard vs FIFO Queues",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/10-03-standard-vs-fifo-queues.wav"
         },
         {
           "heading": "DLQs, Polling, Delays, Large Messages",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/10-04-dlqs-polling-delays-large-messages.wav"
         },
         {
           "heading": "SNS — Pub/Sub",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/10-05-sns-pub-sub.wav"
         },
         {
           "heading": "The SNS + SQS Fan-Out Pattern",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/10-06-the-sns-sqs-fan-out-pattern.wav"
         },
         {
           "heading": "SQS vs SNS vs EventBridge — the messaging triangle",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/10-07-sqs-vs-sns-vs-eventbridge-the-messaging-triangle.wav"
         },
         {
           "heading": "Kinesis Data Streams",
@@ -1316,7 +1497,8 @@
           "highlight": [
             "kinesis-streams"
           ],
-          "focus": "ingest"
+          "focus": "ingest",
+          "audio": "audio/10-08-kinesis-data-streams.wav"
         },
         {
           "heading": "Consumers — Standard vs Enhanced Fan-Out",
@@ -1325,7 +1507,8 @@
           "highlight": [
             "kinesis-streams"
           ],
-          "focus": "ingest"
+          "focus": "ingest",
+          "audio": "audio/10-09-consumers-standard-vs-enhanced-fan-out.wav"
         },
         {
           "heading": "Kinesis Data Firehose",
@@ -1334,7 +1517,8 @@
           "highlight": [
             "firehose"
           ],
-          "focus": "ingest"
+          "focus": "ingest",
+          "audio": "audio/10-10-kinesis-data-firehose.wav"
         },
         {
           "heading": "Data Analytics on Streams, and MSK",
@@ -1344,7 +1528,8 @@
             "msk",
             "emr"
           ],
-          "focus": "ingest"
+          "focus": "ingest",
+          "audio": "audio/10-11-data-analytics-on-streams-and-msk.wav"
         },
         {
           "heading": "Step Functions — Workflow Orchestration",
@@ -1353,7 +1538,8 @@
           "highlight": [
             "stepfn-b"
           ],
-          "focus": "process"
+          "focus": "process",
+          "audio": "audio/10-12-step-functions-workflow-orchestration.wav"
         },
         {
           "heading": "Retry, Catch, and Failure Modes",
@@ -1362,7 +1548,8 @@
           "highlight": [
             "stepfn-b"
           ],
-          "focus": "process"
+          "focus": "process",
+          "audio": "audio/10-13-retry-catch-and-failure-modes.wav"
         },
         {
           "heading": "Standard vs Express Workflows",
@@ -1371,17 +1558,20 @@
           "highlight": [
             "stepfn-b"
           ],
-          "focus": "process"
+          "focus": "process",
+          "audio": "audio/10-14-standard-vs-express-workflows.wav"
         },
         {
           "heading": "EventBridge — the Event Bus",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/10-15-eventbridge-the-event-bus.wav"
         },
         {
           "heading": "EventBridge — Schema Registry, Pipes, Archive",
           "scene": "aws-data-engineering",
-          "spine": false
+          "spine": false,
+          "audio": "audio/10-16-eventbridge-schema-registry-pipes-archive.wav"
         },
         {
           "heading": "Picking the Right Tool",
@@ -1405,67 +1595,80 @@
         {
           "heading": "KMS — Key Management Service",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-02-kms-key-management-service.wav"
         },
         {
           "heading": "Envelope Encryption",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-03-envelope-encryption.wav"
         },
         {
           "heading": "Key Policies, Grants, Cross-Account",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-04-key-policies-grants-cross-account.wav"
         },
         {
           "heading": "Rotation, Deletion, Multi-Region Keys",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-05-rotation-deletion-multi-region-keys.wav"
         },
         {
           "heading": "KMS in S3, EBS, and RDS",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-06-kms-in-s3-ebs-and-rds.wav"
         },
         {
           "heading": "AWS Secrets Manager",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-07-aws-secrets-manager.wav"
         },
         {
           "heading": "Secrets Manager vs SSM Parameter Store",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-08-secrets-manager-vs-ssm-parameter-store.wav"
         },
         {
           "heading": "AWS Shield — DDoS Protection",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-09-aws-shield-ddos-protection.wav"
         },
         {
           "heading": "AWS WAF — Web Application Firewall",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-10-aws-waf-web-application-firewall.wav"
         },
         {
           "heading": "AWS Firewall Manager",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-11-aws-firewall-manager.wav"
         },
         {
           "heading": "Cognito User Pools — Authentication",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-12-cognito-user-pools-authentication.wav"
         },
         {
           "heading": "Cognito Identity Pools — AWS Credentials",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-13-cognito-identity-pools-aws-credentials.wav"
         },
         {
           "heading": "Detective Services — GuardDuty, Macie, Inspector, Detective",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/11-14-detective-services-guardduty-macie-inspector-detective.wav"
         },
         {
           "heading": "Picking the Right Tool",
@@ -1489,47 +1692,56 @@
         {
           "heading": "The Shared Responsibility Model",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/12-02-the-shared-responsibility-model.wav"
         },
         {
           "heading": "CloudWatch Metrics",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/12-03-cloudwatch-metrics.wav"
         },
         {
           "heading": "CloudWatch Logs",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/12-04-cloudwatch-logs.wav"
         },
         {
           "heading": "CloudWatch Alarms",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/12-05-cloudwatch-alarms.wav"
         },
         {
           "heading": "CloudWatch Agent and Insights Variants",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/12-06-cloudwatch-agent-and-insights-variants.wav"
         },
         {
           "heading": "AWS CloudTrail",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/12-07-aws-cloudtrail.wav"
         },
         {
           "heading": "AWS Config",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/12-08-aws-config.wav"
         },
         {
           "heading": "Compliance — Artifact, Audit Manager, Programmes",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/12-09-compliance-artifact-audit-manager-programmes.wav"
         },
         {
           "heading": "CloudWatch vs CloudTrail vs Config",
           "scene": "aws-iam",
-          "spine": true
+          "spine": true,
+          "audio": "audio/12-10-cloudwatch-vs-cloudtrail-vs-config.wav"
         },
         {
           "heading": "Picking the Right Tool",
@@ -1548,52 +1760,62 @@
           "heading": "RTO and RPO — the only two numbers that matter",
           "scene": "aws-global",
           "spine": true,
-          "role": "hook"
+          "role": "hook",
+          "audio": "audio/13-01-rto-and-rpo-the-only-two-numbers-that-matter.wav"
         },
         {
           "heading": "HA patterns within a Region",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/13-02-ha-patterns-within-a-region.wav"
         },
         {
           "heading": "DR strategies — the four AWS shapes",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/13-03-dr-strategies-the-four-aws-shapes.wav"
         },
         {
           "heading": "AWS Backup",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/13-04-aws-backup.wav"
         },
         {
           "heading": "Right-sizing and idle elimination",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/13-05-right-sizing-and-idle-elimination.wav"
         },
         {
           "heading": "Commitment discounts — Reserved Instances, Savings Plans, Spot",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/13-06-commitment-discounts-reserved-instances-savings-plans-spot.wav"
         },
         {
           "heading": "Cost tools — Cost Explorer, Budgets, Anomaly Detection",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/13-07-cost-tools-cost-explorer-budgets-anomaly-detection.wav"
         },
         {
           "heading": "The 7 Rs",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/13-08-the-7-rs.wav"
         },
         {
           "heading": "Migration services",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/13-09-migration-services.wav"
         },
         {
           "heading": "Snow family — bulk data when the network won't do",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/13-10-snow-family-bulk-data-when-the-network-won-t-do.wav"
         },
         {
           "heading": "Putting it together",
@@ -1612,62 +1834,74 @@
           "heading": "Operational Excellence",
           "scene": "aws-global",
           "spine": true,
-          "role": "hook"
+          "role": "hook",
+          "audio": "audio/14-01-operational-excellence.wav"
         },
         {
           "heading": "Security",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-02-security.wav"
         },
         {
           "heading": "Reliability",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-03-reliability.wav"
         },
         {
           "heading": "Performance Efficiency",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-04-performance-efficiency.wav"
         },
         {
           "heading": "Cost Optimization",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-05-cost-optimization.wav"
         },
         {
           "heading": "Sustainability",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-06-sustainability.wav"
         },
         {
           "heading": "AWS Well-Architected Tool",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-07-aws-well-architected-tool.wav"
         },
         {
           "heading": "Trusted Advisor",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-08-trusted-advisor.wav"
         },
         {
           "heading": "SAA blueprint — where each notebook fits",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-09-saa-blueprint-where-each-notebook-fits.wav"
         },
         {
           "heading": "Reading a scenario question",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-10-reading-a-scenario-question.wav"
         },
         {
           "heading": "Distractor patterns to recognise",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-11-distractor-patterns-to-recognise.wav"
         },
         {
           "heading": "Study plan",
           "scene": "aws-global",
-          "spine": true
+          "spine": true,
+          "audio": "audio/14-12-study-plan.wav"
         },
         {
           "heading": "Closing",

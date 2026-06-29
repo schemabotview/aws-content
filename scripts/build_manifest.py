@@ -13,6 +13,22 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NB = os.path.join(ROOT, "notebooks")
+TTS = os.path.join(ROOT, "tts")
+
+
+def audio_for(module_id, n):
+    """Wire a section's narration: return ``audio/<stem>.wav`` for the section at
+    1-based notebook order ``n``, or ``None`` when its ``.tts`` is silent (the
+    intro-overview opener and recap closer are intentionally skipped, leaving gaps
+    in the ``NN-SS`` numbering). Matched by the ``NN-SS`` prefix only — never by the
+    slug — so a heading edit can't break the audio wiring. The ``.wav`` itself is
+    generated separately (``scripts/colab_generate_audio.ipynb``); this references it
+    by the `.tts` that is the source of truth for "this section is narrated"."""
+    prefix = f"{module_id[:2]}-{n:02d}-"
+    for f in sorted(os.listdir(TTS)):
+        if f.startswith(prefix) and f.endswith(".tts"):
+            return f"audio/{f[:-4]}.wav"
+    return None
 
 
 def headings(nb_file):
@@ -227,6 +243,9 @@ for m in MODULES:
             sec["highlight"] = o["highlight"]
         if o.get("focus"):
             sec["focus"] = o["focus"]
+        audio = audio_for(m["id"], i + 1)
+        if audio:
+            sec["audio"] = audio
         secs.append(sec)
     presentations.append({
         "id": m["id"],
