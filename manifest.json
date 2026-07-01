@@ -8,18 +8,13 @@
       "status": "built"
     },
     {
+      "id": "aws-cloud",
+      "title": "AWS Cloud — the whole map",
+      "status": "built"
+    },
+    {
       "id": "aws-iam",
       "title": "AWS IAM — identities, roles & policy evaluation",
-      "status": "built"
-    },
-    {
-      "id": "aws-vpc",
-      "title": "AWS VPC — traffic flow (SG vs NACL)",
-      "status": "built"
-    },
-    {
-      "id": "aws-data-engineering",
-      "title": "AWS Data Engineering — the lake-house pipeline",
       "status": "built"
     }
   ],
@@ -359,216 +354,216 @@
       "id": "03-compute-core-ec2-elb-autoscaling",
       "title": "Compute Core — EC2, ELB & Auto Scaling",
       "notebook": "notebooks/03-compute-core-ec2-elb-autoscaling.ipynb",
-      "defaultScene": "aws-vpc",
+      "defaultScene": "aws-cloud",
       "sections": [
         {
           "heading": "What EC2 is",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "role": "hook",
           "audio": "audio/03-01-what-ec2-is.wav"
         },
         {
           "heading": "The minimum to launch a working web server",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-02-the-minimum-to-launch-a-working-web-server.wav"
         },
         {
           "heading": "What You Configure at Launch",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-03-what-you-configure-at-launch.wav"
         },
         {
           "heading": "Instance Families",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-04-instance-families.wav"
         },
         {
           "heading": "Instance Naming",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-05-instance-naming.wav"
         },
         {
           "heading": "T-Series Burstable Instances",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-06-t-series-burstable-instances.wav"
         },
         {
           "heading": "Purchasing Options",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-07-purchasing-options.wav"
         },
         {
           "heading": "Reserved Instances — Anatomy",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-08-reserved-instances-anatomy.wav"
         },
         {
           "heading": "Savings Plans vs Reserved Instances",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-09-savings-plans-vs-reserved-instances.wav"
         },
         {
           "heading": "Spot Instances",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-10-spot-instances.wav"
         },
         {
           "heading": "Amazon Machine Images (AMIs)",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-11-amazon-machine-images-amis.wav"
         },
         {
           "heading": "AMI Lifecycle",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-12-ami-lifecycle.wav"
         },
         {
           "heading": "Baked vs Bootstrapped",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-13-baked-vs-bootstrapped.wav"
         },
         {
           "heading": "User Data",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-14-user-data.wav"
         },
         {
           "heading": "Security Groups",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-15-security-groups.wav"
         },
         {
           "heading": "Instance Metadata Service (IMDS)",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-16-instance-metadata-service-imds.wav"
         },
         {
           "heading": "Public, Private, and Elastic IPs",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-17-public-private-and-elastic-ips.wav"
         },
         {
           "heading": "Tenancy Options",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-18-tenancy-options.wav"
         },
         {
           "heading": "ENIs, ENA, and EFA",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-19-enis-ena-and-efa.wav"
         },
         {
           "heading": "Placement Groups",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-20-placement-groups.wav"
         },
         {
           "heading": "The Nitro System",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-21-the-nitro-system.wav"
         },
         {
           "heading": "Hibernate, Stop, Terminate",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-22-hibernate-stop-terminate.wav"
         },
         {
           "heading": "Elastic Load Balancing",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-23-elastic-load-balancing.wav"
         },
         {
           "heading": "The Four ELB Types",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-24-the-four-elb-types.wav"
         },
         {
           "heading": "Application Load Balancer (ALB)",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-25-application-load-balancer-alb.wav"
         },
         {
           "heading": "Network Load Balancer (NLB)",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-26-network-load-balancer-nlb.wav"
         },
         {
           "heading": "Gateway Load Balancer (GWLB)",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-27-gateway-load-balancer-gwlb.wav"
         },
         {
           "heading": "Target Groups, Health Checks, Draining",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-28-target-groups-health-checks-draining.wav"
         },
         {
           "heading": "Auto Scaling Groups (ASG)",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-29-auto-scaling-groups-asg.wav"
         },
         {
           "heading": "Launch Templates",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-30-launch-templates.wav"
         },
         {
           "heading": "Scaling Policies",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-31-scaling-policies.wav"
         },
         {
           "heading": "ASG Health Checks",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-32-asg-health-checks.wav"
         },
         {
           "heading": "Instance Refresh",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-33-instance-refresh.wav"
         },
         {
           "heading": "Lifecycle Hooks",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-34-lifecycle-hooks.wav"
         },
         {
           "heading": "Warm Pools",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/03-35-warm-pools.wav"
         }
@@ -747,155 +742,155 @@
       "id": "05-storage-s3-ebs-efs-fsx",
       "title": "Storage — S3, EBS, EFS & FSx",
       "notebook": "notebooks/05-storage-s3-ebs-efs-fsx.ipynb",
-      "defaultScene": "aws-data-engineering",
+      "defaultScene": "aws-cloud",
       "sections": [
         {
           "heading": "The three categories at a glance",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "role": "hook"
         },
         {
           "heading": "S3 — Buckets and Objects",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-02-s3-buckets-and-objects.wav"
         },
         {
           "heading": "Storage Classes",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-03-storage-classes.wav"
         },
         {
           "heading": "Security Model",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-04-security-model.wav"
         },
         {
           "heading": "Encryption",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-05-encryption.wav"
         },
         {
           "heading": "Versioning, Object Lock, and MFA Delete",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-06-versioning-object-lock-and-mfa-delete.wav"
         },
         {
           "heading": "Lifecycle Policies",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-07-lifecycle-policies.wav"
         },
         {
           "heading": "Replication",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-08-replication.wav"
         },
         {
           "heading": "Performance",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-09-performance.wav"
         },
         {
           "heading": "Pre-signed URLs, Access Points, and Object Lambda",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-10-pre-signed-urls-access-points-and-object-lambda.wav"
         },
         {
           "heading": "Event Notifications",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-11-event-notifications.wav"
         },
         {
           "heading": "S3 Select, Batch Operations, and Storage Lens",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-12-s3-select-batch-operations-and-storage-lens.wav"
         },
         {
           "heading": "Static Website Hosting",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-13-static-website-hosting.wav"
         },
         {
           "heading": "EBS — Block Storage for EC2",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-14-ebs-block-storage-for-ec2.wav"
         },
         {
           "heading": "Volume Types",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-15-volume-types.wav"
         },
         {
           "heading": "Snapshots",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-16-snapshots.wav"
         },
         {
           "heading": "Encryption",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-17-encryption.wav"
         },
         {
           "heading": "Instance Store",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-18-instance-store.wav"
         },
         {
           "heading": "EFS — Elastic File System",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-19-efs-elastic-file-system.wav"
         },
         {
           "heading": "Performance and Throughput Modes",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-20-performance-and-throughput-modes.wav"
         },
         {
           "heading": "Storage Tiers and One Zone",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-21-storage-tiers-and-one-zone.wav"
         },
         {
           "heading": "FSx — Specialised File Systems",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-22-fsx-specialised-file-systems.wav"
         },
         {
           "heading": "Windows File Server and Lustre in More Detail",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-23-windows-file-server-and-lustre-in-more-detail.wav"
         },
         {
           "heading": "Storage Gateway — the Hybrid Bridge",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/05-24-storage-gateway-the-hybrid-bridge.wav"
         },
         {
           "heading": "Choosing Among the File Storage Options",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true
         }
       ]
@@ -904,189 +899,189 @@
       "id": "06-vpc-and-connectivity",
       "title": "VPC & Connectivity",
       "notebook": "notebooks/06-vpc-and-connectivity.ipynb",
-      "defaultScene": "aws-vpc",
+      "defaultScene": "aws-cloud",
       "sections": [
         {
           "heading": "What a VPC is",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "role": "hook",
           "highlight": [
-            "ans-vpc"
+            "vpc-a"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-01-what-a-vpc-is.wav"
         },
         {
           "heading": "VPC and CIDR",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
-            "ans-vpc"
+            "vpc-a"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-02-vpc-and-cidr.wav"
         },
         {
           "heading": "Subnets",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
-            "ans-public-subnet",
-            "ans-private-a",
-            "ans-private-b"
+            "public-a",
+            "app-a",
+            "app-b"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-03-subnets.wav"
         },
         {
           "heading": "Internet Gateway and Route Tables",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
-            "ans-igw"
+            "igw"
           ],
-          "focus": "ans-aws-cloud",
+          "focus": "region-a",
           "audio": "audio/06-04-internet-gateway-and-route-tables.wav"
         },
         {
           "heading": "NAT Gateway",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-private-a"
+            "app-a"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-05-nat-gateway.wav"
         },
         {
           "heading": "Security Groups",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
-            "ans-sg-alb",
-            "ans-sg-ec2-a",
-            "ans-sg-ec2-b"
+            "alb",
+            "sg-app-a",
+            "sg-app-b"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-06-security-groups.wav"
         },
         {
           "heading": "Network ACLs",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
-            "ans-nacl-public",
-            "ans-nacl-a",
-            "ans-nacl-b"
+            "nacl-public-a",
+            "nacl-app-a",
+            "nacl-app-b"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-07-network-acls.wav"
         },
         {
           "heading": "Elastic IPs",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-igw"
+            "igw"
           ],
-          "focus": "ans-aws-cloud",
+          "focus": "region-a",
           "audio": "audio/06-08-elastic-ips.wav"
         },
         {
           "heading": "DNS Inside the VPC",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-vpc"
+            "vpc-a"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-09-dns-inside-the-vpc.wav"
         },
         {
           "heading": "VPC Flow Logs",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-vpc"
+            "vpc-a"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-10-vpc-flow-logs.wav"
         },
         {
           "heading": "Reaching Private Instances",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-private-a",
-            "ans-asg-a"
+            "app-a",
+            "asg"
           ],
-          "focus": "ans-private-a",
+          "focus": "app-a",
           "audio": "audio/06-11-reaching-private-instances.wav"
         },
         {
           "heading": "VPC Peering",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-vpc"
+            "vpc-a"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-12-vpc-peering.wav"
         },
         {
           "heading": "VPC Endpoints",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-vpc"
+            "vpc-a"
           ],
-          "focus": "ans-vpc",
+          "focus": "vpc-a",
           "audio": "audio/06-13-vpc-endpoints.wav"
         },
         {
           "heading": "PrivateLink for Your Own Services",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-nlb"
+            "alb"
           ],
-          "focus": "ans-public-subnet",
+          "focus": "public-a",
           "audio": "audio/06-14-privatelink-for-your-own-services.wav"
         },
         {
           "heading": "Transit Gateway",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-aws-cloud"
+            "region-a"
           ],
-          "focus": "ans-aws-cloud",
+          "focus": "region-a",
           "audio": "audio/06-15-transit-gateway.wav"
         },
         {
           "heading": "Site-to-Site VPN",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-igw"
+            "igw"
           ],
-          "focus": "ans-aws-cloud",
+          "focus": "region-a",
           "audio": "audio/06-16-site-to-site-vpn.wav"
         },
         {
           "heading": "Direct Connect",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
-            "ans-igw"
+            "igw"
           ],
-          "focus": "ans-aws-cloud",
+          "focus": "region-a",
           "audio": "audio/06-17-direct-connect.wav"
         },
         {
           "heading": "Picking a Connectivity Option",
-          "scene": "aws-vpc",
+          "scene": "aws-cloud",
           "spine": false
         }
       ]
@@ -1198,113 +1193,113 @@
       "id": "08-relational-databases-and-caching",
       "title": "Relational Databases & Caching",
       "notebook": "notebooks/08-relational-databases-and-caching.ipynb",
-      "defaultScene": "aws-data-engineering",
+      "defaultScene": "aws-cloud",
       "sections": [
         {
           "heading": "The relational data tier on AWS",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "role": "hook"
         },
         {
           "heading": "RDS Overview",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-02-rds-overview.wav"
         },
         {
           "heading": "Backups and Point-in-Time Restore",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-03-backups-and-point-in-time-restore.wav"
         },
         {
           "heading": "Multi-AZ vs Read Replicas",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-04-multi-az-vs-read-replicas.wav"
         },
         {
           "heading": "RDS Security",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-05-rds-security.wav"
         },
         {
           "heading": "RDS Proxy",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-06-rds-proxy.wav"
         },
         {
           "heading": "Aurora — a Different Engine",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-07-aurora-a-different-engine.wav"
         },
         {
           "heading": "Aurora Endpoints",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-08-aurora-endpoints.wav"
         },
         {
           "heading": "Aurora Serverless v2",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-09-aurora-serverless-v2.wav"
         },
         {
           "heading": "Aurora Global Database",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-10-aurora-global-database.wav"
         },
         {
           "heading": "Backtrack and Multi-Master",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-11-backtrack-and-multi-master.wav"
         },
         {
           "heading": "RDS vs Aurora — Picking Which",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-12-rds-vs-aurora-picking-which.wav"
         },
         {
           "heading": "Why Cache?",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-13-why-cache.wav"
         },
         {
           "heading": "Caching Strategies",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-14-caching-strategies.wav"
         },
         {
           "heading": "Redis vs Memcached",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-15-redis-vs-memcached.wav"
         },
         {
           "heading": "ElastiCache for Redis",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-16-elasticache-for-redis.wav"
         },
         {
           "heading": "ElastiCache for Memcached",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "audio": "audio/08-17-elasticache-for-memcached.wav"
         },
         {
           "heading": "Putting the Tier Together",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true
         }
       ]
@@ -1313,71 +1308,71 @@
       "id": "09-nosql-and-analytics",
       "title": "NoSQL & Analytics",
       "notebook": "notebooks/09-nosql-and-analytics.ipynb",
-      "defaultScene": "aws-data-engineering",
+      "defaultScene": "aws-cloud",
       "sections": [
         {
           "heading": "The database zoo at a glance",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "role": "hook"
         },
         {
           "heading": "DynamoDB — Core Model",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-02-dynamodb-core-model.wav"
         },
         {
           "heading": "Partitions and Hot Keys",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-03-partitions-and-hot-keys.wav"
         },
         {
           "heading": "Capacity Modes",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-04-capacity-modes.wav"
         },
         {
           "heading": "Read Consistency",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-05-read-consistency.wav"
         },
         {
           "heading": "Secondary Indexes",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-06-secondary-indexes.wav"
         },
         {
           "heading": "Operations: Get, Query, Scan, Transactions",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-07-operations-get-query-scan-transactions.wav"
         },
         {
           "heading": "DAX — DynamoDB Accelerator",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-08-dax-dynamodb-accelerator.wav"
         },
         {
           "heading": "Streams and Global Tables",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-09-streams-and-global-tables.wav"
         },
         {
           "heading": "TTL and PITR",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-10-ttl-and-pitr.wav"
         },
         {
           "heading": "Redshift — Data Warehouse for OLAP",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
             "redshift"
@@ -1387,7 +1382,7 @@
         },
         {
           "heading": "Redshift Architecture",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
             "redshift"
@@ -1397,7 +1392,7 @@
         },
         {
           "heading": "Loading Data — COPY and Spectrum",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
             "redshift",
@@ -1408,7 +1403,7 @@
         },
         {
           "heading": "Distribution and Sort Keys",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
             "redshift"
@@ -1418,7 +1413,7 @@
         },
         {
           "heading": "Around Redshift — Athena, Glue, EMR, OpenSearch",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
             "athena",
@@ -1431,13 +1426,13 @@
         },
         {
           "heading": "Purpose-Built Databases",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/09-16-purpose-built-databases.wav"
         },
         {
           "heading": "Picking the Right Database",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false
         }
       ]
@@ -1446,53 +1441,53 @@
       "id": "10-integration-and-streaming",
       "title": "Integration & Streaming",
       "notebook": "notebooks/10-integration-and-streaming.ipynb",
-      "defaultScene": "aws-data-engineering",
+      "defaultScene": "aws-cloud",
       "sections": [
         {
           "heading": "Five services, one question",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "role": "hook"
         },
         {
           "heading": "SQS — The Queue",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/10-02-sqs-the-queue.wav"
         },
         {
           "heading": "Standard vs FIFO Queues",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/10-03-standard-vs-fifo-queues.wav"
         },
         {
           "heading": "DLQs, Polling, Delays, Large Messages",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/10-04-dlqs-polling-delays-large-messages.wav"
         },
         {
           "heading": "SNS — Pub/Sub",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/10-05-sns-pub-sub.wav"
         },
         {
           "heading": "The SNS + SQS Fan-Out Pattern",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/10-06-the-sns-sqs-fan-out-pattern.wav"
         },
         {
           "heading": "SQS vs SNS vs EventBridge — the messaging triangle",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/10-07-sqs-vs-sns-vs-eventbridge-the-messaging-triangle.wav"
         },
         {
           "heading": "Kinesis Data Streams",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
             "kinesis-streams"
@@ -1502,7 +1497,7 @@
         },
         {
           "heading": "Consumers — Standard vs Enhanced Fan-Out",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
             "kinesis-streams"
@@ -1512,7 +1507,7 @@
         },
         {
           "heading": "Kinesis Data Firehose",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
             "firehose"
@@ -1522,7 +1517,7 @@
         },
         {
           "heading": "Data Analytics on Streams, and MSK",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
             "msk",
@@ -1533,7 +1528,7 @@
         },
         {
           "heading": "Step Functions — Workflow Orchestration",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": true,
           "highlight": [
             "stepfn-b"
@@ -1543,7 +1538,7 @@
         },
         {
           "heading": "Retry, Catch, and Failure Modes",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
             "stepfn-b"
@@ -1553,7 +1548,7 @@
         },
         {
           "heading": "Standard vs Express Workflows",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "highlight": [
             "stepfn-b"
@@ -1563,19 +1558,19 @@
         },
         {
           "heading": "EventBridge — the Event Bus",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/10-15-eventbridge-the-event-bus.wav"
         },
         {
           "heading": "EventBridge — Schema Registry, Pipes, Archive",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false,
           "audio": "audio/10-16-eventbridge-schema-registry-pipes-archive.wav"
         },
         {
           "heading": "Picking the Right Tool",
-          "scene": "aws-data-engineering",
+          "scene": "aws-cloud",
           "spine": false
         }
       ]
